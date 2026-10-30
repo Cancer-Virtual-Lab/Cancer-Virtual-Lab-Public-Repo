@@ -15,7 +15,7 @@ Website: <https://cancer-virtual-lab.github.io/Cancer-Virtual-Lab-Public-Repo/>
 
 ## Rebuilding the site
 
-Requires Java 17+ and WIDOCO 1.4.25
+Requires Java 17+, Python 3 and WIDOCO 1.4.25
 (`widoco-1.4.25-jar-with-dependencies_JDK-17.jar`):
 
 ```bash

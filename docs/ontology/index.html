@@ -22,6 +22,7 @@
   /* ontology page: hero without the visual, a denser layout below */
   .page-hero { padding-block: 104px 64px; max-width: 880px; }
   .page-hero h1 { font-size: clamp(2.3rem, 5vw, 3.8rem); }
+  .hint { margin: 20px 0 0; max-width: 46em; font-size: .88rem; color: var(--faint); text-wrap: pretty; }
   .back-btn {
     display: flex; width: max-content; align-items: center; gap: 10px; margin-bottom: 28px; padding: 6px 16px 6px 6px;
     border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--fg);
@@ -168,6 +169,8 @@
         <a class="link" href="doc/index-it.html">Documentazione in italiano</a>
         <a class="link" href="doc/webvowl/index.html">Graph view</a>
       </div>
+      <p class="hint reveal d3">Value classes (sex, ECOG grades, lines and settings of therapy) are also declared
+      as individuals of themselves (OWL 2 punning); these type assertions are not drawn in the graph view.</p>
     </header>
 
     <div class="stats reveal">

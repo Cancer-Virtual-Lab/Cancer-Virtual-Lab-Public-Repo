@@ -13,7 +13,7 @@
 # Usage (from any folder):
 #   CVLO_PACKAGE="/path/to/CVL-O Ontology" WIDOCO_JAR=/path/widoco.jar scripts/build_pages.sh
 # Optional: JAVA (default: java).
-# Requires WIDOCO 1.4.25 (widoco-1.4.25-jar-with-dependencies_JDK-17.jar) and Java 17+.
+# Requires WIDOCO 1.4.25 (widoco-1.4.25-jar-with-dependencies_JDK-17.jar), Java 17+ and Python 3.
 # =============================================================================
 set -euo pipefail
 cd "$(dirname "$0")/.."
@@ -38,6 +38,22 @@ rm -rf "$TMP"
 # from Patient: open the full graph instead (the filter stays available in the Filter menu)
 sed -i 's/NODE_COUNT_LIMIT_FOR_AUTO_ENABLING = 50;/NODE_COUNT_LIMIT_FOR_AUTO_ENABLING = 100000;/' \
   "$TMP/doc/webvowl/js/webvowl.js"
+# Value classes are also declared as individuals of themselves (OWL 2 punning, used by the
+# queries): WebVOWL draws each as an "is a" self-loop. Hide them in the graph only.
+python3 - "$TMP/doc/webvowl/data/ontology.json" <<'PY'
+import json, sys
+path = sys.argv[1]
+with open(path, encoding="utf-8") as f:
+    data = json.load(f)
+types = {p["id"]: p["type"] for p in data["property"]}
+loops = {a["id"] for a in data["propertyAttribute"]
+         if types.get(a["id"]) == "rdf:Property" and a.get("domain") == a.get("range")}
+data["property"] = [p for p in data["property"] if p["id"] not in loops]
+data["propertyAttribute"] = [a for a in data["propertyAttribute"] if a["id"] not in loops]
+with open(path, "w", encoding="utf-8") as f:
+    json.dump(data, f, ensure_ascii=False)
+print(f"WebVOWL: hid {len(loops)} punning self-loops")
+PY
 
 echo "== 2. Site -> $OUT/"
 rm -rf "$OUT"
