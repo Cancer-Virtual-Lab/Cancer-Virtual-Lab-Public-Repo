@@ -1,0 +1,2640 @@
+@prefix : <http://irst.emr.it/cvl/> .
+@prefix cvl: <http://irst.emr.it/cvl/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@base <http://irst.emr.it/cvl/> .
+
+<http://irst.emr.it/cvl/> rdf:type owl:Ontology ;
+                           owl:versionIRI <http://irst.emr.it/cvl/1.1.0> ;
+                           dcterms:bibliographicCitation "Giorgetti L, Carbonaro A, Ridolfi L, Pasolini R, Pagliarani A, Cavallucci M, Andalò A, Del Gaudio L, De Angelis P, Vespignani R, Gentili N. Cancer Virtual Lab Ontology (CVL-O), version 1.1.0. Zenodo; 2026. https://doi.org/10.5281/zenodo.23762955" ;
+                           dcterms:created "2025-01-30"^^xsd:date ;
+                           dcterms:contributor <https://orcid.org/0000-0002-3890-4852> ,
+                                               "Lorenzo Ridolfi" ,
+                                               "Roberto Pasolini" ,
+                                               <https://orcid.org/0009-0007-4241-3005> ,
+                                               "Martina Cavallucci" ,
+                                               <https://orcid.org/0009-0005-8022-0242> ,
+                                               <https://orcid.org/0009-0000-4148-5954> ,
+                                               "Paolo De Angelis" ,
+                                               <https://orcid.org/0000-0003-3676-171X> ,
+                                               <https://orcid.org/0000-0002-0066-9172> ;
+                           dcterms:creator <https://orcid.org/0009-0002-9475-0744> ;
+                           dcterms:description "The Cancer Virtual Lab Ontology (CVL-O) is an OWL 2 ontology for representing the oncological care pathway of patients from real-world clinical data: diagnosis and TNM staging, therapies and drug administrations, adverse events, biomarkers, genomic variants, laboratory tests, body measurements, symptom assessments, treatment response and clinical services. It is aligned with HL7 FHIR and reuses standard biomedical terminologies (SNOMED CT, LOINC, NCIt, ICD-10, ATC). CVL-O is the semantic foundation of the Cancer Virtual Lab project, a collaboration between the University of Bologna, IRCCS Istituto Romagnolo per lo Studio dei Tumori (IRST) \"Dino Amadori\", Aivolution Srl and IFAB (International Foundation Big Data and Artificial Intelligence for Human Development), and underpins the Cancer Virtual Lab knowledge graph."@en ;
+                           dcterms:isPartOf <https://doi.org/10.5281/zenodo.23762955> ;
+                           dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                           dcterms:modified "2026-10-30"^^xsd:date ;
+                           dcterms:title "Cancer Virtual Lab Ontology (CVL-O)"@en ;
+                           vann:preferredNamespacePrefix "cvl" ;
+                           vann:preferredNamespaceUri "http://irst.emr.it/cvl/" ;
+                           rdfs:comment "The clinical definitions (skos:definition) of CVL-O 1.1.0 have been reviewed and validated by the biomedical team of the Cancer Virtual Lab project."@en ;
+                           rdfs:seeAlso <https://cancer-virtual-lab.github.io/Cancer-Virtual-Lab-Public-Repo/> ,
+                                        <https://github.com/Cancer-Virtual-Lab/Cancer-Virtual-Lab-Public-Repo> ;
+                           owl:versionInfo "1.1.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/bibliographicCitation
+dcterms:bibliographicCitation rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+dcterms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+dcterms:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dcterms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dcterms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/isPartOf
+dcterms:isPartOf rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dcterms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dcterms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+skos:closeMatch rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Ontology authors
+#################################################################
+
+<https://orcid.org/0000-0002-3890-4852> rdfs:label "Antonella Carbonaro" ;
+                                        foaf:name "Antonella Carbonaro" .
+<https://orcid.org/0009-0002-9475-0744> rdfs:label "Luca Giorgetti" ;
+                                        foaf:name "Luca Giorgetti" .
+<https://orcid.org/0009-0007-4241-3005> rdfs:label "Andrea Pagliarani" ;
+                                        foaf:name "Andrea Pagliarani" .
+<https://orcid.org/0009-0005-8022-0242> rdfs:label "Alice Andalò" ;
+                                        foaf:name "Alice Andalò" .
+<https://orcid.org/0009-0000-4148-5954> rdfs:label "Livia Del Gaudio" ;
+                                        foaf:name "Livia Del Gaudio" .
+<https://orcid.org/0000-0003-3676-171X> rdfs:label "Roberto Vespignani" ;
+                                        foaf:name "Roberto Vespignani" .
+<https://orcid.org/0000-0002-0066-9172> rdfs:label "Nicola Gentili" ;
+                                        foaf:name "Nicola Gentili" .
+
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://irst.emr.it/cvl/TNM_code
+cvl:TNM_code rdf:type owl:ObjectProperty ;
+             rdfs:domain cvl:TNMClassification ;
+             rdfs:range owl:Thing ;
+             rdfs:label "Codice della classificazione TNM"@it ,
+                        "TNM code"@en ;
+             skos:definition "Identifier code for a TNM classification entity."@en .
+
+
+###  http://irst.emr.it/cvl/active_substance_code
+cvl:active_substance_code rdf:type owl:ObjectProperty ;
+                          rdfs:domain cvl:ActiveSubstance ;
+                          rdfs:range owl:Thing ;
+                          rdfs:label "Active substance code"@en ,
+                                     "Codice del principio attivo"@it ;
+                          skos:definition "The specific identifier or code for a drug, medication, or active clinical substance."@en .
+
+
+###  http://irst.emr.it/cvl/address_diagnosis
+cvl:address_diagnosis rdf:type owl:ObjectProperty ;
+                      owl:inverseOf cvl:is_addressed_by ;
+                      rdfs:domain cvl:Therapy ;
+                      rdfs:range cvl:Diagnosis ;
+                      rdfs:label "Address diagnosis"@en ,
+                                 "Affronta la diagnosi"@it ;
+                      skos:definition "Relates a therapy, treatment, or clinical management plan to the specific diagnosis or disease it is intended to treat."@en .
+
+
+###  http://irst.emr.it/cvl/administer_active_substance
+cvl:administer_active_substance rdf:type owl:ObjectProperty ;
+                                owl:inverseOf cvl:is_administered_in ;
+                                rdfs:domain cvl:Administration ;
+                                rdfs:range cvl:ActiveSubstance ;
+                                rdfs:label "Administer active substance"@en ,
+                                           "Somministra principio attivo"@it ;
+                                skos:definition "Links a medical administration event to the specific active substance, drug, medicine, or chemical agent given to the patient."@en .
+
+
+###  http://irst.emr.it/cvl/adverse_event_code
+cvl:adverse_event_code rdf:type owl:ObjectProperty ;
+                       rdfs:domain cvl:AdverseEventEffect ;
+                       rdfs:range owl:Thing ;
+                       rdfs:label "Adverse event code"@en ,
+                                  "Codice dell'evento avverso"@it ;
+                       skos:definition "The identifier code for a side effect, toxicity, or adverse medical event."@en .
+
+
+###  http://irst.emr.it/cvl/causes
+cvl:causes rdf:type owl:ObjectProperty ;
+           rdfs:domain cvl:Administration ;
+           rdfs:range cvl:AdverseEvent ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           owl:inverseOf cvl:is_due_to ;
+           rdfs:label "Causa"@it ,
+                      "Causes"@en ;
+           skos:definition "Indicates that a drug administration is associated with the onset of a specific adverse event."@en .
+
+
+###  http://irst.emr.it/cvl/characterizes_diagnosis
+cvl:characterizes_diagnosis rdf:type owl:ObjectProperty ;
+                            owl:inverseOf cvl:is_characterized_by ;
+                            rdfs:domain cvl:TNM ;
+                            rdfs:range cvl:Diagnosis ;
+                            rdfs:label "Caratterizza diagnosi"@it ,
+                                       "Characterizes diagnosis"@en ;
+                            skos:definition "Links a TNM staging classification to the specific tumor diagnosis it characterizes."@en .
+
+
+###  http://irst.emr.it/cvl/exam_code
+cvl:exam_code rdf:type owl:ObjectProperty ;
+              rdfs:domain cvl:Variant ;
+              rdfs:range owl:Thing ;
+              rdfs:label "Codice dell'esame"@it ,
+                         "Exam code"@en ;
+              skos:definition "The identifier for a genetic variant examination, sequencing, or molecular test."@en .
+
+
+###  http://irst.emr.it/cvl/has_ECOG_status
+cvl:has_ECOG_status rdf:type owl:ObjectProperty ;
+                    owl:inverseOf cvl:is_ECOG_status_of ;
+                    rdfs:domain cvl:Patient ;
+                    rdfs:range cvl:ECOGStatus ;
+                    rdfs:label "Ha ECOG"@it ,
+                               "Has ECOG status"@en ;
+                    skos:definition "Links a patient to an assessment of their ECOG performance status."@en .
+
+
+###  http://irst.emr.it/cvl/has_administration
+cvl:has_administration rdf:type owl:ObjectProperty ;
+                       owl:inverseOf cvl:is_based_on_therapy ;
+                       rdfs:domain cvl:Therapy ;
+                       rdfs:range cvl:Administration ;
+                       rdfs:label "Ha somministrazione"@it ,
+                                  "Has administration"@en ;
+                       skos:definition "Links a therapy or treatment plan to the specific dates and events when drugs or medications were administered to the patient."@en .
+
+
+###  http://irst.emr.it/cvl/has_biomarker
+cvl:has_biomarker rdf:type owl:ObjectProperty ;
+                  owl:inverseOf cvl:is_biomarker_of ;
+                  rdfs:domain cvl:Patient ;
+                  rdfs:range cvl:Biomarker ;
+                  rdfs:label "Ha biomarker"@it ,
+                             "Has biomarker"@en ;
+                  skos:definition "Connects a patient to a biomarker test, genetic marker finding, or molecular profile result (e.g., PD-L1, HER2)."@en .
+
+
+###  http://irst.emr.it/cvl/has_body_measurement
+cvl:has_body_measurement rdf:type owl:ObjectProperty ;
+                         owl:inverseOf cvl:is_body_measurement_of ;
+                         rdfs:domain cvl:Patient ;
+                         rdfs:range cvl:BodyMeasurement ;
+                         rdfs:label "Ha peso e altezza"@it ,
+                                    "Has body measurement"@en ;
+                         skos:definition "Links a patient to their physical body measurements, such as their recorded height or weight."@en .
+
+
+###  http://irst.emr.it/cvl/has_body_metric
+cvl:has_body_metric rdf:type owl:ObjectProperty ;
+                    owl:inverseOf cvl:is_body_metric_of ;
+                    rdfs:domain cvl:BodyMeasurement ;
+                    rdfs:range cvl:BodyMetric ;
+                    rdfs:label "Ha metrica corporea"@it ,
+                               "Has body metric"@en ;
+                    skos:definition "Connects a body measurement event to the specific metric recorded (e.g., measuring height or weight)."@en .
+
+
+###  http://irst.emr.it/cvl/has_cm
+cvl:has_cm rdf:type owl:ObjectProperty ;
+           owl:inverseOf cvl:is_cm_of ;
+           rdfs:domain cvl:ClinicalTNM ;
+           rdfs:range cvl:C_M_Class ;
+           rdfs:label "Ha presenza clinica di metastasi a distanza (M)"@it ,
+                      "Has clinical presence of distant metastasis (M)"@en ;
+           skos:definition "Links a clinical TNM staging record to the clinical Metastasis (cM) classification, indicating distant spread."@en .
+
+
+###  http://irst.emr.it/cvl/has_cn
+cvl:has_cn rdf:type owl:ObjectProperty ;
+           owl:inverseOf cvl:is_cn_of ;
+           rdfs:domain cvl:ClinicalTNM ;
+           rdfs:range cvl:C_N_Class ;
+           rdfs:label "Ha coinvolgimento clinico dei linfonodi regionali (N)"@it ,
+                      "Has clinical spread to regional lymph nodes (N)"@en ;
+           skos:definition "Links a clinical TNM staging record to the clinical Node (cN) classification, indicating lymph node involvement."@en .
+
+
+###  http://irst.emr.it/cvl/has_ct
+cvl:has_ct rdf:type owl:ObjectProperty ;
+           owl:inverseOf cvl:is_ct_of ;
+           rdfs:domain cvl:ClinicalTNM ;
+           rdfs:range cvl:C_T_Class ;
+           rdfs:label "Ha dimensione del tumore clinica (T)"@it ,
+                      "Has clinical tumor size (T)"@en ;
+           skos:definition "Links a clinical TNM staging record to the clinical Tumor (cT) classification, indicating primary tumor size."@en .
+
+
+###  http://irst.emr.it/cvl/has_diagnosis
+cvl:has_diagnosis rdf:type owl:ObjectProperty ;
+                  owl:inverseOf cvl:is_diagnosis_of ;
+                  rdfs:domain cvl:Patient ;
+                  rdfs:range cvl:Diagnosis ;
+                  rdfs:label "Ha diagnosi"@it ,
+                             "Has diagnosis"@en ;
+                  skos:definition "Links a patient to a cancer diagnosis."@en .
+
+
+###  http://irst.emr.it/cvl/has_effect
+cvl:has_effect rdf:type owl:ObjectProperty ;
+               owl:inverseOf cvl:is_adverse_event_effect_of ;
+               rdfs:domain cvl:AdverseEvent ;
+               rdfs:range cvl:AdverseEventEffect ;
+               rdfs:label "Ha effetto"@it ,
+                          "Has effect"@en ;
+               skos:definition "Links an adverse event to the specific effect, toxicity grade, and description of the side effect experienced."@en .
+
+
+###  http://irst.emr.it/cvl/has_gender
+cvl:has_gender rdf:type owl:ObjectProperty ;
+               rdfs:domain cvl:Patient ;
+               rdfs:range cvl:SexAssignedAtBirth ;
+               rdfs:label "Ha genere"@it ,
+                          "Has gender"@en ;
+               skos:definition "Specifies the sex assigned at birth of a patient."@en .
+
+
+###  http://irst.emr.it/cvl/has_height
+cvl:has_height rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf cvl:has_body_metric ;
+               rdfs:domain cvl:BodyMeasurement ;
+               rdfs:range cvl:Height ;
+               rdfs:label "Ha altezza"@it ,
+                          "Has height"@en ;
+               skos:definition "Links a body measurement event specifically to the patient's height metric."@en .
+
+
+###  http://irst.emr.it/cvl/has_laboratory_test
+cvl:has_laboratory_test rdf:type owl:ObjectProperty ;
+                        owl:inverseOf cvl:is_laboratory_test_of ;
+                        rdfs:domain cvl:Patient ;
+                        rdfs:range cvl:LaboratoryTest ;
+                        rdfs:label "Ha esame di laboratorio"@it ,
+                                   "Has laboratory test"@en ;
+                        skos:definition "Connects a patient to blood tests, lab work, hematology, or other laboratory examinations."@en .
+
+
+###  http://irst.emr.it/cvl/has_line_of_therapy
+cvl:has_line_of_therapy rdf:type owl:ObjectProperty ;
+                        rdfs:domain cvl:Therapy ;
+                        rdfs:range cvl:LineOfTherapy ;
+                        rdfs:label "Ha linea di terapia"@it ,
+                                   "Has line of therapy"@en ;
+                        skos:definition "Indicates the sequential line of therapy (e.g., first-line, second-line, third-line) for a specific treatment plan."@en .
+
+
+###  http://irst.emr.it/cvl/has_physiological_history
+cvl:has_physiological_history rdf:type owl:ObjectProperty ;
+                              owl:inverseOf cvl:is_physiological_history_of ;
+                              rdfs:domain cvl:Patient ;
+                              rdfs:range cvl:PhysiologicalHistory ;
+                              rdfs:label "Ha anamnesi fisiologica"@it ,
+                                         "Has physiological history"@en ;
+                              skos:definition "Links a patient to their lifestyle habits, physiological background, and history such as smoking or alcohol consumption."@en .
+
+
+###  http://irst.emr.it/cvl/has_pm
+cvl:has_pm rdf:type owl:ObjectProperty ;
+           owl:inverseOf cvl:is_pm_of ;
+           rdfs:domain cvl:PathologicalTNM ;
+           rdfs:range cvl:P_M_Class ;
+           rdfs:label "Ha presenza patologica di metastasi a distanza (M)"@it ,
+                      "Has pathological presence of distant metastasis (M)"@en ;
+           skos:definition "Links a pathological TNM staging record to the pathological Metastasis (pM) classification."@en .
+
+
+###  http://irst.emr.it/cvl/has_pn
+cvl:has_pn rdf:type owl:ObjectProperty ;
+           owl:inverseOf cvl:is_pn_of ;
+           rdfs:domain cvl:PathologicalTNM ;
+           rdfs:range cvl:P_N_Class ;
+           rdfs:label "Ha coinvolgimento patologico dei linfonodi regionali (N)"@it ,
+                      "Has pathological spread to regional lymph nodes (N)"@en ;
+           skos:definition "Links a pathological TNM staging record to the pathological Node (pN) classification."@en .
+
+
+###  http://irst.emr.it/cvl/has_pt
+cvl:has_pt rdf:type owl:ObjectProperty ;
+           owl:inverseOf cvl:is_pt_of ;
+           rdfs:domain cvl:PathologicalTNM ;
+           rdfs:range cvl:P_T_Class ;
+           rdfs:label "Ha dimensione del tumore patologica (T)"@it ,
+                      "Has pathological tumor size (T)"@en ;
+           skos:definition "Links a pathological TNM staging record to the pathological Tumor (pT) classification."@en .
+
+
+###  http://irst.emr.it/cvl/has_response
+cvl:has_response rdf:type owl:ObjectProperty ;
+                 owl:inverseOf cvl:is_response_of ;
+                 rdfs:domain cvl:Patient ;
+                 rdfs:range cvl:Response ;
+                 rdfs:label "Ha risposta al trattamento"@it ,
+                            "Has response"@en ;
+                 skos:definition "Connects a patient to their treatment response, clinical outcome, or disease progression status (e.g., complete response, stable disease)."@en .
+
+
+###  http://irst.emr.it/cvl/has_service
+cvl:has_service rdf:type owl:ObjectProperty ;
+                owl:inverseOf cvl:is_service_of ;
+                rdfs:domain cvl:Patient ;
+                rdfs:range cvl:Service ;
+                rdfs:label "Ha prestazione clinica"@it ,
+                           "Has clinical service"@en ;
+                skos:definition "Links a patient to a clinical service or procedure they received."@en .
+
+
+###  http://irst.emr.it/cvl/has_symptom_assessment
+cvl:has_symptom_assessment rdf:type owl:ObjectProperty ;
+                           owl:inverseOf cvl:is_symptom_assessment_of ;
+                           rdfs:domain cvl:Patient ;
+                           rdfs:range cvl:SymptomAssessment ;
+                           rdfs:label "Ha valutazione ESAS"@it ,
+                                      "Has symptom assessment"@en ;
+                           skos:definition "Links a patient to an ESAS (Edmonton Symptom Assessment System) evaluation, measuring pain, fatigue, and palliative symptoms."@en .
+
+
+###  http://irst.emr.it/cvl/has_symptom_assessment_finding
+cvl:has_symptom_assessment_finding rdf:type owl:ObjectProperty ;
+                                   rdfs:domain cvl:SymptomAssessment ;
+                                   rdfs:range cvl:SymptomAssessmentFinding ;
+                                   rdfs:label "Ha valutazione"@it ,
+                                              "Has finding"@en ;
+                                   skos:definition "Connects a symptom assessment survey to a specific symptom finding and its numeric severity score."@en .
+
+
+###  http://irst.emr.it/cvl/has_target_value
+cvl:has_target_value rdf:type owl:ObjectProperty ;
+                     rdfs:domain cvl:ECOGStatus ;
+                     rdfs:range cvl:ECOGPerformanceStatusFinding ;
+                     rdfs:label "Ha valore"@it ,
+                                "Has value"@en ;
+                     skos:definition "Links an ECOG performance status to the specific numeric grade (e.g., Grade 0 to Grade 5) of the patient's health."@en .
+
+
+###  http://irst.emr.it/cvl/has_therapy
+cvl:has_therapy rdf:type owl:ObjectProperty ;
+                owl:inverseOf cvl:is_therapy_of ;
+                rdfs:domain cvl:Patient ;
+                rdfs:range cvl:Therapy ;
+                rdfs:label "Ha terapia"@it ,
+                           "Has therapy"@en ;
+                skos:definition "Links a patient to an oncological therapy."@en .
+
+
+###  http://irst.emr.it/cvl/has_therapy_setting
+cvl:has_therapy_setting rdf:type owl:ObjectProperty ;
+                        rdfs:domain cvl:Therapy ;
+                        rdfs:range cvl:TherapySetting ;
+                        rdfs:label "Ha setting"@it ,
+                                   "Has setting"@en ;
+                        skos:definition "Indicates the clinical setting or intent of a therapy (e.g., adjuvant, neoadjuvant, palliative, advanced, consolidation)."@en .
+
+
+###  http://irst.emr.it/cvl/has_variant
+cvl:has_variant rdf:type owl:ObjectProperty ;
+                owl:inverseOf cvl:is_variant_of ;
+                rdfs:domain cvl:Patient ;
+                rdfs:range cvl:Variant ;
+                rdfs:label "Ha variante genetica"@it ,
+                           "Has variant"@en ;
+                skos:definition "Links a patient to a specific genetic mutation, genomic alteration, or genetic variant detected in their tumor DNA."@en .
+
+
+###  http://irst.emr.it/cvl/has_weight
+cvl:has_weight rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf cvl:has_body_metric ;
+               rdfs:domain cvl:BodyMeasurement ;
+               rdfs:range cvl:Weight ;
+               rdfs:label "Ha peso"@it ,
+                          "Has weight"@en ;
+               skos:definition "Links a body measurement event specifically to the patient's weight metric."@en .
+
+
+###  http://irst.emr.it/cvl/is_ECOG_status_of
+cvl:is_ECOG_status_of rdf:type owl:ObjectProperty ;
+                      rdfs:domain cvl:ECOGStatus ;
+                      rdfs:range cvl:Patient ;
+                      rdfs:label "Is ECOG status of"@en ,
+                                 "È ECOG di"@it ;
+                      skos:definition "Reverse link from an ECOG performance status assessment back to the patient."@en .
+
+
+###  http://irst.emr.it/cvl/is_addressed_by
+cvl:is_addressed_by rdf:type owl:ObjectProperty ;
+                    rdfs:domain cvl:Diagnosis ;
+                    rdfs:range cvl:Therapy ;
+                    rdfs:label "Is addressed by"@en ,
+                               "È affrontata da"@it ;
+                    skos:definition "Reverse link from a disease diagnosis to the therapy or treatment used to address it."@en .
+
+
+###  http://irst.emr.it/cvl/is_administered_in
+cvl:is_administered_in rdf:type owl:ObjectProperty ;
+                       rdfs:domain cvl:ActiveSubstance ;
+                       rdfs:range cvl:Administration ;
+                       rdfs:label "Is administered in"@en ,
+                                  "È somministrato in"@it ;
+                       skos:definition "Reverse link from an active substance/drug to the administration event."@en .
+
+
+###  http://irst.emr.it/cvl/is_adverse_event_effect_of
+cvl:is_adverse_event_effect_of rdf:type owl:ObjectProperty ;
+                               rdfs:domain cvl:AdverseEventEffect ;
+                               rdfs:range cvl:AdverseEvent ;
+                               rdfs:label "Is adverse event effect of"@en ,
+                                          "È effetto di evento avverso di"@it ;
+                               skos:definition "Reverse link from a specific adverse effect or toxicity back to the overarching adverse event."@en .
+
+
+###  http://irst.emr.it/cvl/is_based_on_therapy
+cvl:is_based_on_therapy rdf:type owl:ObjectProperty ;
+                        rdfs:domain cvl:Administration ;
+                        rdfs:range cvl:Therapy ;
+                        rdfs:label "Is based on therapy"@en ,
+                                   "È basata su terapia"@it ;
+                        skos:definition "Reverse link from a single administration event back to the broad therapy plan it belongs to."@en .
+
+
+###  http://irst.emr.it/cvl/is_biomarker_of
+cvl:is_biomarker_of rdf:type owl:ObjectProperty ;
+                    rdfs:domain cvl:Biomarker ;
+                    rdfs:range cvl:Patient ;
+                    rdfs:label "Is biomarker of"@en ,
+                               "È biomarker di"@it ;
+                    skos:definition "Reverse link from a biomarker test result back to the patient."@en .
+
+
+###  http://irst.emr.it/cvl/is_body_measurement_of
+cvl:is_body_measurement_of rdf:type owl:ObjectProperty ;
+                           rdfs:domain cvl:BodyMeasurement ;
+                           rdfs:range cvl:Patient ;
+                           rdfs:label "Is body measurement of"@en ,
+                                      "È peso e altezza di"@it ;
+                           skos:definition "Reverse link from a body measurement event back to the patient."@en .
+
+
+###  http://irst.emr.it/cvl/is_body_metric_of
+cvl:is_body_metric_of rdf:type owl:ObjectProperty ;
+                      rdfs:domain cvl:BodyMetric ;
+                      rdfs:range cvl:BodyMeasurement ;
+                      rdfs:label "Is body metric of"@en ,
+                                 "È metrica corporea di"@it ;
+                      skos:definition "Reverse link from a specific height/weight metric back to the body measurement event."@en .
+
+
+###  http://irst.emr.it/cvl/is_characterized_by
+cvl:is_characterized_by rdf:type owl:ObjectProperty ;
+                        rdfs:domain cvl:Diagnosis ;
+                        rdfs:range cvl:TNM ;
+                        rdfs:label "Is characterized by"@en ,
+                                   "È caratterizzata da"@it ;
+                        skos:definition "Links a diagnosis to the TNM staging classification that characterizes it."@en .
+
+
+###  http://irst.emr.it/cvl/is_characterized_by_clinical_tnm
+cvl:is_characterized_by_clinical_tnm rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf cvl:is_characterized_by ;
+                                     rdfs:domain cvl:Diagnosis ;
+                                     rdfs:range cvl:ClinicalTNM ;
+                                     rdfs:label "Is characterized by clinical TNM"@en ,
+                                                "È caratterizzata da TNM clinico"@it ;
+                                     skos:definition "Relates a diagnosis specifically to its clinical TNM (cTNM) staging."@en .
+
+
+###  http://irst.emr.it/cvl/is_characterized_by_pathological_tnm
+cvl:is_characterized_by_pathological_tnm rdf:type owl:ObjectProperty ;
+                                         rdfs:subPropertyOf cvl:is_characterized_by ;
+                                         rdfs:domain cvl:Diagnosis ;
+                                         rdfs:range cvl:PathologicalTNM ;
+                                         rdfs:label "Is characterized by pathological TNM"@en ,
+                                                    "È caratterizzata da TNM patologico"@it ;
+                                         skos:definition "Relates a diagnosis specifically to its pathological TNM (pTNM) staging after surgery."@en .
+
+
+###  http://irst.emr.it/cvl/is_cm_of
+cvl:is_cm_of rdf:type owl:ObjectProperty ;
+             rdfs:domain cvl:C_M_Class ;
+             rdfs:range cvl:ClinicalTNM ;
+             rdfs:label "Is clinical presence of distant metastasis of"@en ,
+                        "È presenza clinica di metastasi a distanza di"@it ;
+             skos:definition "Reverse link from a clinical Metastasis (cM) class to the clinical TNM record."@en .
+
+
+###  http://irst.emr.it/cvl/is_cn_of
+cvl:is_cn_of rdf:type owl:ObjectProperty ;
+             rdfs:domain cvl:C_N_Class ;
+             rdfs:range cvl:ClinicalTNM ;
+             rdfs:label "Is clinical spread to regional lymph nodes of"@en ,
+                        "È diffusione clinica ai linfonodi regionali di"@it ;
+             skos:definition "Reverse link from a clinical Node (cN) class to the clinical TNM record."@en .
+
+
+###  http://irst.emr.it/cvl/is_ct_of
+cvl:is_ct_of rdf:type owl:ObjectProperty ;
+             rdfs:domain cvl:C_T_Class ;
+             rdfs:range cvl:ClinicalTNM ;
+             rdfs:label "Is clinical tumor size of"@en ,
+                        "È dimensione clinica del tumore di"@it ;
+             skos:definition "Reverse link from a clinical Tumor (cT) class to the clinical TNM record."@en .
+
+
+###  http://irst.emr.it/cvl/is_diagnosis_of
+cvl:is_diagnosis_of rdf:type owl:ObjectProperty ;
+                    rdfs:domain cvl:Diagnosis ;
+                    rdfs:range cvl:Patient ;
+                    rdfs:label "Is diagnosis of"@en ,
+                               "È diagnosi di"@it ;
+                    skos:definition "Reverse link from a medical diagnosis back to the patient."@en .
+
+
+###  http://irst.emr.it/cvl/is_due_to
+cvl:is_due_to rdf:type owl:ObjectProperty ;
+              rdfs:domain cvl:AdverseEvent ;
+              rdfs:range cvl:Administration ;
+              rdfs:label "Is due to"@en ,
+                         "È dovuto a"@it ;
+              skos:definition "Indicates that an adverse event or side effect is due to a specific administration of a drug."@en .
+
+
+###  http://irst.emr.it/cvl/is_laboratory_test_of
+cvl:is_laboratory_test_of rdf:type owl:ObjectProperty ;
+                          rdfs:domain cvl:LaboratoryTest ;
+                          rdfs:range cvl:Patient ;
+                          rdfs:label "Is laboratory test of"@en ,
+                                     "È esame di laboratorio di"@it ;
+                          skos:definition "Reverse link from a laboratory blood test back to the patient."@en .
+
+
+###  http://irst.emr.it/cvl/is_physiological_history_of
+cvl:is_physiological_history_of rdf:type owl:ObjectProperty ;
+                                rdfs:domain cvl:PhysiologicalHistory ;
+                                rdfs:range cvl:Patient ;
+                                rdfs:label "Is physiological history of"@en ,
+                                           "È anamnesi fisiologica di"@it ;
+                                skos:definition "Reverse link from physiological and lifestyle history (smoking/alcohol) back to the patient."@en .
+
+
+###  http://irst.emr.it/cvl/is_pm_of
+cvl:is_pm_of rdf:type owl:ObjectProperty ;
+             rdfs:domain cvl:P_M_Class ;
+             rdfs:range cvl:PathologicalTNM ;
+             rdfs:label "Is pathological presence of distant metastasis of"@en ,
+                        "È presenza patologica di metastasi a distanza di"@it ;
+             skos:definition "Reverse link from a pathological Metastasis (pM) class to the pathological TNM record."@en .
+
+
+###  http://irst.emr.it/cvl/is_pn_of
+cvl:is_pn_of rdf:type owl:ObjectProperty ;
+             rdfs:domain cvl:P_N_Class ;
+             rdfs:range cvl:PathologicalTNM ;
+             rdfs:label "Is pathological spread to regional lymph nodes of"@en ,
+                        "È diffusione patologica ai linfonodi regionali di"@it ;
+             skos:definition "Reverse link from a pathological Node (pN) class to the pathological TNM record."@en .
+
+
+###  http://irst.emr.it/cvl/is_provided_by
+cvl:is_provided_by rdf:type owl:ObjectProperty ;
+                   owl:inverseOf cvl:provides ;
+                   rdfs:domain cvl:Service ;
+                   rdfs:range cvl:Department ;
+                   rdfs:label "Is provided by"@en ,
+                              "È erogata da"@it ;
+                   skos:definition "Links a clinical service, procedure, or care event to the hospital department that provided it."@en .
+
+
+###  http://irst.emr.it/cvl/is_pt_of
+cvl:is_pt_of rdf:type owl:ObjectProperty ;
+             rdfs:domain cvl:P_T_Class ;
+             rdfs:range cvl:PathologicalTNM ;
+             rdfs:label "Is pathological tumor size of"@en ,
+                        "È dimensione patologica del tumore di"@it ;
+             skos:definition "Reverse link from a pathological Tumor (pT) class to the pathological TNM record."@en .
+
+
+###  http://irst.emr.it/cvl/is_response_of
+cvl:is_response_of rdf:type owl:ObjectProperty ;
+                   rdfs:domain cvl:Response ;
+                   rdfs:range cvl:Patient ;
+                   rdfs:label "Is response of"@en ,
+                              "È risposta al trattamento di"@it ;
+                   skos:definition "Reverse link from a treatment response outcome back to the patient."@en .
+
+
+###  http://irst.emr.it/cvl/is_service_of
+cvl:is_service_of rdf:type owl:ObjectProperty ;
+                  rdfs:domain cvl:Service ;
+                  rdfs:range cvl:Patient ;
+                  rdfs:label "Is service of"@en ,
+                             "È prestazione clinica di"@it ;
+                  skos:definition "Reverse link from a clinical service or procedure back to the patient."@en .
+
+
+###  http://irst.emr.it/cvl/is_symptom_assessment_of
+cvl:is_symptom_assessment_of rdf:type owl:ObjectProperty ;
+                             rdfs:domain cvl:SymptomAssessment ;
+                             rdfs:range cvl:Patient ;
+                             rdfs:label "Is symptom assessment of"@en ,
+                                        "È valutazione ESAS di"@it ;
+                             skos:definition "Reverse link from a symptom assessment (ESAS) back to the patient."@en .
+
+
+###  http://irst.emr.it/cvl/is_therapy_of
+cvl:is_therapy_of rdf:type owl:ObjectProperty ;
+                  rdfs:domain cvl:Therapy ;
+                  rdfs:range cvl:Patient ;
+                  rdfs:label "Is therapy of"@en ,
+                             "È terapia di"@it ;
+                  skos:definition "Reverse link from an oncology therapy or treatment back to the patient."@en .
+
+
+###  http://irst.emr.it/cvl/is_variant_of
+cvl:is_variant_of rdf:type owl:ObjectProperty ;
+                  rdfs:domain cvl:Variant ;
+                  rdfs:range cvl:Patient ;
+                  rdfs:label "Is variant of"@en ,
+                             "È variante genetica di"@it ;
+                  skos:definition "Reverse link from a genetic mutation or variant back to the patient."@en .
+
+
+###  http://irst.emr.it/cvl/laboratory_code
+cvl:laboratory_code rdf:type owl:ObjectProperty ;
+                    rdfs:domain cvl:LaboratoryTest ;
+                    rdfs:range owl:Thing ;
+                    rdfs:label "Codice dell’esame"@it ,
+                               "Laboratory code"@en ;
+                    skos:definition "Identifier code for a specific laboratory test."@en .
+
+
+###  http://irst.emr.it/cvl/marker_code
+cvl:marker_code rdf:type owl:ObjectProperty ;
+                rdfs:domain cvl:Biomarker ;
+                rdfs:range owl:Thing ;
+                rdfs:label "Biomarker code"@en ,
+                           "Codice del biomarker"@it ;
+                skos:definition "Identifier code for a molecular biomarker test."@en .
+
+
+###  http://irst.emr.it/cvl/marker_value_code
+cvl:marker_value_code rdf:type owl:ObjectProperty ;
+                      rdfs:domain cvl:Biomarker ;
+                      rdfs:range owl:Thing ;
+                      rdfs:label "Biomarker value code"@en ,
+                                 "Codice del valore del biomarker"@it ;
+                      skos:definition "Identifier code for the specific value or outcome of a biomarker test."@en .
+
+
+###  http://irst.emr.it/cvl/provides
+cvl:provides rdf:type owl:ObjectProperty ;
+             rdfs:domain cvl:Department ;
+             rdfs:range cvl:Service ;
+             rdfs:label "Eroga"@it ,
+                        "Provides"@en ;
+             skos:definition "Links a hospital department to the specific clinical services it provides to patients."@en .
+
+
+###  http://irst.emr.it/cvl/response_code
+cvl:response_code rdf:type owl:ObjectProperty ;
+                  rdfs:domain cvl:Response ;
+                  rdfs:range owl:Thing ;
+                  rdfs:label "Codice della risposta"@it ,
+                             "Response code"@en ;
+                  skos:definition "Identifier code for a clinical treatment response finding."@en .
+
+
+###  http://irst.emr.it/cvl/service_code
+cvl:service_code rdf:type owl:ObjectProperty ;
+                 rdfs:domain cvl:Service ;
+                 rdfs:range owl:Thing ;
+                 rdfs:label "Codice della prestazione"@it ,
+                            "Service code"@en ;
+                 skos:definition "Identifier code for a medical procedure, surgery, or clinical service."@en .
+
+
+###  http://irst.emr.it/cvl/site_code
+cvl:site_code rdf:type owl:ObjectProperty ;
+              rdfs:domain cvl:Diagnosis ;
+              rdfs:range owl:Thing ;
+              rdfs:label "Codice della sede anamnestica"@it ,
+                         "Site code"@en ;
+              skos:definition "Identifier code for the anatomical site, organ, or location of a tumor/diagnosis."@en .
+
+
+###  http://irst.emr.it/cvl/stage_code
+cvl:stage_code rdf:type owl:ObjectProperty ;
+               rdfs:domain cvl:Diagnosis ;
+               rdfs:range owl:Thing ;
+               rdfs:label "Codice stadio della malattia"@it ,
+                          "Disease stage code"@en ;
+               skos:definition "Identifier code for the overall stage of a cancer diagnosis."@en .
+
+
+###  http://irst.emr.it/cvl/variant_code
+cvl:variant_code rdf:type owl:ObjectProperty ;
+                 rdfs:domain cvl:Variant ;
+                 rdfs:range owl:Thing ;
+                 rdfs:label "Codice della variante"@it ,
+                            "Variant code"@en ;
+                 skos:definition "Identifier code for a specific genetic variant or mutation."@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://irst.emr.it/cvl/ECOG_date
+cvl:ECOG_date rdf:type owl:DatatypeProperty ;
+              rdfs:domain cvl:ECOGStatus ;
+              rdfs:range xsd:date ;
+              rdfs:label "Data valutazione ECOG"@it ,
+                         "ECOG assessment date"@en ;
+              skos:definition "The date an ECOG performance status was measured or recorded."@en .
+
+
+###  http://irst.emr.it/cvl/ESAS_date
+cvl:ESAS_date rdf:type owl:DatatypeProperty ;
+              rdfs:domain cvl:SymptomAssessment ;
+              rdfs:range xsd:dateTime ;
+              rdfs:label "Data della valutazione ESAS"@it ,
+                         "ESAS assessment date"@en ;
+              skos:definition "The date and time a symptom assessment (ESAS) was completed by the patient."@en .
+
+
+###  http://irst.emr.it/cvl/TNM_value
+cvl:TNM_value rdf:type owl:DatatypeProperty ;
+              rdfs:domain cvl:TNMClassification ;
+              rdfs:range xsd:string ;
+              rdfs:label "TNM value"@en ,
+                         "Valore della classificazione TNM"@it ;
+              skos:definition "The string value representing a TNM classification score (e.g., 'T2', 'N1', 'M0')."@en .
+
+
+###  http://irst.emr.it/cvl/active_substance_description
+cvl:active_substance_description rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain cvl:ActiveSubstance ;
+                                 rdfs:range xsd:string ;
+                                 rdfs:label "Active substance description"@en ,
+                                            "Descrizione del principio attivo"@it ;
+                                 skos:definition "The name or textual description of a drug, medication, or active substance (e.g., 'Cisplatin', 'Pembrolizumab')."@en .
+
+
+###  http://irst.emr.it/cvl/administration_date
+cvl:administration_date rdf:type owl:DatatypeProperty ;
+                        rdfs:domain cvl:Administration ;
+                        rdfs:range xsd:date ;
+                        rdfs:label "Administration date"@en ,
+                                   "Data di somministrazione"@it ;
+                        skos:definition "The specific date a drug, medication, or therapy was physically administered to the patient."@en .
+
+
+###  http://irst.emr.it/cvl/adverse_event_date
+cvl:adverse_event_date rdf:type owl:DatatypeProperty ;
+                       rdfs:domain cvl:AdverseEvent ;
+                       rdfs:range xsd:date ;
+                       rdfs:label "Adverse event date"@en ,
+                                  "Data dell’evento avverso"@it ;
+                       skos:definition "The date an adverse event, toxicity, or side effect began."@en .
+
+
+###  http://irst.emr.it/cvl/adverse_event_description
+cvl:adverse_event_description rdf:type owl:DatatypeProperty ;
+                              rdfs:domain cvl:AdverseEventEffect ;
+                              rdfs:range xsd:string ;
+                              rdfs:label "Adverse event description"@en ,
+                                         "Descrizione dell'evento avverso"@it ;
+                              skos:definition "The text description of a side effect or adverse event (e.g., 'Nausea', 'Neutropenia', 'Rash')."@en .
+
+
+###  http://irst.emr.it/cvl/alcohol_consumption
+cvl:alcohol_consumption rdf:type owl:DatatypeProperty ;
+                        rdfs:domain cvl:PhysiologicalHistory ;
+                        rdfs:range xsd:boolean ;
+                        rdfs:label "Alcohol consumption"@en ,
+                                   "Consumo di alcol"@it ;
+                        skos:definition "Boolean flag (true/false) indicating whether the patient consumes alcohol (is a drinker)."@en .
+
+
+###  http://irst.emr.it/cvl/amino_acid_change
+cvl:amino_acid_change rdf:type owl:DatatypeProperty ;
+                      rdfs:domain cvl:Variant ;
+                      rdfs:range xsd:string ;
+                      rdfs:label "Amino acid change"@en ,
+                                 "Cambiamento aminoacidico"@it ;
+                      skos:definition "The specific protein or amino acid change caused by a genetic variant (e.g., 'V600E', 'L858R')."@en ;
+                      skos:exactMatch <http://snomed.info/sct/250574005> .
+
+
+###  http://irst.emr.it/cvl/birth_date
+cvl:birth_date rdf:type owl:DatatypeProperty ;
+               rdfs:domain cvl:Patient ;
+               rdfs:range xsd:date ;
+               rdfs:label "Birth date"@en ,
+                          "Data di nascita"@it ;
+               skos:definition "The patient's date of birth. Used to calculate their age."@en .
+
+
+###  http://irst.emr.it/cvl/body_metric_unit
+cvl:body_metric_unit rdf:type owl:DatatypeProperty ;
+                     rdfs:domain cvl:BodyMetric ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "Body metric unit"@en ,
+                                "Unità di misura metrica"@it ;
+                     skos:definition "The unit of measure of a body metric value (e.g., 'cm', 'kg')."@en .
+
+
+###  http://irst.emr.it/cvl/body_metric_value
+cvl:body_metric_value rdf:type owl:DatatypeProperty ;
+                      rdfs:domain cvl:BodyMetric ;
+                      rdfs:range xsd:integer ;
+                      rdfs:label "Body metric value"@en ,
+                                 "Valore metrica"@it ;
+                      skos:definition "The numeric integer value of a body measurement (e.g., height in cm, weight in kg)."@en .
+
+
+###  http://irst.emr.it/cvl/category1
+cvl:category1 rdf:type owl:DatatypeProperty ;
+              rdfs:domain cvl:Service ;
+              rdfs:range xsd:string ;
+              rdfs:label "Categoria 1 della prestazione"@it ,
+                         "Category 1"@en ;
+              skos:definition "Primary hierarchical classification category for a clinical service or procedure."@en .
+
+
+###  http://irst.emr.it/cvl/category2
+cvl:category2 rdf:type owl:DatatypeProperty ;
+              rdfs:domain cvl:Service ;
+              rdfs:range xsd:string ;
+              rdfs:label "Categoria 2 della prestazione"@it ,
+                         "Category 2"@en ;
+              skos:definition "Secondary hierarchical classification category for a clinical service or procedure."@en .
+
+
+###  http://irst.emr.it/cvl/category3
+cvl:category3 rdf:type owl:DatatypeProperty ;
+              rdfs:domain cvl:Service ;
+              rdfs:range xsd:string ;
+              rdfs:label "Categoria 3 della prestazione"@it ,
+                         "Category 3"@en ;
+              skos:definition "Tertiary hierarchical classification category for a clinical service or procedure."@en .
+
+
+###  http://irst.emr.it/cvl/currency
+cvl:currency rdf:type owl:DatatypeProperty ;
+             rdfs:domain cvl:Service ;
+             rdfs:range xsd:string ;
+             rdfs:label "Currency"@en ,
+                        "Valuta della prestazione"@it ;
+             skos:definition "The currency used to denominate the price of a clinical service (e.g., 'EUR', 'USD')."@en .
+
+
+###  http://irst.emr.it/cvl/death_date
+cvl:death_date rdf:type owl:DatatypeProperty ;
+               rdfs:domain cvl:Patient ;
+               rdfs:range xsd:date ;
+               rdfs:label "Data di morte"@it ,
+                          "Death date"@en ;
+               skos:definition "The date of the patient's death. Used for calculating overall survival and mortality."@en .
+
+
+###  http://irst.emr.it/cvl/department_code
+cvl:department_code rdf:type owl:DatatypeProperty ;
+                    rdfs:domain cvl:Department ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "Codice del reparto"@it ,
+                               "Department code"@en ;
+                    skos:definition "Alphanumeric identifier code for a hospital department."@en .
+
+
+###  http://irst.emr.it/cvl/department_name
+cvl:department_name rdf:type owl:DatatypeProperty ;
+                    rdfs:domain cvl:Department ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "Department name"@en ,
+                               "Nome del reparto"@it ;
+                    skos:definition "The name of the hospital department providing a clinical service (e.g., 'Oncology', 'Radiology')."@en .
+
+
+###  http://irst.emr.it/cvl/diagnosis_date
+cvl:diagnosis_date rdf:type owl:DatatypeProperty ;
+                   rdfs:domain cvl:Diagnosis ;
+                   rdfs:range xsd:date ;
+                   rdfs:label "Data della diagnosi"@it ,
+                              "Diagnosis date"@en ;
+                   skos:definition "The date the cancer, tumor, or disease was formally diagnosed."@en .
+
+
+###  http://irst.emr.it/cvl/exam_description
+cvl:exam_description rdf:type owl:DatatypeProperty ;
+                     rdfs:domain cvl:Variant ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "Descrizione dell'esame"@it ,
+                                "Exam description"@en ;
+                     skos:definition "Description of the genetic, genomic, or molecular examination performed to find a variant."@en .
+
+
+###  http://irst.emr.it/cvl/first_administration_date
+cvl:first_administration_date rdf:type owl:DatatypeProperty ;
+                              rdfs:domain cvl:Therapy ;
+                              rdfs:range xsd:date ;
+                              rdfs:label "Data della prima somministrazione della terapia"@it ,
+                                         "First administration date"@en ;
+                              skos:definition "The start date when a patient received the very first dose of a specific line of therapy."@en .
+
+
+###  http://irst.emr.it/cvl/laboratory_description
+cvl:laboratory_description rdf:type owl:DatatypeProperty ;
+                           rdfs:domain cvl:LaboratoryTest ;
+                           rdfs:range xsd:string ;
+                           rdfs:label "Descrizione dell’esame"@it ,
+                                      "Laboratory description"@en ;
+                           skos:definition "The name or description of a lab test (e.g., 'Hemoglobin', 'White Blood Cell Count')."@en .
+
+
+###  http://irst.emr.it/cvl/laboratory_test_date
+cvl:laboratory_test_date rdf:type owl:DatatypeProperty ;
+                         rdfs:domain cvl:LaboratoryTest ;
+                         rdfs:range xsd:date ;
+                         rdfs:label "Data dell’esame di laboratorio"@it ,
+                                    "Laboratory test date"@en ;
+                         skos:definition "The date a blood test or laboratory exam was drawn or performed."@en .
+
+
+###  http://irst.emr.it/cvl/last_administration_date
+cvl:last_administration_date rdf:type owl:DatatypeProperty ;
+                             rdfs:domain cvl:Therapy ;
+                             rdfs:range xsd:date ;
+                             rdfs:label "Data dell’ultima somministrazione della terapia"@it ,
+                                        "Last administration date"@en ;
+                             skos:definition "The end date when a patient received their final dose of a specific line of therapy."@en .
+
+
+###  http://irst.emr.it/cvl/line_of_therapy_value
+cvl:line_of_therapy_value rdf:type owl:DatatypeProperty ;
+                          rdfs:domain cvl:Therapy ;
+                          rdfs:range xsd:integer ;
+                          rdfs:label "Line of therapy value"@en ,
+                                     "Valore linea di terapia"@it ;
+                          skos:definition "Numeric integer indicating the sequential line of treatment (1 for first-line, 2 for second-line, etc.)."@en .
+
+
+###  http://irst.emr.it/cvl/marker_date
+cvl:marker_date rdf:type owl:DatatypeProperty ;
+                rdfs:domain cvl:Biomarker ;
+                rdfs:range xsd:date ;
+                rdfs:label "Biomarker measurement date"@en ,
+                           "Data della misurazione del biomarker"@it ;
+                skos:definition "The date a biomarker test or molecular profiling was performed."@en .
+
+
+###  http://irst.emr.it/cvl/marker_description
+cvl:marker_description rdf:type owl:DatatypeProperty ;
+                       rdfs:domain cvl:Biomarker ;
+                       rdfs:range xsd:string ;
+                       rdfs:label "Biomarker description"@en ,
+                                  "Descrizione del biomarker"@it ;
+                       skos:definition "The name of the biomarker tested (e.g., 'PD-L1', 'HER2', 'ALK')."@en .
+
+
+###  http://irst.emr.it/cvl/marker_value
+cvl:marker_value rdf:type owl:DatatypeProperty ;
+                 rdfs:domain cvl:Biomarker ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "Biomarker value"@en ,
+                            "Valore del biomarker"@it ;
+                 skos:definition "The result or status of a biomarker test (e.g., 'Positive', 'Negative', '50% expression')."@en .
+
+
+###  http://irst.emr.it/cvl/measurement_date
+cvl:measurement_date rdf:type owl:DatatypeProperty ;
+                     rdfs:domain cvl:BodyMeasurement ;
+                     rdfs:range xsd:date ;
+                     rdfs:label "Data della misurazione"@it ,
+                                "Measurement date"@en ;
+                     skos:definition "The date a patient's body measurement (height or weight) was recorded."@en .
+
+
+###  http://irst.emr.it/cvl/patient_identifier
+cvl:patient_identifier rdf:type owl:DatatypeProperty ;
+                       rdfs:domain cvl:Patient ;
+                       rdfs:range xsd:string ;
+                       rdfs:label "Identificativo del paziente"@it ,
+                                  "Patient identifier"@en ;
+                       skos:definition "The unique alphanumeric ID code or medical record number of a patient."@en .
+
+
+###  http://irst.emr.it/cvl/price
+cvl:price rdf:type owl:DatatypeProperty ;
+          rdfs:domain cvl:Service ;
+          rdfs:range xsd:decimal ;
+          rdfs:label "Prezzo della prestazione"@it ,
+                     "Price"@en ;
+          skos:definition "The financial cost, billing amount, or price of a medical service or procedure."@en .
+
+
+###  http://irst.emr.it/cvl/quantity
+cvl:quantity rdf:type owl:DatatypeProperty ;
+             rdfs:domain cvl:Service ;
+             rdfs:range xsd:decimal ;
+             rdfs:label "Quantity"@en ,
+                        "Quantità erogata"@it ;
+             skos:definition "The count or number of times a specific service or procedure was performed."@en .
+
+
+###  http://irst.emr.it/cvl/reference_max_unit
+cvl:reference_max_unit rdf:type owl:DatatypeProperty ;
+                       rdfs:domain cvl:LaboratoryTest ;
+                       rdfs:range xsd:string ;
+                       rdfs:label "Maximum reference unit"@en ,
+                                  "Unità del valore massimo di riferimento"@it ;
+                       skos:definition "The unit of measurement for a lab test's maximum normal value."@en .
+
+
+###  http://irst.emr.it/cvl/reference_max_value
+cvl:reference_max_value rdf:type owl:DatatypeProperty ;
+                        rdfs:domain cvl:LaboratoryTest ;
+                        rdfs:range xsd:decimal ;
+                        rdfs:label "Maximum reference value"@en ,
+                                   "Valore massimo di riferimento"@it ;
+                        skos:definition "The upper limit of the normal reference range for a laboratory test."@en .
+
+
+###  http://irst.emr.it/cvl/reference_min_unit
+cvl:reference_min_unit rdf:type owl:DatatypeProperty ;
+                       rdfs:domain cvl:LaboratoryTest ;
+                       rdfs:range xsd:string ;
+                       rdfs:label "Minimum reference unit"@en ,
+                                  "Unità del valore minimo di riferimento"@it ;
+                       skos:definition "The unit of measurement for a lab test's minimum normal value."@en .
+
+
+###  http://irst.emr.it/cvl/reference_min_value
+cvl:reference_min_value rdf:type owl:DatatypeProperty ;
+                        rdfs:domain cvl:LaboratoryTest ;
+                        rdfs:range xsd:decimal ;
+                        rdfs:label "Minimum reference value"@en ,
+                                   "Valore minimo di riferimento"@it ;
+                        skos:definition "The lower limit of the normal reference range for a laboratory test."@en .
+
+
+###  http://irst.emr.it/cvl/response_date
+cvl:response_date rdf:type owl:DatatypeProperty ;
+                  rdfs:domain cvl:Response ;
+                  rdfs:range xsd:date ;
+                  rdfs:label "Data della risposta"@it ,
+                             "Response date"@en ;
+                  skos:definition "The date a clinical response evaluation or tumor restaging was recorded."@en .
+
+
+###  http://irst.emr.it/cvl/response_description
+cvl:response_description rdf:type owl:DatatypeProperty ;
+                         rdfs:domain cvl:Response ;
+                         rdfs:range xsd:string ;
+                         rdfs:label "Descrizione della risposta"@it ,
+                                    "Response description"@en ;
+                         skos:definition "Free-text description of a clinical response assessment as reported in the source record."@en .
+
+
+###  http://irst.emr.it/cvl/response_value
+cvl:response_value rdf:type owl:DatatypeProperty ;
+                   rdfs:domain cvl:Response ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "Response value"@en ,
+                              "Valore della risposta"@it ;
+                   skos:definition "The clinical outcome or tumor response to therapy (e.g., 'Complete Response', 'Progressive Disease', 'Stable Disease')."@en .
+
+
+###  http://irst.emr.it/cvl/service_date
+cvl:service_date rdf:type owl:DatatypeProperty ;
+                 rdfs:domain cvl:Service ;
+                 rdfs:range xsd:date ;
+                 rdfs:label "Data di erogazione della prestazione"@it ,
+                            "Service date"@en ;
+                 skos:definition "The date a clinical service, imaging scan, or procedure was provided."@en .
+
+
+###  http://irst.emr.it/cvl/service_description
+cvl:service_description rdf:type owl:DatatypeProperty ;
+                        rdfs:domain cvl:Service ;
+                        rdfs:range xsd:string ;
+                        rdfs:label "Descrizione della prestazione"@it ,
+                                   "Service description"@en ;
+                        skos:definition "The text description of a medical procedure, imaging scan, surgery, or clinical service."@en .
+
+
+###  http://irst.emr.it/cvl/site_description
+cvl:site_description rdf:type owl:DatatypeProperty ;
+                     rdfs:domain cvl:Diagnosis ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "Descrizione della sede anamnestica"@it ,
+                                "Site description"@en ;
+                     skos:definition "The anatomical site, organ, or bodily location where the primary tumor or cancer is located (e.g., 'Lung', 'Breast', 'Colon')."@en .
+
+
+###  http://irst.emr.it/cvl/smoking
+cvl:smoking rdf:type owl:DatatypeProperty ;
+            rdfs:domain cvl:PhysiologicalHistory ;
+            rdfs:range xsd:boolean ;
+            rdfs:label "Fumo"@it ,
+                       "Smoking"@en ;
+            skos:definition "Boolean flag (true/false) indicating whether the patient is a smoker or uses tobacco."@en .
+
+
+###  http://irst.emr.it/cvl/stage_description
+cvl:stage_description rdf:type owl:DatatypeProperty ;
+                      rdfs:domain cvl:Diagnosis ;
+                      rdfs:range xsd:string ;
+                      rdfs:label "Descrizione dello stadio della malattia"@it ,
+                                 "Disease stage description"@en ;
+                      skos:definition "The overall clinical or pathological stage of the cancer (e.g., 'Stage IIIA', 'Stage IV', 'Metastatic')."@en .
+
+
+###  http://irst.emr.it/cvl/symptom_assessment_value
+cvl:symptom_assessment_value rdf:type owl:DatatypeProperty ;
+                             rdfs:domain cvl:SymptomAssessmentFinding ;
+                             rdfs:range xsd:integer ;
+                             rdfs:label "Symptom assessment value"@en ,
+                                        "Valore valutazione dei sintomi"@it ;
+                             skos:definition "The numeric severity score (usually 0-10) for a specific patient-reported symptom (pain, fatigue, nausea, etc.)."@en .
+
+
+###  http://irst.emr.it/cvl/target_description
+cvl:target_description rdf:type owl:DatatypeProperty ;
+                       rdfs:domain cvl:ECOGStatus ;
+                       rdfs:range xsd:string ;
+                       rdfs:label "Descrizione del target"@it ,
+                                  "Target description"@en ;
+                       skos:definition "The text description of the patient's ECOG performance status (e.g., 'Fully active', 'Restricted in physically strenuous activity')."@en .
+
+
+###  http://irst.emr.it/cvl/toxicity_grade_description
+cvl:toxicity_grade_description rdf:type owl:DatatypeProperty ;
+                               rdfs:domain cvl:AdverseEventEffect ;
+                               rdfs:range xsd:string ;
+                               rdfs:label "Descrizione del grado di tossicità"@it ,
+                                          "Toxicity grade description"@en ;
+                               skos:definition "Text description of the severity of an adverse event or side effect."@en .
+
+
+###  http://irst.emr.it/cvl/toxicity_grade_value
+cvl:toxicity_grade_value rdf:type owl:DatatypeProperty ;
+                         rdfs:domain cvl:AdverseEventEffect ;
+                         rdfs:range xsd:integer ;
+                         rdfs:label "Toxicity grade value"@en ,
+                                    "Valore del grado di tossicità"@it ;
+                         skos:definition "Numeric grade (usually 1-5) indicating the severity of an adverse event or clinical toxicity."@en .
+
+
+###  http://irst.emr.it/cvl/variant2
+cvl:variant2 rdf:type owl:DatatypeProperty ;
+             rdfs:domain cvl:Variant ;
+             rdfs:range xsd:string ;
+             rdfs:label "Seconda variante"@it ,
+                        "Variant 2"@en ;
+             skos:definition "Additional molecular information or secondary classification about a genetic variant."@en ;
+             skos:exactMatch <http://snomed.info/sct/64195000> .
+
+
+###  http://irst.emr.it/cvl/variant_date
+cvl:variant_date rdf:type owl:DatatypeProperty ;
+                 rdfs:domain cvl:Variant ;
+                 rdfs:range xsd:date ;
+                 rdfs:label "Data della variante"@it ,
+                            "Variant date"@en ;
+                 skos:definition "The date a genetic variant or mutation was sequenced or detected."@en .
+
+
+###  http://irst.emr.it/cvl/variant_description
+cvl:variant_description rdf:type owl:DatatypeProperty ;
+                        rdfs:domain cvl:Variant ;
+                        rdfs:range xsd:string ;
+                        rdfs:label "Descrizione della variante"@it ,
+                                   "Variant description"@en ;
+                        skos:definition "The name or gene of the detected mutation, variant, or genetic alteration (e.g., 'EGFR', 'BRAF', 'KRAS')."@en .
+
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://hl7.org/fhir/AdverseEvent
+fhir:AdverseEvent rdf:type owl:Class ;
+                  owl:equivalentClass cvl:AdverseEvent ;
+                  rdfs:label "fhir:AdverseEvent" .
+
+
+###  http://hl7.org/fhir/CarePlan
+fhir:CarePlan rdf:type owl:Class ;
+              owl:equivalentClass cvl:Therapy ;
+              rdfs:label "fhir:CarePlan" .
+
+
+###  http://hl7.org/fhir/ChargeItem
+fhir:ChargeItem rdf:type owl:Class ;
+                owl:equivalentClass cvl:Service ;
+                rdfs:label "fhir:ChargeItem" .
+
+
+###  http://hl7.org/fhir/Condition
+fhir:Condition rdf:type owl:Class ;
+               rdfs:label "fhir:Condition" .
+
+
+###  http://hl7.org/fhir/Medication
+fhir:Medication rdf:type owl:Class ;
+                owl:equivalentClass cvl:ActiveSubstance ;
+                rdfs:label "fhir:Medication" .
+
+
+###  http://hl7.org/fhir/MedicationAdministration
+fhir:MedicationAdministration rdf:type owl:Class ;
+                              owl:equivalentClass cvl:Administration ;
+                              rdfs:label "fhir:MedicationAdministration" .
+
+
+###  http://hl7.org/fhir/Observation
+fhir:Observation rdf:type owl:Class ;
+                 rdfs:label "fhir:Observation" .
+
+
+###  http://hl7.org/fhir/Organization
+fhir:Organization rdf:type owl:Class ;
+                  owl:equivalentClass cvl:Department ;
+                  rdfs:label "fhir:Organization" .
+
+
+###  http://hl7.org/fhir/Patient
+fhir:Patient rdf:type owl:Class ;
+             owl:equivalentClass cvl:Patient ;
+             rdfs:label "fhir:Patient" .
+
+
+###  http://irst.emr.it/cvl/ActiveSubstance
+cvl:ActiveSubstance rdf:type owl:Class ;
+                    rdfs:label "Active Substance"@en ,
+                               "Principio Attivo"@it ;
+                    skos:definition "The pharmacologically active ingredient of a medication administered to a patient, identified by its ATC code (e.g., cisplatin, pembrolizumab)."@en .
+
+
+###  http://irst.emr.it/cvl/AdjuvantTherapy
+cvl:AdjuvantTherapy rdf:type owl:Class ;
+                    owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15675> ;
+                    rdfs:subClassOf cvl:TherapySetting ;
+                    skos:definition "A therapy setting given after the primary treatment (like surgery) to lower the risk that the cancer will return."@en .
+
+
+###  http://irst.emr.it/cvl/Administration
+cvl:Administration rdf:type owl:Class ;
+                   rdfs:label "Administration"@en ,
+                              "Somministrazione"@it ;
+                   skos:definition "A specific event where a drug, medication, or therapy dose is physically given to the patient at a specific time and date."@en .
+
+
+###  http://irst.emr.it/cvl/AdvancedTherapy
+cvl:AdvancedTherapy rdf:type owl:Class ;
+                    rdfs:subClassOf cvl:TherapySetting ;
+                    skos:definition "A therapy setting for treating advanced, late-stage, or metastatic cancer that has spread."@en .
+
+
+###  http://irst.emr.it/cvl/AdverseEvent
+cvl:AdverseEvent rdf:type owl:Class ;
+                 rdfs:label "Adverse Event"@en ,
+                            "Evento avverso"@it ;
+                 skos:definition "An unfavourable and unintended medical occurrence experienced by a patient following a treatment administration, whether or not considered related to it."@en .
+
+
+###  http://irst.emr.it/cvl/AdverseEventEffect
+cvl:AdverseEventEffect rdf:type owl:Class ;
+                       rdfs:subClassOf fhir:Condition ;
+                       rdfs:label "Adverse Event Effect"@en ,
+                                  "Effetto evento avverso"@it ;
+                       skos:definition "The specific type and severity (toxicity grade) of a side effect experienced by the patient (e.g., severe nausea, grade 3 rash)."@en .
+
+
+###  http://irst.emr.it/cvl/Anxiety
+cvl:Anxiety rdf:type owl:Class ;
+            skos:closeMatch <http://snomed.info/sct/48694002> ;
+            rdfs:subClassOf cvl:SymptomAssessmentFinding ;
+            rdfs:label "Ansia"@it ,
+                       "Anxiety"@en ;
+            skos:definition "An item of an ESAS (Edmonton Symptom Assessment System) survey rating the patient's anxiety, nervousness or psychological distress on a 0-10 scale (0 = absent, 10 = worst possible); the item is recorded whatever its score."@en .
+
+
+###  http://irst.emr.it/cvl/Biomarker
+cvl:Biomarker rdf:type owl:Class ;
+              rdfs:subClassOf fhir:Observation ;
+              rdfs:label "Biomarker"@en ,
+                         "Biomarker"@it ;
+              skos:definition "A measurable biological, molecular, or genetic marker tested in the patient's tumor or blood used to guide targeted therapy (e.g., PD-L1, EGFR, HER2)."@en .
+
+
+###  http://irst.emr.it/cvl/BodyMeasurement
+cvl:BodyMeasurement rdf:type owl:Class ;
+                    rdfs:subClassOf fhir:Observation ;
+                    rdfs:label "Body Measurement"@en ,
+                               "Peso e Altezza"@it ;
+                    skos:definition "A record of a patient's physical body metrics (e.g., height, weight) taken on a given date."@en .
+
+
+###  http://irst.emr.it/cvl/BodyMetric
+cvl:BodyMetric rdf:type owl:Class ;
+               rdfs:label "Body Metric"@en ,
+                          "Metrica corporea"@it ;
+               skos:definition "A specific physical measurement value, such as a patient's exact height in centimeters or weight in kilograms."@en .
+
+
+###  http://irst.emr.it/cvl/BreathingDifficulty
+cvl:BreathingDifficulty rdf:type owl:Class ;
+                        skos:closeMatch <http://snomed.info/sct/267036007> ;
+                        rdfs:subClassOf cvl:SymptomAssessmentFinding ;
+                        rdfs:label "Breathing difficulty"@en ,
+                                   "Difficoltà a respirare"@it ;
+                        skos:definition "An item of an ESAS (Edmonton Symptom Assessment System) survey rating the patient's shortness of breath, dyspnea or trouble breathing on a 0-10 scale (0 = absent, 10 = worst possible); the item is recorded whatever its score."@en .
+
+
+###  http://irst.emr.it/cvl/C_M_Class
+cvl:C_M_Class rdf:type owl:Class ;
+              owl:equivalentClass <http://snomed.info/sct/399387003> ;
+              rdfs:subClassOf cvl:TNMClassificationM ;
+              rdfs:label "Clinical presence of distant metastasis (M)"@en ,
+                         "Presenza clinica di metastasi a distanza (M)"@it ;
+              skos:definition "Clinical Metastasis (cM) category in TNM staging, indicating the presence or absence of distant spread based on clinical imaging before surgery."@en .
+
+
+###  http://irst.emr.it/cvl/C_N_Class
+cvl:C_N_Class rdf:type owl:Class ;
+              owl:equivalentClass <http://snomed.info/sct/399534004> ;
+              rdfs:subClassOf cvl:TNMClassificationN ;
+              rdfs:label "Clinical spread to regional lymph nodes (N)"@en ,
+                         "Coinvolgimento clinico dei linfonodi regionali (N)"@it ;
+              skos:definition "Clinical Node (cN) category in TNM staging, indicating regional lymph node involvement based on clinical exams before surgery."@en .
+
+
+###  http://irst.emr.it/cvl/C_T_Class
+cvl:C_T_Class rdf:type owl:Class ;
+              owl:equivalentClass <http://snomed.info/sct/399504009> ;
+              rdfs:subClassOf cvl:TNMClassificationT ;
+              rdfs:label "Clinical tumor size (T)"@en ,
+                         "Dimensione del tumore clinica (T)"@it ;
+              skos:definition "Clinical Tumor (cT) category in TNM staging, indicating the size and extent of the primary tumor based on clinical exams before surgery."@en .
+
+
+###  http://irst.emr.it/cvl/ClinicalTNM
+cvl:ClinicalTNM rdf:type owl:Class ;
+                owl:equivalentClass <http://snomed.info/sct/399537006> ;
+                rdfs:subClassOf cvl:TNM ;
+                rdfs:label "Clinical TNM"@en ,
+                           "TNM clinico"@it ;
+                skos:definition "The clinical TNM (Tumor, Node, Metastasis) staging classification, assessed before definitive surgery using imaging and biopsies."@en .
+
+
+###  http://irst.emr.it/cvl/ConcomitantWithRadiotherapy
+cvl:ConcomitantWithRadiotherapy rdf:type owl:Class ;
+                                owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94626> ;
+                                rdfs:subClassOf cvl:TherapySetting ;
+                                skos:definition "A therapy setting where systemic treatment (like chemotherapy) is administered concurrently or at the same time as radiation therapy."@en .
+
+
+###  http://irst.emr.it/cvl/ConsolidationTherapy
+cvl:ConsolidationTherapy rdf:type owl:Class ;
+                         owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15679> ;
+                         rdfs:subClassOf cvl:TherapySetting ;
+                         skos:definition "A therapy setting given to kill any cancer cells that may be left after initial treatment to deepen the patient's response."@en .
+
+
+###  http://irst.emr.it/cvl/Department
+cvl:Department rdf:type owl:Class ;
+               rdfs:label "Department"@en ,
+                          "Reparto"@it ;
+               skos:definition "A specific hospital unit, clinic, or medical department that provides clinical services or procedures."@en .
+
+
+###  http://irst.emr.it/cvl/Depression
+cvl:Depression rdf:type owl:Class ;
+               skos:closeMatch <http://snomed.info/sct/35489007> ;
+               rdfs:subClassOf cvl:SymptomAssessmentFinding ;
+               rdfs:label "Depression"@en ,
+                          "Depressione"@it ;
+               skos:definition "An item of an ESAS (Edmonton Symptom Assessment System) survey rating the patient's depression, sadness or low mood on a 0-10 scale (0 = absent, 10 = worst possible); the item is recorded whatever its score."@en .
+
+
+###  http://irst.emr.it/cvl/Diagnosis
+cvl:Diagnosis rdf:type owl:Class ;
+              rdfs:subClassOf fhir:Condition ;
+              rdfs:label "Diagnosi"@it ,
+                         "Diagnosis"@en ;
+              skos:definition "The formal medical identification of the patient's cancer, tumor, or disease, including its anatomical primary site and overall stage."@en .
+
+
+###  http://irst.emr.it/cvl/DrinkerPatient
+cvl:DrinkerPatient rdf:type owl:Class ;
+                   skos:closeMatch <http://snomed.info/sct/219006> ;
+                   rdfs:subClassOf cvl:Patient ;
+                   rdfs:label "Drinker patient"@en ,
+                              "Paziente consumatore di alcolici"@it ;
+                   skos:definition "A patient who has a recorded physiological history of consuming alcohol or being a drinker."@en .
+
+
+###  http://irst.emr.it/cvl/Drowsiness
+cvl:Drowsiness rdf:type owl:Class ;
+               skos:closeMatch <http://snomed.info/sct/271782001> ;
+               rdfs:subClassOf cvl:SymptomAssessmentFinding ;
+               rdfs:label "Drowsiness"@en ,
+                          "Sonnolenza"@it ;
+               skos:definition "An item of an ESAS (Edmonton Symptom Assessment System) survey rating the patient's unusual sleepiness or drowsiness on a 0-10 scale (0 = absent, 10 = worst possible); the item is recorded whatever its score."@en .
+
+
+###  http://irst.emr.it/cvl/ECOGPerformanceStatusFinding
+cvl:ECOGPerformanceStatusFinding rdf:type owl:Class ;
+                                 owl:equivalentClass <http://snomed.info/sct/424122007> ;
+                                 rdfs:label "ECOG performance status finding"@en ,
+                                            "Valore ECOG performance status"@it ;
+                                 skos:definition "The specific numeric grade (0 through 5) assigned during an ECOG performance status assessment."@en .
+
+
+###  http://irst.emr.it/cvl/ECOGPerformanceStatusFinding0
+cvl:ECOGPerformanceStatusFinding0 rdf:type owl:Class ;
+                                  owl:equivalentClass <http://snomed.info/sct/425389002> ;
+                                  rdfs:subClassOf cvl:ECOGPerformanceStatusFinding ;
+                                  skos:definition "ECOG Grade 0, indicating the patient is fully active and able to carry on all pre-disease performance without restriction."@en .
+
+
+###  http://irst.emr.it/cvl/ECOGPerformanceStatusFinding1
+cvl:ECOGPerformanceStatusFinding1 rdf:type owl:Class ;
+                                  owl:equivalentClass <http://snomed.info/sct/422512005> ;
+                                  rdfs:subClassOf cvl:ECOGPerformanceStatusFinding ;
+                                  skos:definition "ECOG Grade 1, indicating the patient is restricted in physically strenuous activity but ambulatory."@en .
+
+
+###  http://irst.emr.it/cvl/ECOGPerformanceStatusFinding2
+cvl:ECOGPerformanceStatusFinding2 rdf:type owl:Class ;
+                                  owl:equivalentClass <http://snomed.info/sct/422894000> ;
+                                  rdfs:subClassOf cvl:ECOGPerformanceStatusFinding ;
+                                  skos:definition "ECOG Grade 2, indicating the patient is ambulatory and capable of all selfcare but unable to carry out any work activities."@en .
+
+
+###  http://irst.emr.it/cvl/ECOGPerformanceStatusFinding3
+cvl:ECOGPerformanceStatusFinding3 rdf:type owl:Class ;
+                                  owl:equivalentClass <http://snomed.info/sct/423053003> ;
+                                  rdfs:subClassOf cvl:ECOGPerformanceStatusFinding ;
+                                  skos:definition "ECOG Grade 3, indicating the patient is capable of only limited selfcare, confined to bed or chair more than 50% of waking hours."@en .
+
+
+###  http://irst.emr.it/cvl/ECOGPerformanceStatusFinding4
+cvl:ECOGPerformanceStatusFinding4 rdf:type owl:Class ;
+                                  owl:equivalentClass <http://snomed.info/sct/423237006> ;
+                                  rdfs:subClassOf cvl:ECOGPerformanceStatusFinding ;
+                                  skos:definition "ECOG Grade 4, indicating the patient is completely disabled, cannot carry on any selfcare, and is totally confined to bed or chair."@en .
+
+
+###  http://irst.emr.it/cvl/ECOGPerformanceStatusFinding5
+cvl:ECOGPerformanceStatusFinding5 rdf:type owl:Class ;
+                                  owl:equivalentClass <http://snomed.info/sct/423409001> ;
+                                  rdfs:subClassOf cvl:ECOGPerformanceStatusFinding ;
+                                  skos:definition "ECOG Grade 5, indicating the patient is dead."@en .
+
+
+###  http://irst.emr.it/cvl/ECOGStatus
+cvl:ECOGStatus rdf:type owl:Class ;
+               rdfs:subClassOf fhir:Observation ;
+               rdfs:label "ECOG Performance Status"@en ,
+                          "Stato di performance ECOG"@it ;
+               skos:definition "An assessment of a patient's performance status — their level of functioning in terms of self-care, daily activity and physical ability — graded on the Eastern Cooperative Oncology Group (ECOG) scale (0–5)."@en .
+
+
+###  http://irst.emr.it/cvl/Fatigue
+cvl:Fatigue rdf:type owl:Class ;
+            skos:closeMatch <http://snomed.info/sct/84229001> ;
+            rdfs:subClassOf cvl:SymptomAssessmentFinding ;
+            rdfs:label "Fatigue"@en ,
+                       "Stanchezza"@it ;
+            skos:definition "An item of an ESAS (Edmonton Symptom Assessment System) survey rating the patient's tiredness, exhaustion or fatigue on a 0-10 scale (0 = absent, 10 = worst possible); the item is recorded whatever its score."@en .
+
+
+###  http://irst.emr.it/cvl/Female
+cvl:Female rdf:type owl:Class ;
+           owl:equivalentClass <https://loinc.org/LA3-6> ;
+           rdfs:subClassOf cvl:SexAssignedAtBirth ;
+           skos:definition "Female sex assigned at birth."@en .
+
+
+###  http://irst.emr.it/cvl/Height
+cvl:Height rdf:type owl:Class ;
+           owl:equivalentClass <http://snomed.info/sct/50373000> ;
+           rdfs:subClassOf cvl:BodyMetric ;
+           rdfs:label "Altezza"@it ,
+                      "Height"@en ;
+           skos:definition "A specific body metric recording how tall the patient is, usually measured in centimeters."@en .
+
+
+###  http://irst.emr.it/cvl/InductionTherapy
+cvl:InductionTherapy rdf:type owl:Class ;
+                     owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158876> ;
+                     rdfs:subClassOf cvl:TherapySetting ;
+                     skos:definition "Initial or first-phase therapy setting given to shrink a tumor before other treatments like surgery or radiation."@en .
+
+
+###  http://irst.emr.it/cvl/LaboratoryTest
+cvl:LaboratoryTest rdf:type owl:Class ;
+                   rdfs:subClassOf fhir:Observation ;
+                   rdfs:label "Esame di laboratorio"@it ,
+                              "Laboratory Test"@en ;
+                   skos:definition "A laboratory test performed on a patient specimen, reported with its normal reference range."@en .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy
+cvl:LineOfTherapy rdf:type owl:Class ;
+                  rdfs:label "Line of therapy"@en ,
+                             "Linea di terapia"@it ;
+                  skos:definition "Represents the sequential order of cancer treatments a patient receives over time."@en .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy1
+cvl:LineOfTherapy1 rdf:type owl:Class ;
+                   owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45792> ;
+                   rdfs:subClassOf cvl:LineOfTherapy ;
+                   skos:definition "First-line therapy, the initial treatment regimen given for a disease."@en .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy10
+cvl:LineOfTherapy10 rdf:type owl:Class ;
+                    rdfs:subClassOf cvl:LineOfTherapy ;
+                    skos:definition "Tenth-line therapy, a highly advanced subsequent treatment regimen."@en .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy2
+cvl:LineOfTherapy2 rdf:type owl:Class ;
+                   owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54350> ;
+                   rdfs:subClassOf cvl:LineOfTherapy ;
+                   skos:definition "Second-line therapy, the treatment given when the first-line therapy doesn't work or stops working."@en .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy3
+cvl:LineOfTherapy3 rdf:type owl:Class ;
+                   owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94628> ;
+                   rdfs:subClassOf cvl:LineOfTherapy ;
+                   skos:definition "Third-line therapy, given after first- and second-line treatments have failed."@en .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy4
+cvl:LineOfTherapy4 rdf:type owl:Class ;
+                   owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133522> ;
+                   rdfs:subClassOf cvl:LineOfTherapy ;
+                   skos:definition "Fourth-line therapy, a subsequent treatment regimen."@en .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy5
+cvl:LineOfTherapy5 rdf:type owl:Class ;
+                   owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133524> ;
+                   rdfs:subClassOf cvl:LineOfTherapy ;
+                   skos:definition "Fifth-line therapy, a subsequent treatment regimen."@en .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy6
+cvl:LineOfTherapy6 rdf:type owl:Class ;
+                   owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133526> ;
+                   rdfs:subClassOf cvl:LineOfTherapy ;
+                   skos:definition "Sixth-line therapy, a subsequent treatment regimen."@en .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy7
+cvl:LineOfTherapy7 rdf:type owl:Class ;
+                   owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133528> ;
+                   rdfs:subClassOf cvl:LineOfTherapy ;
+                   skos:definition "Seventh-line therapy, a subsequent treatment regimen."@en .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy8
+cvl:LineOfTherapy8 rdf:type owl:Class ;
+                   owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133529> ;
+                   rdfs:subClassOf cvl:LineOfTherapy ;
+                   skos:definition "Eighth-line therapy, a subsequent treatment regimen."@en .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy9
+cvl:LineOfTherapy9 rdf:type owl:Class ;
+                   rdfs:subClassOf cvl:LineOfTherapy ;
+                   skos:definition "Ninth-line therapy, a subsequent treatment regimen."@en .
+
+
+###  http://irst.emr.it/cvl/LossOfAppetite
+cvl:LossOfAppetite rdf:type owl:Class ;
+                   skos:closeMatch <http://snomed.info/sct/289162002> ;
+                   rdfs:subClassOf cvl:SymptomAssessmentFinding ;
+                   rdfs:label "Loss of appetite"@en ,
+                              "Mancanza di appetito"@it ;
+                   skos:definition "An item of an ESAS (Edmonton Symptom Assessment System) survey rating the patient's loss of appetite or reduced desire to eat on a 0-10 scale (0 = absent, 10 = worst possible); the item is recorded whatever its score."@en .
+
+
+###  http://irst.emr.it/cvl/MaintenanceTherapy
+cvl:MaintenanceTherapy rdf:type owl:Class ;
+                       owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15688> ;
+                       rdfs:subClassOf cvl:TherapySetting ;
+                       skos:definition "A therapy setting intended to help keep cancer from growing after it has shrunk following initial treatment."@en .
+
+
+###  http://irst.emr.it/cvl/Malaise
+cvl:Malaise rdf:type owl:Class ;
+            skos:closeMatch <http://snomed.info/sct/367391008> ;
+            rdfs:subClassOf cvl:SymptomAssessmentFinding ;
+            rdfs:label "Malaise"@en ,
+                       "Malessere"@it ;
+            skos:definition "An item of an ESAS (Edmonton Symptom Assessment System) survey rating the patient's general feeling of discomfort, illness or unease (lack of wellbeing) on a 0-10 scale (0 = absent, 10 = worst possible); the item is recorded whatever its score."@en .
+
+
+###  http://irst.emr.it/cvl/Male
+cvl:Male rdf:type owl:Class ;
+         owl:equivalentClass <https://loinc.org/LA2-8> ;
+         rdfs:subClassOf cvl:SexAssignedAtBirth ;
+         skos:definition "Male sex assigned at birth."@en .
+
+
+###  http://irst.emr.it/cvl/Nausea
+cvl:Nausea rdf:type owl:Class ;
+           skos:closeMatch <http://snomed.info/sct/422587007> ;
+           rdfs:subClassOf cvl:SymptomAssessmentFinding ;
+           rdfs:label "Nausea"@en ,
+                      "Nausea"@it ;
+           skos:definition "An item of an ESAS (Edmonton Symptom Assessment System) survey rating the patient's nausea or urge to vomit on a 0-10 scale (0 = absent, 10 = worst possible); the item is recorded whatever its score."@en .
+
+
+###  http://irst.emr.it/cvl/NeoadjuvantTherapy
+cvl:NeoadjuvantTherapy rdf:type owl:Class ;
+                       owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15665> ;
+                       rdfs:subClassOf cvl:TherapySetting ;
+                       skos:definition "A therapy setting given before the main treatment (usually surgery) to shrink a tumor and make it easier to remove."@en .
+
+
+###  http://irst.emr.it/cvl/P_M_Class
+cvl:P_M_Class rdf:type owl:Class ;
+              owl:equivalentClass <http://snomed.info/sct/371497001> ;
+              rdfs:subClassOf cvl:TNMClassificationM ;
+              rdfs:label "Pathological presence of distant metastasis (M)"@en ,
+                         "Presenza patologica di metastasi a distanza (M)"@it ;
+              skos:definition "Pathological Metastasis (pM) category, determining distant spread after examining surgical tissue under a microscope."@en .
+
+
+###  http://irst.emr.it/cvl/P_N_Class
+cvl:P_N_Class rdf:type owl:Class ;
+              owl:equivalentClass <http://snomed.info/sct/371494008> ;
+              rdfs:subClassOf cvl:TNMClassificationN ;
+              rdfs:label "Coinvolgimento patologico dei linfonodi regionali (N)"@it ,
+                         "Pathological spread to regional lymph nodes (N)"@en ;
+              skos:definition "Pathological Node (pN) category, indicating lymph node spread based on definitive surgical pathology."@en .
+
+
+###  http://irst.emr.it/cvl/P_T_Class
+cvl:P_T_Class rdf:type owl:Class ;
+              owl:equivalentClass <http://snomed.info/sct/384625004> ;
+              rdfs:subClassOf cvl:TNMClassificationT ;
+              rdfs:label "Dimensione del tumore patologica (T)"@it ,
+                         "Pathological tumor size (T)"@en ;
+              skos:definition "Pathological Tumor (pT) category, indicating primary tumor extent and size based on definitive surgical pathology."@en .
+
+
+###  http://irst.emr.it/cvl/Pain
+cvl:Pain rdf:type owl:Class ;
+         skos:closeMatch <http://snomed.info/sct/22253000> ;
+         rdfs:subClassOf cvl:SymptomAssessmentFinding ;
+         rdfs:label "Dolore"@it ,
+                    "Pain"@en ;
+         skos:definition "An item of an ESAS (Edmonton Symptom Assessment System) survey rating the patient's physical pain on a 0-10 scale (0 = absent, 10 = worst possible); the item is recorded whatever its score."@en .
+
+
+###  http://irst.emr.it/cvl/PathologicalTNM
+cvl:PathologicalTNM rdf:type owl:Class ;
+                    owl:equivalentClass <http://snomed.info/sct/399588009> ;
+                    rdfs:subClassOf cvl:TNM ;
+                    rdfs:label "Pathological TNM"@en ,
+                               "TNM patologico"@it ;
+                    skos:definition "The pathological TNM staging classification, which is the most accurate staging determined after surgical removal and lab examination of the tumor."@en .
+
+
+###  http://irst.emr.it/cvl/Patient
+cvl:Patient rdf:type owl:Class ;
+            rdfs:label "Patient"@en ,
+                       "Paziente"@it ;
+            skos:definition "The core individual person receiving clinical care, diagnosed with cancer, and undergoing oncological therapies."@en .
+
+
+###  http://irst.emr.it/cvl/PhysiologicalHistory
+cvl:PhysiologicalHistory rdf:type owl:Class ;
+                         rdfs:subClassOf fhir:Observation ;
+                         rdfs:label "Anamnesi Fisiologica"@it ,
+                                    "Physiological History"@en ;
+                         skos:definition "The patient's lifestyle habits, physiological background, and personal history, notably including smoking and alcohol use."@en .
+
+
+###  http://irst.emr.it/cvl/Response
+cvl:Response rdf:type owl:Class ;
+             rdfs:subClassOf fhir:Observation ;
+             rdfs:label "Response"@en ,
+                        "Risposta al trattamento"@it ;
+             skos:definition "The clinical outcome, treatment effect, or restaging result measuring how well the tumor responded to therapy (e.g., progressive disease, stable disease, complete response)."@en .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy
+cvl:SalvageTherapy rdf:type owl:Class ;
+                   owl:equivalentClass <http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15359> ;
+                   rdfs:subClassOf cvl:TherapySetting ;
+                   rdfs:label "Salvage therapy"@en ,
+                              "Terapia di salvataggio"@it ;
+                   skos:definition "Therapy setting given when the cancer has not responded to other treatments or has returned (relapse/refractory settings)."@en .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy1
+cvl:SalvageTherapy1 rdf:type owl:Class ;
+                    rdfs:subClassOf cvl:SalvageTherapy ;
+                    skos:definition "First-line salvage therapy given for relapsed or refractory disease."@en .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy10
+cvl:SalvageTherapy10 rdf:type owl:Class ;
+                     rdfs:subClassOf cvl:SalvageTherapy ;
+                     skos:definition "Tenth-line salvage therapy."@en .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy2
+cvl:SalvageTherapy2 rdf:type owl:Class ;
+                    rdfs:subClassOf cvl:SalvageTherapy ;
+                    skos:definition "Second-line salvage therapy given for relapsed or refractory disease."@en .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy3
+cvl:SalvageTherapy3 rdf:type owl:Class ;
+                    rdfs:subClassOf cvl:SalvageTherapy ;
+                    skos:definition "Third-line salvage therapy given for relapsed or refractory disease."@en .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy4
+cvl:SalvageTherapy4 rdf:type owl:Class ;
+                    rdfs:subClassOf cvl:SalvageTherapy ;
+                    skos:definition "Fourth-line salvage therapy."@en .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy5
+cvl:SalvageTherapy5 rdf:type owl:Class ;
+                    rdfs:subClassOf cvl:SalvageTherapy ;
+                    skos:definition "Fifth-line salvage therapy."@en .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy6
+cvl:SalvageTherapy6 rdf:type owl:Class ;
+                    rdfs:subClassOf cvl:SalvageTherapy ;
+                    skos:definition "Sixth-line salvage therapy."@en .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy7
+cvl:SalvageTherapy7 rdf:type owl:Class ;
+                    rdfs:subClassOf cvl:SalvageTherapy ;
+                    skos:definition "Seventh-line salvage therapy."@en .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy8
+cvl:SalvageTherapy8 rdf:type owl:Class ;
+                    rdfs:subClassOf cvl:SalvageTherapy ;
+                    skos:definition "Eighth-line salvage therapy."@en .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy9
+cvl:SalvageTherapy9 rdf:type owl:Class ;
+                    rdfs:subClassOf cvl:SalvageTherapy ;
+                    skos:definition "Ninth-line salvage therapy."@en .
+
+
+###  http://irst.emr.it/cvl/Service
+cvl:Service rdf:type owl:Class ;
+            rdfs:label "Clinical Service"@en ,
+                       "Prestazione Clinica"@it ;
+            skos:definition "A clinical service or procedure (e.g., imaging, surgery, outpatient visit) provided to a patient by a hospital department."@en .
+
+
+###  http://irst.emr.it/cvl/SexAssignedAtBirth
+cvl:SexAssignedAtBirth rdf:type owl:Class ;
+                       owl:equivalentClass <https://loinc.org/76689-9> ;
+                       rdfs:label "Sesso assegnato alla nascita"@it ,
+                                  "Sex assigned at birth"@en ;
+                       skos:definition "The sex assigned to a patient at birth (e.g., male, female)."@en .
+
+
+###  http://irst.emr.it/cvl/SmokerPatient
+cvl:SmokerPatient rdf:type owl:Class ;
+                  skos:closeMatch <http://snomed.info/sct/77176002> ;
+                  rdfs:subClassOf cvl:Patient ;
+                  rdfs:label "Paziente fumatore"@it ,
+                             "Smoker patient"@en ;
+                  skos:definition "A patient who has a recorded physiological history of smoking, tobacco use, or nicotine addiction."@en .
+
+
+###  http://irst.emr.it/cvl/SymptomAssessment
+cvl:SymptomAssessment rdf:type owl:Class ;
+                      rdfs:subClassOf fhir:Observation ;
+                      rdfs:label "Symptom Assessment"@en ,
+                                 "Valutazione dei sintomi"@it ;
+                      skos:definition "An Edmonton Symptom Assessment System (ESAS) survey evaluating the patient's palliative symptoms, pain, and quality of life."@en .
+
+
+###  http://irst.emr.it/cvl/SymptomAssessmentFinding
+cvl:SymptomAssessmentFinding rdf:type owl:Class ;
+                             rdfs:label "Rilevazione dei sintomi manifestati"@it ,
+                                        "Symptom Assessment finding"@en ;
+                             skos:definition "A specific subjective symptom reported in an ESAS survey along with its severity score (e.g., Pain=8)."@en .
+
+
+###  http://irst.emr.it/cvl/TNM
+cvl:TNM rdf:type owl:Class ;
+        owl:equivalentClass <http://snomed.info/sct/399390009> ;
+        rdfs:subClassOf fhir:Observation ;
+        rdfs:label "TNM"@en ,
+                   "TNM"@it ;
+        skos:definition "A general representation of the Tumor, Node, Metastasis (TNM) oncology staging system used to describe the extent of cancer."@en .
+
+
+###  http://irst.emr.it/cvl/TNMClassification
+cvl:TNMClassification rdf:type owl:Class ;
+                      owl:equivalentClass <http://snomed.info/sct/399566009> ;
+                      rdfs:subClassOf fhir:Observation ;
+                      rdfs:label "Classificazione TNM"@it ,
+                                 "TNM Classification"@en ;
+                      skos:definition "An overarching classification category for any specific T (Tumor), N (Node), or M (Metastasis) staging score."@en .
+
+
+###  http://irst.emr.it/cvl/TNMClassificationM
+cvl:TNMClassificationM rdf:type owl:Class ;
+                       owl:equivalentClass <http://snomed.info/sct/277208005> ;
+                       rdfs:subClassOf <http://snomed.info/sct/399566009> ;
+                       rdfs:label "Categoria M"@it ,
+                                  "M category"@en ;
+                       skos:definition "The parent class for Metastasis (M) staging categories, indicating distant cancer spread."@en .
+
+
+###  http://irst.emr.it/cvl/TNMClassificationN
+cvl:TNMClassificationN rdf:type owl:Class ;
+                       owl:equivalentClass <http://snomed.info/sct/277206009> ;
+                       rdfs:subClassOf <http://snomed.info/sct/399566009> ;
+                       rdfs:label "Categoria N"@it ,
+                                  "N category"@en ;
+                       skos:definition "The parent class for Node (N) staging categories, indicating regional lymph node involvement."@en .
+
+
+###  http://irst.emr.it/cvl/TNMClassificationT
+cvl:TNMClassificationT rdf:type owl:Class ;
+                       owl:equivalentClass <http://snomed.info/sct/78873005> ;
+                       rdfs:subClassOf <http://snomed.info/sct/399566009> ;
+                       rdfs:label "Categoria T"@it ,
+                                  "T category"@en ;
+                       skos:definition "The parent class for Tumor (T) staging categories, indicating primary tumor size and local extent."@en .
+
+
+###  http://irst.emr.it/cvl/Therapy
+cvl:Therapy rdf:type owl:Class ;
+            rdfs:label "Terapia"@it ,
+                       "Therapy"@en ;
+            skos:definition "A treatment plan or oncological regimen (e.g., chemotherapy, immunotherapy, targeted therapy) administered to a patient over a period of time."@en .
+
+
+###  http://irst.emr.it/cvl/TherapySetting
+cvl:TherapySetting rdf:type owl:Class ;
+                   rdfs:label "Setting di terapia"@it ,
+                              "Therapy setting"@en ;
+                   skos:definition "The clinical context, timing, or intent of the cancer therapy (e.g., adjuvant, palliative, induction, neoadjuvant)."@en .
+
+
+###  http://irst.emr.it/cvl/UnknownGender
+cvl:UnknownGender rdf:type owl:Class ;
+                  owl:equivalentClass <https://loinc.org/LA4489-6> ;
+                  rdfs:subClassOf cvl:SexAssignedAtBirth ;
+                  skos:definition "Assigned when the patient's biological sex is not recorded or known in the system."@en .
+
+
+###  http://irst.emr.it/cvl/Variant
+cvl:Variant rdf:type owl:Class ;
+            rdfs:subClassOf fhir:Observation ;
+            rdfs:label "Variant"@en ,
+                       "Variante genetica"@it ;
+            skos:definition "A genetic mutation, genomic alteration, or molecular DNA variant found in the patient's tumor profiling or NGS sequencing."@en .
+
+
+###  http://irst.emr.it/cvl/Weight
+cvl:Weight rdf:type owl:Class ;
+           owl:equivalentClass <http://snomed.info/sct/363808001> ;
+           rdfs:subClassOf cvl:BodyMetric ;
+           rdfs:label "Peso"@it ,
+                      "Weight"@en ;
+           skos:definition "A specific body metric recording the patient's body mass, usually measured in kilograms."@en .
+
+
+###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133522
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133522> rdf:type owl:Class ;
+                                                             rdfs:label "ncit:C133522" .
+
+
+###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133524
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133524> rdf:type owl:Class ;
+                                                             rdfs:label "ncit:C133524" .
+
+
+###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133526
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133526> rdf:type owl:Class ;
+                                                             rdfs:label "ncit:C133526" .
+
+
+###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133528
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133528> rdf:type owl:Class ;
+                                                             rdfs:label "ncit:C133528" .
+
+
+###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133529
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133529> rdf:type owl:Class ;
+                                                             rdfs:label "ncit:C133529" .
+
+
+###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15359
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15359> rdf:type owl:Class ;
+                                                            rdfs:label "ncit:C15359" .
+
+
+###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15665
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15665> rdf:type owl:Class ;
+                                                            rdfs:label "ncit:C15665" .
+
+
+###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15675
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15675> rdf:type owl:Class ;
+                                                            rdfs:label "ncit:C15675" .
+
+
+###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15679
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15679> rdf:type owl:Class ;
+                                                            rdfs:label "ncit:C15679" .
+
+
+###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15688
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15688> rdf:type owl:Class ;
+                                                            rdfs:label "ncit:C15688" .
+
+
+###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158876
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158876> rdf:type owl:Class ;
+                                                             rdfs:label "ncit:C158876" .
+
+
+###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45792
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45792> rdf:type owl:Class ;
+                                                            rdfs:label "ncit:C45792" .
+
+
+###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54350
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54350> rdf:type owl:Class ;
+                                                            rdfs:label "ncit:C54350" .
+
+
+###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94626
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94626> rdf:type owl:Class ;
+                                                            rdfs:label "ncit:C94626" .
+
+
+###  http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94628
+<http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94628> rdf:type owl:Class ;
+                                                            rdfs:label "ncit:C94628" .
+
+
+###  http://snomed.info/sct/277206009
+<http://snomed.info/sct/277206009> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://snomed.info/sct/399566009> ;
+                                   rdfs:label "snomed:277206009" .
+
+
+###  http://snomed.info/sct/277208005
+<http://snomed.info/sct/277208005> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://snomed.info/sct/399566009> ;
+                                   rdfs:label "snomed:277208005" .
+
+
+###  http://snomed.info/sct/363808001
+<http://snomed.info/sct/363808001> rdf:type owl:Class ;
+                                   rdfs:label "snomed:363808001" .
+
+
+###  http://snomed.info/sct/371494008
+<http://snomed.info/sct/371494008> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://snomed.info/sct/277206009> ;
+                                   rdfs:label "snomed:371494008" .
+
+
+###  http://snomed.info/sct/371497001
+<http://snomed.info/sct/371497001> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://snomed.info/sct/277208005> ;
+                                   rdfs:label "snomed:371497001" .
+
+
+###  http://snomed.info/sct/384625004
+<http://snomed.info/sct/384625004> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://snomed.info/sct/78873005> ;
+                                   rdfs:label "snomed:384625004" .
+
+
+###  http://snomed.info/sct/399387003
+<http://snomed.info/sct/399387003> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://snomed.info/sct/277208005> ;
+                                   rdfs:label "snomed:399387003" .
+
+
+###  http://snomed.info/sct/399390009
+<http://snomed.info/sct/399390009> rdf:type owl:Class ;
+                                   rdfs:label "snomed:399390009" .
+
+
+###  http://snomed.info/sct/399504009
+<http://snomed.info/sct/399504009> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://snomed.info/sct/78873005> ;
+                                   rdfs:label "snomed:399504009" .
+
+
+###  http://snomed.info/sct/399534004
+<http://snomed.info/sct/399534004> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://snomed.info/sct/277206009> ;
+                                   rdfs:label "snomed:399534004" .
+
+
+###  http://snomed.info/sct/399537006
+<http://snomed.info/sct/399537006> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://snomed.info/sct/399390009> ;
+                                   rdfs:label "snomed:399537006" .
+
+
+###  http://snomed.info/sct/399566009
+<http://snomed.info/sct/399566009> rdf:type owl:Class ;
+                                   rdfs:label "snomed:399566009" .
+
+
+###  http://snomed.info/sct/399588009
+<http://snomed.info/sct/399588009> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://snomed.info/sct/399390009> ;
+                                   rdfs:label "snomed:399588009" .
+
+
+###  http://snomed.info/sct/422512005
+<http://snomed.info/sct/422512005> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://snomed.info/sct/424122007> ;
+                                   rdfs:label "snomed:422512005" .
+
+
+###  http://snomed.info/sct/422894000
+<http://snomed.info/sct/422894000> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://snomed.info/sct/424122007> ;
+                                   rdfs:label "snomed:422894000" .
+
+
+###  http://snomed.info/sct/423053003
+<http://snomed.info/sct/423053003> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://snomed.info/sct/424122007> ;
+                                   rdfs:label "snomed:423053003" .
+
+
+###  http://snomed.info/sct/423237006
+<http://snomed.info/sct/423237006> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://snomed.info/sct/424122007> ;
+                                   rdfs:label "snomed:423237006" .
+
+
+###  http://snomed.info/sct/423409001
+<http://snomed.info/sct/423409001> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://snomed.info/sct/424122007> ;
+                                   rdfs:label "snomed:423409001" .
+
+
+###  http://snomed.info/sct/424122007
+<http://snomed.info/sct/424122007> rdf:type owl:Class ;
+                                   rdfs:label "snomed:424122007" .
+
+
+###  http://snomed.info/sct/425389002
+<http://snomed.info/sct/425389002> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://snomed.info/sct/424122007> ;
+                                   rdfs:label "snomed:425389002" .
+
+
+###  http://snomed.info/sct/50373000
+<http://snomed.info/sct/50373000> rdf:type owl:Class ;
+                                  rdfs:label "snomed:50373000" .
+
+
+###  http://snomed.info/sct/78873005
+<http://snomed.info/sct/78873005> rdf:type owl:Class ;
+                                  rdfs:subClassOf <http://snomed.info/sct/399566009> ;
+                                  rdfs:label "snomed:78873005" .
+
+
+###  https://loinc.org/LA2-8
+<https://loinc.org/LA2-8> rdf:type owl:Class ;
+                          rdfs:subClassOf <https://loinc.org/76689-9> ;
+                          rdfs:label "loinc:LA2-8" .
+
+
+###  https://loinc.org/LA3-6
+<https://loinc.org/LA3-6> rdf:type owl:Class ;
+                          rdfs:subClassOf <https://loinc.org/76689-9> ;
+                          rdfs:label "loinc:LA3-6" .
+
+
+###  https://loinc.org/LA4489-6
+<https://loinc.org/LA4489-6> rdf:type owl:Class ;
+                             rdfs:subClassOf <https://loinc.org/76689-9> ;
+                             rdfs:label "loinc:LA4489-6" .
+
+
+###  https://loinc.org/76689-9
+<https://loinc.org/76689-9> rdf:type owl:Class ;
+                            rdfs:label "loinc:76689-9" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://irst.emr.it/cvl/AdjuvantTherapy
+cvl:AdjuvantTherapy rdf:type owl:NamedIndividual ,
+                             cvl:AdjuvantTherapy .
+
+
+###  http://irst.emr.it/cvl/AdvancedTherapy
+cvl:AdvancedTherapy rdf:type owl:NamedIndividual ,
+                             cvl:AdvancedTherapy .
+
+
+###  http://irst.emr.it/cvl/ConcomitantWithRadiotherapy
+cvl:ConcomitantWithRadiotherapy rdf:type owl:NamedIndividual ,
+                                         cvl:ConcomitantWithRadiotherapy .
+
+
+###  http://irst.emr.it/cvl/ConsolidationTherapy
+cvl:ConsolidationTherapy rdf:type owl:NamedIndividual ,
+                                  cvl:ConsolidationTherapy .
+
+
+###  http://irst.emr.it/cvl/ECOGPerformanceStatusFinding0
+cvl:ECOGPerformanceStatusFinding0 rdf:type owl:NamedIndividual ,
+                                           cvl:ECOGPerformanceStatusFinding0 .
+
+
+###  http://irst.emr.it/cvl/ECOGPerformanceStatusFinding1
+cvl:ECOGPerformanceStatusFinding1 rdf:type owl:NamedIndividual ,
+                                           cvl:ECOGPerformanceStatusFinding1 .
+
+
+###  http://irst.emr.it/cvl/ECOGPerformanceStatusFinding2
+cvl:ECOGPerformanceStatusFinding2 rdf:type owl:NamedIndividual ,
+                                           cvl:ECOGPerformanceStatusFinding2 .
+
+
+###  http://irst.emr.it/cvl/ECOGPerformanceStatusFinding3
+cvl:ECOGPerformanceStatusFinding3 rdf:type owl:NamedIndividual ,
+                                           cvl:ECOGPerformanceStatusFinding3 .
+
+
+###  http://irst.emr.it/cvl/ECOGPerformanceStatusFinding4
+cvl:ECOGPerformanceStatusFinding4 rdf:type owl:NamedIndividual ,
+                                           cvl:ECOGPerformanceStatusFinding4 .
+
+
+###  http://irst.emr.it/cvl/ECOGPerformanceStatusFinding5
+cvl:ECOGPerformanceStatusFinding5 rdf:type owl:NamedIndividual ,
+                                           cvl:ECOGPerformanceStatusFinding5 .
+
+
+###  http://irst.emr.it/cvl/Female
+cvl:Female rdf:type owl:NamedIndividual ,
+                    cvl:Female .
+
+
+###  http://irst.emr.it/cvl/InductionTherapy
+cvl:InductionTherapy rdf:type owl:NamedIndividual ,
+                              cvl:InductionTherapy .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy1
+cvl:LineOfTherapy1 rdf:type owl:NamedIndividual ,
+                            cvl:LineOfTherapy1 .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy10
+cvl:LineOfTherapy10 rdf:type owl:NamedIndividual ,
+                             cvl:LineOfTherapy10 .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy2
+cvl:LineOfTherapy2 rdf:type owl:NamedIndividual ,
+                            cvl:LineOfTherapy2 .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy3
+cvl:LineOfTherapy3 rdf:type owl:NamedIndividual ,
+                            cvl:LineOfTherapy3 .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy4
+cvl:LineOfTherapy4 rdf:type owl:NamedIndividual ,
+                            cvl:LineOfTherapy4 .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy5
+cvl:LineOfTherapy5 rdf:type owl:NamedIndividual ,
+                            cvl:LineOfTherapy5 .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy6
+cvl:LineOfTherapy6 rdf:type owl:NamedIndividual ,
+                            cvl:LineOfTherapy6 .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy7
+cvl:LineOfTherapy7 rdf:type owl:NamedIndividual ,
+                            cvl:LineOfTherapy7 .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy8
+cvl:LineOfTherapy8 rdf:type owl:NamedIndividual ,
+                            cvl:LineOfTherapy8 .
+
+
+###  http://irst.emr.it/cvl/LineOfTherapy9
+cvl:LineOfTherapy9 rdf:type owl:NamedIndividual ,
+                            cvl:LineOfTherapy9 .
+
+
+###  http://irst.emr.it/cvl/MaintenanceTherapy
+cvl:MaintenanceTherapy rdf:type owl:NamedIndividual ,
+                                cvl:MaintenanceTherapy .
+
+
+###  http://irst.emr.it/cvl/Male
+cvl:Male rdf:type owl:NamedIndividual ,
+                  cvl:Male .
+
+
+###  http://irst.emr.it/cvl/NeoadjuvantTherapy
+cvl:NeoadjuvantTherapy rdf:type owl:NamedIndividual ,
+                                cvl:NeoadjuvantTherapy .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy1
+cvl:SalvageTherapy1 rdf:type owl:NamedIndividual ,
+                             cvl:SalvageTherapy1 .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy10
+cvl:SalvageTherapy10 rdf:type owl:NamedIndividual ,
+                              cvl:SalvageTherapy10 .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy2
+cvl:SalvageTherapy2 rdf:type owl:NamedIndividual ,
+                             cvl:SalvageTherapy2 .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy3
+cvl:SalvageTherapy3 rdf:type owl:NamedIndividual ,
+                             cvl:SalvageTherapy3 .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy4
+cvl:SalvageTherapy4 rdf:type owl:NamedIndividual ,
+                             cvl:SalvageTherapy4 .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy5
+cvl:SalvageTherapy5 rdf:type owl:NamedIndividual ,
+                             cvl:SalvageTherapy5 .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy6
+cvl:SalvageTherapy6 rdf:type owl:NamedIndividual ,
+                             cvl:SalvageTherapy6 .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy7
+cvl:SalvageTherapy7 rdf:type owl:NamedIndividual ,
+                             cvl:SalvageTherapy7 .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy8
+cvl:SalvageTherapy8 rdf:type owl:NamedIndividual ,
+                             cvl:SalvageTherapy8 .
+
+
+###  http://irst.emr.it/cvl/SalvageTherapy9
+cvl:SalvageTherapy9 rdf:type owl:NamedIndividual ,
+                             cvl:SalvageTherapy9 .
+
+
+###  http://irst.emr.it/cvl/UnknownGender
+cvl:UnknownGender rdf:type owl:NamedIndividual ,
+                           cvl:UnknownGender .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+cvl:AdjuvantTherapy rdfs:label "Adjuvant therapy"@en ,
+                               "Terapia adiuvante"@it .
+
+
+cvl:AdvancedTherapy rdfs:label "Advanced therapy"@en ,
+                               "Terapia avanzata"@it .
+
+
+cvl:ConcomitantWithRadiotherapy rdfs:label "Concomitant with radiotherapy"@en ,
+                                           "Concomitante a radioterapia"@it .
+
+
+cvl:ConsolidationTherapy rdfs:label "Consolidation therapy"@en ,
+                                    "Terapia di consolidamento"@it .
+
+
+cvl:ECOGPerformanceStatusFinding0 rdfs:label "Grade 0"@en ,
+                                             "Grado 0"@it .
+
+
+cvl:ECOGPerformanceStatusFinding1 rdfs:label "Grade 1"@en ,
+                                             "Grado 1"@it .
+
+
+cvl:ECOGPerformanceStatusFinding2 rdfs:label "Grade 2"@en ,
+                                             "Grado 2"@it .
+
+
+cvl:ECOGPerformanceStatusFinding3 rdfs:label "Grade 3"@en ,
+                                             "Grado 3"@it .
+
+
+cvl:ECOGPerformanceStatusFinding4 rdfs:label "Grade 4"@en ,
+                                             "Grado 4"@it .
+
+
+cvl:ECOGPerformanceStatusFinding5 rdfs:label "Grade 5"@en ,
+                                             "Grado 5"@it .
+
+
+cvl:Female rdfs:label "Donna"@it ,
+                      "Female"@en .
+
+
+cvl:InductionTherapy rdfs:label "Induction therapy"@en ,
+                                "Terapia ad induzione"@it .
+
+
+cvl:LineOfTherapy1 rdfs:label "First line of therapy"@en ,
+                              "Prima linea di terapia"@it .
+
+
+cvl:LineOfTherapy10 rdfs:label "Decima linea di terapia"@it ,
+                               "Tenth line of therapy"@en .
+
+
+cvl:LineOfTherapy2 rdfs:label "Second line of therapy"@en ,
+                              "Seconda linea di terapia"@it .
+
+
+cvl:LineOfTherapy3 rdfs:label "Terza linea di terapia"@it ,
+                              "Third line of therapy"@en .
+
+
+cvl:LineOfTherapy4 rdfs:label "Fourth line of therapy"@en ,
+                              "Quarta linea di terapia"@it .
+
+
+cvl:LineOfTherapy5 rdfs:label "Fifth line of therapy"@en ,
+                              "Quinta linea di terapia"@it .
+
+
+cvl:LineOfTherapy6 rdfs:label "Sesta linea di terapia"@it ,
+                              "Sixth line of therapy"@en .
+
+
+cvl:LineOfTherapy7 rdfs:label "Settima linea di terapia"@it ,
+                              "Seventh line of therapy"@en .
+
+
+cvl:LineOfTherapy8 rdfs:label "Eighth line of therapy"@en ,
+                              "Ottava linea di terapia"@it .
+
+
+cvl:LineOfTherapy9 rdfs:label "Ninth line of therapy"@en ,
+                              "Nona linea di terapia"@it .
+
+
+cvl:MaintenanceTherapy rdfs:label "Maintenance therapy"@en ,
+                                  "Terapia di mantenimento"@it .
+
+
+cvl:Male rdfs:label "Male"@en ,
+                    "Uomo"@it .
+
+
+cvl:NeoadjuvantTherapy rdfs:label "Neoadjuvant therapy"@en ,
+                                  "Terapia neoadiuvante"@it .
+
+
+cvl:SalvageTherapy1 rdfs:label "First salvage therapy"@en ,
+                               "Primo salvataggio"@it .
+
+
+cvl:SalvageTherapy10 rdfs:label "Decimo salvataggio"@it ,
+                                "Tenth salvage therapy"@en .
+
+
+cvl:SalvageTherapy2 rdfs:label "Second salvage therapy"@en ,
+                               "Secondo salvataggio"@it .
+
+
+cvl:SalvageTherapy3 rdfs:label "Terzo salvataggio"@it ,
+                               "Third salvage therapy"@en .
+
+
+cvl:SalvageTherapy4 rdfs:label "Fourth salvage therapy"@en ,
+                               "Quarto salvataggio"@it .
+
+
+cvl:SalvageTherapy5 rdfs:label "Fifth salvage therapy"@en ,
+                               "Quinto salvataggio"@it .
+
+
+cvl:SalvageTherapy6 rdfs:label "Sesto salvataggio"@it ,
+                               "Sixth salvage therapy"@en .
+
+
+cvl:SalvageTherapy7 rdfs:label "Settimo salvataggio"@it ,
+                               "Seventh salvage therapy"@en .
+
+
+cvl:SalvageTherapy8 rdfs:label "Eighth salvage therapy"@en ,
+                               "Ottavo salvataggio"@it .
+
+
+cvl:SalvageTherapy9 rdfs:label "Ninth salvage therapy"@en ,
+                               "Nono salvataggio"@it .
+
+
+cvl:UnknownGender rdfs:label "Sconosciuto"@it ,
+                             "Unknown"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( cvl:ClinicalTNM
+                cvl:PathologicalTNM
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( cvl:C_M_Class
+                cvl:P_M_Class
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( cvl:C_N_Class
+                cvl:P_N_Class
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( cvl:C_T_Class
+                cvl:P_T_Class
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( cvl:ECOGPerformanceStatusFinding0
+                cvl:ECOGPerformanceStatusFinding1
+                cvl:ECOGPerformanceStatusFinding2
+                cvl:ECOGPerformanceStatusFinding3
+                cvl:ECOGPerformanceStatusFinding4
+                cvl:ECOGPerformanceStatusFinding5
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( cvl:Female
+                cvl:Male
+                cvl:UnknownGender
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( cvl:LineOfTherapy1
+                cvl:LineOfTherapy10
+                cvl:LineOfTherapy2
+                cvl:LineOfTherapy3
+                cvl:LineOfTherapy4
+                cvl:LineOfTherapy5
+                cvl:LineOfTherapy6
+                cvl:LineOfTherapy7
+                cvl:LineOfTherapy8
+                cvl:LineOfTherapy9
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( cvl:SalvageTherapy1
+                cvl:SalvageTherapy10
+                cvl:SalvageTherapy2
+                cvl:SalvageTherapy3
+                cvl:SalvageTherapy4
+                cvl:SalvageTherapy5
+                cvl:SalvageTherapy6
+                cvl:SalvageTherapy7
+                cvl:SalvageTherapy8
+                cvl:SalvageTherapy9
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( cvl:TNMClassificationM
+                cvl:TNMClassificationN
+                cvl:TNMClassificationT
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

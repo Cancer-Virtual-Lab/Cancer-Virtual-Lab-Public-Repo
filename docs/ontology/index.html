@@ -3,161 +3,294 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cancer Virtual Lab Ontology (CVL-O)</title>
-<meta name="description" content="CVL-O, an OWL 2 ontology for the oncological care pathway from real-world hospital data, aligned with HL7 FHIR.">
+<title>CVL-O, the Cancer Virtual Lab Ontology</title>
+<meta name="description" content="CVL-O, an OWL 2 ontology for the oncological care pathway from real-world clinical data, aligned with HL7 FHIR.">
+<meta property="og:title" content="CVL-O, the Cancer Virtual Lab Ontology">
+<meta property="og:description" content="OWL 2 ontology of the oncological care pathway, aligned with HL7 FHIR and standard biomedical terminologies.">
+<meta name="theme-color" content="#0CA7D3">
 <link rel="icon" href="../assets/cvl-mark.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
 <style>
-  :root {
-    --bg: #ffffff; --fg: #1d2330; --muted: #5b6475; --line: #e3e6ec;
-    --card: #f7f8fa; --accent: #1f5fae; --accent-fg: #ffffff; --ok: #1a7f37;
+  /* ontology page: hero without the visual, a denser layout below */
+  .page-hero { padding-block: 104px 64px; max-width: 880px; }
+  .page-hero h1 { font-size: clamp(2.3rem, 5vw, 3.8rem); }
+  .back-btn {
+    display: flex; width: max-content; align-items: center; gap: 10px; margin-bottom: 28px; padding: 6px 16px 6px 6px;
+    border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--fg);
+    text-decoration: none; font-weight: 500; font-size: .92rem;
+    transition: border-color .3s var(--ease), transform .5s var(--ease);
   }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --bg: #12151b; --fg: #e6e8ec; --muted: #9aa3b2; --line: #2a303b;
-      --card: #1a1f27; --accent: #6ea8f0; --accent-fg: #0d1117; --ok: #3fb950;
-    }
+  .back-btn .ico {
+    display: grid; place-items: center; width: 28px; height: 28px; border-radius: 999px;
+    background: var(--accent-soft); color: var(--accent); transition: transform .5s var(--ease);
   }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; background: var(--bg); color: var(--fg);
-    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  .back-btn:hover { border-color: var(--accent); }
+  .back-btn:hover .ico { transform: translateX(-3px); }
+  .back-btn:active { transform: scale(.98); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 32px; }
+  .chip {
+    display: inline-flex; gap: 6px; align-items: baseline; padding: 6px 12px; border-radius: 10px;
+    background: var(--surface); border: 1px solid var(--line); font-size: .85rem; color: var(--muted);
   }
-  main { max-width: 860px; margin: 0 auto; padding: 48px 16px 64px; }
-  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 4px; }
-  h2 { font-size: 1.05rem; margin: 40px 0 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
-  p { margin: 0 0 12px; }
-  a { color: var(--accent); }
-  .meta { color: var(--muted); margin-bottom: 20px; }
-  .meta code { color: var(--fg); }
-  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 0; }
-  .btn {
-    display: inline-block; padding: 10px 16px; border-radius: 6px; text-decoration: none;
-    border: 1px solid var(--accent); color: var(--accent); font-weight: 600;
+  .chip code { font: 500 .82rem "Geist Mono", monospace; color: var(--fg); overflow-wrap: anywhere; }
+  .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--line);
+    border: 1px solid var(--line); border-radius: 24px; overflow: hidden; }
+  .stats div { background: var(--surface); padding: 24px; display: flex; flex-direction: column; gap: 4px; }
+  .stats b { font-size: 2rem; font-weight: 600; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+  .stats span { color: var(--faint); font-size: .88rem; }
+  section.tight { padding: 72px 0; }
+
+  /* downloads */
+  .formats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  .format {
+    display: flex; flex-direction: column; gap: 4px; padding: 20px; border-radius: 20px; text-decoration: none;
+    background: var(--surface); border: 1px solid var(--line); color: var(--fg);
+    transition: transform .5s var(--ease), border-color .3s var(--ease), box-shadow .5s var(--ease);
   }
-  .btn.primary { background: var(--accent); color: var(--accent-fg); }
-  ul.list { list-style: none; padding: 0; margin: 0; border: 1px solid var(--line); border-radius: 8px; }
-  ul.list li { padding: 12px 16px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-  ul.list li:first-child { border-top: 0; }
-  ul.list span { color: var(--muted); }
-  .cite { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 16px; overflow-wrap: anywhere; }
-  footer { margin-top: 48px; color: var(--muted); font-size: .9rem; }
-  .acc { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .format:hover { transform: translateY(-3px); border-color: color-mix(in srgb, var(--accent-strong) 45%, transparent); box-shadow: var(--shadow); }
+  .format:active { transform: scale(.98); }
+  .format b { font-weight: 600; }
+  .format span { font: 500 .82rem "Geist Mono", monospace; color: var(--faint); }
+
+  /* validation accordion inside a machined frame */
+  .acc .core { padding: 0; }
   .acc details + details { border-top: 1px solid var(--line); }
   .acc summary {
-    list-style: none; cursor: pointer; padding: 12px 16px; display: flex;
-    justify-content: space-between; align-items: center; gap: 12px; font-weight: 600;
+    list-style: none; cursor: pointer; padding: 20px 24px; display: flex; justify-content: space-between;
+    align-items: center; gap: 12px; font-weight: 600; transition: background-color .3s var(--ease);
   }
   .acc summary::-webkit-details-marker { display: none; }
+  .acc summary:hover { background: color-mix(in srgb, var(--accent-strong) 5%, transparent); }
+  .acc summary:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .acc summary > span:first-child { display: flex; align-items: center; gap: 12px; }
   .acc summary > span:first-child::before {
-    content: "▸"; display: inline-block; width: 1.1em; color: var(--muted); transition: transform .15s;
+    content: ""; width: 8px; height: 8px; border-right: 1.5px solid var(--faint); border-bottom: 1.5px solid var(--faint);
+    transform: rotate(-45deg); transition: transform .4s var(--ease);
   }
-  .acc details[open] summary > span:first-child::before { transform: rotate(90deg); }
-  .acc summary:hover { background: var(--card); }
-  .panel { padding: 4px 16px 16px; }
-  .panel ul { margin: 0 0 12px; padding-left: 20px; }
-  .badge { font-size: .8rem; font-weight: 600; color: var(--muted); white-space: nowrap; }
-  .badge.ok { color: var(--ok); }
+  .acc details[open] summary > span:first-child::before { transform: rotate(45deg); }
+  .badge { font: 500 .78rem "Geist Mono", monospace; color: var(--faint); white-space: nowrap; }
+  .badge.ok { color: #1a9a52; }
+  @media (prefers-color-scheme: dark) { .badge.ok { color: #3fcf7f; } }
+  .panel { padding: 0 24px 24px; color: var(--muted); }
+  .panel p { margin: 0 0 12px; }
+  .panel ul { margin: 0 0 16px; padding-left: 20px; }
+  .panel strong, .panel code { color: var(--fg); }
+  .panel code { font: 500 .85em "Geist Mono", monospace; }
   pre {
-    background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 12px;
-    margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: .85rem;
+    background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 14px; margin: 0;
+    white-space: pre-wrap; overflow-wrap: anywhere; font: 500 .82rem/1.5 "Geist Mono", monospace; color: var(--fg);
   }
-  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 12px; }
   .filters button {
-    font: inherit; font-size: .85rem; padding: 4px 10px; border-radius: 999px; cursor: pointer;
-    border: 1px solid var(--line); background: var(--bg); color: var(--fg);
+    font: 500 .8rem "Geist Mono", monospace; padding: 6px 12px; border-radius: 999px; cursor: pointer;
+    border: 1px solid var(--line); background: var(--surface); color: var(--muted);
+    transition: border-color .3s var(--ease), color .3s var(--ease);
   }
   .filters button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
-  .table-wrap { max-height: 420px; overflow: auto; border: 1px solid var(--line); border-radius: 6px; }
-  table { border-collapse: collapse; width: 100%; font-size: .85rem; }
-  th, td { text-align: left; padding: 6px 10px; border-top: 1px solid var(--line); vertical-align: top; }
-  th { position: sticky; top: 0; background: var(--card); border-top: 0; }
+  .table-wrap { max-height: 420px; overflow: auto; border: 1px solid var(--line); border-radius: 12px; }
+  table { border-collapse: collapse; width: 100%; font-size: .84rem; color: var(--fg); }
+  th, td { text-align: left; padding: 8px 12px; border-top: 1px solid var(--line); vertical-align: top; }
+  th { position: sticky; top: 0; background: var(--surface); border-top: 0; font-weight: 600; }
   td { overflow-wrap: anywhere; }
-  .note { margin-top: 12px; font-size: .9rem; }
-  .back { margin: 0 0 24px; font-size: .9rem; }
-  .back a { text-decoration: none; }
+  td a { text-decoration: none; }
+  .note { margin-top: 14px; font-size: .9rem; }
+
+  /* citation */
+  .cite .core { padding: 28px; display: flex; flex-direction: column; gap: 20px; }
+  .cite blockquote { margin: 0; font-size: 1.02rem; line-height: 1.7; text-wrap: pretty; overflow-wrap: anywhere; }
+  .cite .row { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; }
+  .copy {
+    font: 600 .9rem "Geist", sans-serif; padding: 10px 18px; border-radius: 999px; cursor: pointer;
+    border: 1px solid var(--line); background: var(--bg); color: var(--fg);
+    transition: transform .5s var(--ease), border-color .3s var(--ease);
+  }
+  .copy:hover { border-color: var(--accent); }
+  .copy:active { transform: scale(.98); }
+  .copy:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+  @media (max-width: 860px) {
+    .page-hero { padding-block: 72px 40px; }
+    .stats, .formats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    section.tight { padding: 48px 0; }
+  }
 </style>
 </head>
 <body>
-<main>
-  <p class="back"><a href="../">← Cancer Virtual Lab</a></p>
-  <h1>Cancer Virtual Lab Ontology (CVL-O)</h1>
-  <p class="meta">Version 1.1.0 · Namespace <code>http://irst.emr.it/cvl/</code> · Prefix <code>cvl:</code></p>
+<a class="skip" href="#main">Skip to content</a>
 
-  <p>CVL-O is an OWL 2 ontology for representing the oncological care pathway of patients from
-  real-world hospital data: diagnosis and TNM staging, therapies and drug administrations, adverse
-  events, biomarkers, genomic variants, laboratory tests, body measurements, symptom assessments,
-  treatment response and clinical services. It is aligned with HL7 FHIR and reuses standard
-  biomedical terminologies (SNOMED CT, LOINC, NCIt, ICD-10, ATC).</p>
-  <p>CVL-O is the semantic foundation of the Cancer Virtual Lab project, a collaboration between the
-  University of Bologna, IRCCS Istituto Romagnolo per lo Studio dei Tumori (IRST) "Dino Amadori",
-  Aivolution Srl and IFAB.</p>
-
-  <div class="actions">
-    <a class="btn primary" href="doc/index-en.html">Documentation</a>
-    <a class="btn" href="doc/index-it.html">Documentazione (IT)</a>
-    <a class="btn" href="doc/webvowl/index.html">Graph view (WebVOWL)</a>
-  </div>
-
-  <h2>Download</h2>
-  <ul class="list">
-    <li><a href="doc/ontology.ttl">ontology.ttl</a><span>Turtle</span></li>
-    <li><a href="doc/ontology.owl">ontology.owl</a><span>RDF/XML</span></li>
-    <li><a href="doc/ontology.jsonld">ontology.jsonld</a><span>JSON-LD</span></li>
-    <li><a href="doc/ontology.nt">ontology.nt</a><span>N-Triples</span></li>
+<nav aria-label="Main">
+  <a class="brand" href="../" aria-label="Cancer Virtual Lab home">
+    <picture>
+      <source srcset="../assets/cvl-logo-dark.svg" media="(prefers-color-scheme: dark)">
+      <img src="../assets/cvl-logo-light.svg" alt="Cancer Virtual Lab" width="81" height="26">
+    </picture>
+  </a>
+  <ul>
+    <li><a href="#download">Download</a></li>
+    <li><a href="#validation">Validation</a></li>
+    <li><a href="#cite">Cite</a></li>
   </ul>
+  <a class="btn accent" href="doc/index-en.html">Documentation <span class="ico" aria-hidden="true">
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </span></a>
+</nav>
 
-  <h2>Validation</h2>
-  <div class="acc">
-    <details>
-      <summary><span>ROBOT quality report</span><span class="badge" id="robot-summary">ROBOT</span></summary>
-      <div class="panel">
-        <p>Checks run by <a href="https://robot.obolibrary.org/report">ROBOT report</a> on the CVL terms
-        (<code>--base-iri http://irst.emr.it/cvl/</code>). No errors. The warnings and info are expected:</p>
-        <ul>
-          <li><strong>equivalent_pair</strong>: a CVL class is declared <code>owl:equivalentClass</code> to an
-          external concept (SNOMED CT, NCIt, LOINC). These are the intended exact alignments, which let the
-          clinical data be queried through the external terminologies.</li>
-          <li><strong>missing_superclass</strong>: a top-level CVL class with no superclass.</li>
-        </ul>
-        <div class="filters" id="robot-filters"></div>
-        <div class="table-wrap"><table id="robot-table"><thead><tr>
-          <th>Level</th><th>Rule</th><th>Subject</th><th>Property</th><th>Value</th>
-        </tr></thead><tbody></tbody></table></div>
-        <p class="note"><a href="validation/robot_report.html">Full ROBOT report</a> ·
-        <a href="validation/robot_report.tsv">TSV</a></p>
+<main id="main">
+  <div class="wrap">
+    <header class="page-hero">
+      <a class="back-btn reveal" href="../"><span class="ico" aria-hidden="true">
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M9.5 6H2.5M2.5 6L6 2.5M2.5 6L6 9.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>Back to home</a>
+      <span class="eyebrow reveal">Ontology · v1.1.0</span>
+      <h1 class="reveal d1">CVL-O, the Cancer Virtual Lab <em>Ontology</em></h1>
+      <p class="lead reveal d2">An OWL 2 ontology for the oncological care pathway of patients from real-world
+      clinical data: diagnosis and TNM staging, therapies and drug administrations, adverse events,
+      biomarkers, genomic variants, laboratory tests, body measurements, symptom assessments, treatment
+      response and clinical services. Aligned with HL7 FHIR, it reuses SNOMED CT, LOINC, NCIt, ICD-10 and ATC.</p>
+      <div class="chips reveal d2">
+        <span class="chip">Namespace <code>http://irst.emr.it/cvl/</code></span>
+        <span class="chip">Prefix <code>cvl:</code></span>
+        <span class="chip">License <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></span>
       </div>
-    </details>
-    <details>
-      <summary><span>OWL 2 DL profile check</span><span class="badge ok">In profile</span></summary>
-      <div class="panel">
-        <p>Validated with <code>robot validate-profile --profile DL</code>.</p>
-        <pre data-src="validation/owl2_dl_profile.txt">validation/owl2_dl_profile.txt</pre>
+      <div class="cta reveal d3">
+        <a class="btn accent" href="doc/index-en.html">Read the documentation <span class="ico" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span></a>
+        <a class="link" href="doc/index-it.html">Documentazione in italiano</a>
+        <a class="link" href="doc/webvowl/index.html">Graph view</a>
       </div>
-    </details>
-    <details>
-      <summary><span>Consistency check</span><span class="badge ok">Consistent</span></summary>
-      <div class="panel">
-        <p>Reasoned with HermiT (<code>robot reason --reasoner hermit</code>): the ontology is consistent and
-        has no unsatisfiable classes.</p>
-        <pre data-src="validation/reasoner_hermit.log">validation/reasoner_hermit.log</pre>
-      </div>
-    </details>
+    </header>
+
+    <div class="stats reveal">
+      <div><b>86</b><span>classes</span></div>
+      <div><b>71</b><span>object properties</span></div>
+      <div><b>52</b><span>datatype properties</span></div>
+      <div><b>36</b><span>named individuals</span></div>
+    </div>
   </div>
 
-  <h2>How to cite</h2>
-  <p class="cite">Giorgetti L, Carbonaro A, Ridolfi L, Pasolini R, Pagliarani A, Cavallucci M, Andalò A,
-  Del Gaudio L, De Angelis P, Vespignani R, Gentili N. Cancer Virtual Lab Ontology (CVL-O),
-  version 1.1.0. Zenodo; 2026.
-  <a href="https://doi.org/10.5281/zenodo.23762955">https://doi.org/10.5281/zenodo.23762955</a></p>
+  <section id="download" class="tight">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Download</span>
+        <h2>Available formats</h2>
+      </div>
+      <div class="formats">
+        <a class="format reveal d1" href="download/cvl-ontology.ttl" download><b>Turtle</b><span>cvl-ontology.ttl</span></a>
+        <a class="format reveal d2" href="download/cvl-ontology.owl" download><b>RDF/XML</b><span>cvl-ontology.owl</span></a>
+        <a class="format reveal d3" href="download/cvl-ontology.jsonld" download><b>JSON-LD</b><span>cvl-ontology.jsonld</span></a>
+        <a class="format reveal d4" href="download/cvl-ontology.nt" download><b>N-Triples</b><span>cvl-ontology.nt</span></a>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    License: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
-    Source: <a href="https://github.com/Cancer-Virtual-Lab/Cancer-Virtual-Lab-Public-Repo">GitHub</a> ·
-    Documentation generated with <a href="https://github.com/dgarijo/Widoco">WIDOCO</a> and
-    <a href="https://github.com/ontodev/robot">ROBOT</a>
-  </footer>
+  <section id="validation" class="tight">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Validation</span>
+        <h2>Validation reports</h2>
+        <p>Quality report, OWL 2 DL profile and logical consistency, produced by ROBOT and HermiT.</p>
+      </div>
+      <div class="acc shell reveal">
+        <div class="core">
+          <details>
+            <summary><span>ROBOT quality report</span><span class="badge" id="robot-summary">ROBOT</span></summary>
+            <div class="panel">
+              <p>Checks run by <a href="https://robot.obolibrary.org/report">ROBOT report</a> on the CVL terms
+              (<code>--base-iri http://irst.emr.it/cvl/</code>). No errors. The warnings and info are expected:</p>
+              <ul>
+                <li><strong>equivalent_pair</strong>: a CVL class is declared <code>owl:equivalentClass</code> to an
+                external concept (SNOMED CT, NCIt, LOINC). These are the intended exact alignments, which let the
+                clinical data be queried through the external terminologies.</li>
+                <li><strong>missing_superclass</strong>: a top-level CVL class with no superclass.</li>
+              </ul>
+              <div class="filters" id="robot-filters"></div>
+              <div class="table-wrap"><table id="robot-table"><thead><tr>
+                <th>Level</th><th>Rule</th><th>Subject</th><th>Property</th><th>Value</th>
+              </tr></thead><tbody></tbody></table></div>
+              <p class="note"><a href="validation/robot_report.html">Full ROBOT report</a> ·
+              <a href="validation/robot_report.tsv">TSV</a></p>
+            </div>
+          </details>
+          <details>
+            <summary><span>OWL 2 DL profile check</span><span class="badge ok">In profile</span></summary>
+            <div class="panel">
+              <p>Validated with <code>robot validate-profile --profile DL</code>.</p>
+              <pre data-src="validation/owl2_dl_profile.txt">validation/owl2_dl_profile.txt</pre>
+            </div>
+          </details>
+          <details>
+            <summary><span>Consistency check</span><span class="badge ok">Consistent</span></summary>
+            <div class="panel">
+              <p>Reasoned with HermiT (<code>robot reason --reasoner hermit</code>): the ontology is consistent and
+              has no unsatisfiable classes.</p>
+              <pre data-src="validation/reasoner_hermit.log">validation/reasoner_hermit.log</pre>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cite" class="tight">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Cite</span>
+        <h2>How to cite CVL-O</h2>
+      </div>
+      <div class="cite shell reveal">
+        <div class="core">
+          <blockquote id="citation">Giorgetti L, Carbonaro A, Ridolfi L, Pasolini R, Pagliarani A, Cavallucci M,
+          Andalò A, Del Gaudio L, De Angelis P, Vespignani R, Gentili N. Cancer Virtual Lab Ontology (CVL-O),
+          version 1.1.0. Zenodo; 2026. https://doi.org/10.5281/zenodo.23762955</blockquote>
+          <div class="row">
+            <button class="copy" type="button" id="copy-cite">Copy citation</button>
+            <a class="link doi" href="https://doi.org/10.5281/zenodo.23762955">10.5281/zenodo.23762955</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
+
+<footer>
+  <div class="wrap">
+    <a href="../" aria-label="Cancer Virtual Lab home">
+      <picture>
+        <source srcset="../assets/cvl-logo-dark.svg" media="(prefers-color-scheme: dark)">
+        <img src="../assets/cvl-logo-light.svg" alt="Cancer Virtual Lab" width="68" height="22">
+      </picture>
+    </a>
+    <span>Documentation generated with <a href="https://github.com/dgarijo/Widoco">WIDOCO</a> and
+    <a href="https://github.com/ontodev/robot">ROBOT</a> ·
+    <a href="https://github.com/Cancer-Virtual-Lab/Cancer-Virtual-Lab-Public-Repo">Source on GitHub</a></span>
+  </div>
+</footer>
+
 <script>
+// Reveal elements as they enter the viewport
+const io = new IntersectionObserver((entries) => {
+  for (const e of entries) if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+}, { rootMargin: "0px 0px -8% 0px" });
+document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+// Copy the citation as plain text
+const copyBtn = document.getElementById("copy-cite");
+copyBtn.addEventListener("click", async () => {
+  const text = document.getElementById("citation").textContent.replace(/\s+/g, " ").trim();
+  try {
+    await navigator.clipboard.writeText(text);
+    copyBtn.textContent = "Copied";
+  } catch {
+    copyBtn.textContent = "Copy failed";
+  }
+  setTimeout(() => { copyBtn.textContent = "Copy citation"; }, 1800);
+});
+
 // Fills the validation panels from the files in validation/ (served over HTTP, e.g. GitHub Pages)
 const PREFIXES = [
   ["http://irst.emr.it/cvl/", "cvl:"],

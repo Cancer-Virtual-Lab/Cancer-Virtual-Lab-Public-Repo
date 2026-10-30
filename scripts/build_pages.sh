@@ -4,6 +4,7 @@
 #   docs/index.html       project landing page   (pages/index.html)
 #   docs/ontology/        CVL-O page             (pages/ontology/index.html)
 #                         + WIDOCO documentation and WebVOWL graph (doc/)
+#                         + downloads            (download/cvl-ontology.*)
 #                         + validation reports   (validation/)
 #
 # The ontology and its validation reports are read from the CVL-O folder of the
@@ -45,6 +46,12 @@ cp pages/index.html "$OUT/"
 cp -r pages/assets "$OUT/assets"
 cp pages/ontology/index.html "$OUT/ontology/"
 cp -r "$TMP/doc" "$OUT/ontology/doc"
+# Downloads: the deposited Turtle and RDF/XML files, plus the JSON-LD and N-Triples written by WIDOCO
+mkdir -p "$OUT/ontology/download"
+cp "$PKG/ontology/cvl_ontology.ttl" "$OUT/ontology/download/cvl-ontology.ttl"
+cp "$PKG/ontology/cvl_ontology.owl" "$OUT/ontology/download/cvl-ontology.owl"
+cp "$TMP/doc/ontology.jsonld" "$OUT/ontology/download/cvl-ontology.jsonld"
+cp "$TMP/doc/ontology.nt" "$OUT/ontology/download/cvl-ontology.nt"
 cp "$PKG"/validation/{robot_report.html,robot_report.tsv,owl2_dl_profile.txt,reasoner_hermit.log} \
   "$OUT/ontology/validation/"
 # Serve files as they are (no Jekyll processing)

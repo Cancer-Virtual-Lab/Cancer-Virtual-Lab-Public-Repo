@@ -10,7 +10,7 @@
     "version" : "1.1.0",
     "author" : [ "https://orcid.org/0009-0002-9475-0744" ],
     "description" : {
-      "en" : "The Cancer Virtual Lab Ontology (CVL-O) is an OWL 2 ontology for representing the oncological care pathway of patients from real-world hospital data: diagnosis and TNM staging, therapies and drug administrations, adverse events, biomarkers, genomic variants, laboratory tests, body measurements, symptom assessments, treatment response and clinical services. It is aligned with HL7 FHIR and reuses standard biomedical terminologies (SNOMED CT, LOINC, NCIt, ICD-10, ATC). CVL-O is the semantic foundation of the Cancer Virtual Lab project, a collaboration between the University of Bologna, IRCCS Istituto Romagnolo per lo Studio dei Tumori (IRST) \"Dino Amadori\", Aivolution Srl and IFAB (International Foundation Big Data and Artificial Intelligence for Human Development), and underpins the Cancer Virtual Lab knowledge graph."
+      "en" : "The Cancer Virtual Lab Ontology (CVL-O) is an OWL 2 ontology for representing the oncological care pathway of patients from real-world clinical data: diagnosis and TNM staging, therapies and drug administrations, adverse events, biomarkers, genomic variants, laboratory tests, body measurements, symptom assessments, treatment response and clinical services. It is aligned with HL7 FHIR and reuses standard biomedical terminologies (SNOMED CT, LOINC, NCIt, ICD-10, ATC). CVL-O is the semantic foundation of the Cancer Virtual Lab project, a collaboration between the University of Bologna, IRCCS Istituto Romagnolo per lo Studio dei Tumori (IRST) \"Dino Amadori\", Aivolution Srl and IFAB (International Foundation Big Data and Artificial Intelligence for Human Development), and underpins the Cancer Virtual Lab knowledge graph."
     },
     "comments" : {
       "en" : "The clinical definitions (skos:definition) of CVL-O 1.1.0 have been reviewed and validated by the biomedical team of the Cancer Virtual Lab project."
@@ -36,37 +36,7 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "https://orcid.org/0009-0005-8022-0242",
-        "type" : "iri"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "https://orcid.org/0009-0007-4241-3005",
-        "type" : "iri"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Lorenzo Ridolfi",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
         "value" : "Martina Cavallucci",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "https://orcid.org/0000-0003-3676-171X",
-        "type" : "iri"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "https://orcid.org/0009-0000-4148-5954",
-        "type" : "iri"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Roberto Pasolini",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -76,8 +46,38 @@
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
+        "value" : "https://orcid.org/0009-0007-4241-3005",
+        "type" : "iri"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
         "value" : "https://orcid.org/0000-0002-0066-9172",
         "type" : "iri"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0000-0003-3676-171X",
+        "type" : "iri"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Lorenzo Ridolfi",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0009-0000-4148-5954",
+        "type" : "iri"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "https://orcid.org/0009-0005-8022-0242",
+        "type" : "iri"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Roberto Pasolini",
+        "type" : "label"
       } ],
       "created" : [ {
         "identifier" : "created",
@@ -97,12 +97,6 @@
         "value" : "2026-10-30",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "http://irst.emr.it/cvl/",
-        "type" : "label"
-      } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "undefined",
@@ -115,10 +109,10 @@
         "value" : "Giorgetti L, Carbonaro A, Ridolfi L, Pasolini R, Pagliarani A, Cavallucci M, Andalò A, Del Gaudio L, De Angelis P, Vespignani R, Gentili N. Cancer Virtual Lab Ontology (CVL-O), version 1.1.0. Zenodo; 2026. https://doi.org/10.5281/zenodo.23762955",
         "type" : "label"
       } ],
-      "title" : [ {
-        "identifier" : "title",
-        "language" : "en",
-        "value" : "Cancer Virtual Lab Ontology (CVL-O)",
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "http://irst.emr.it/cvl/",
         "type" : "label"
       } ],
       "isPartOf" : [ {
@@ -126,6 +120,12 @@
         "language" : "undefined",
         "value" : "https://doi.org/10.5281/zenodo.23762955",
         "type" : "iri"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Cancer Virtual Lab Ontology (CVL-O)",
+        "type" : "label"
       } ],
       "seeAlso" : [ {
         "identifier" : "seeAlso",
@@ -184,11 +184,11 @@
     "id" : "33",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "15",
-    "type" : "owl:Class"
-  }, {
     "id" : "34",
     "type" : "owl:equivalentClass"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
   }, {
     "id" : "19",
     "type" : "owl:Class"
@@ -565,10 +565,10 @@
     "id" : "443",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "445",
+    "id" : "442",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "442",
+    "id" : "445",
     "type" : "owl:equivalentClass"
   }, {
     "id" : "189",
@@ -619,10 +619,10 @@
     "id" : "93",
     "type" : "owl:Class"
   }, {
-    "id" : "69",
+    "id" : "273",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "273",
+    "id" : "69",
     "type" : "owl:equivalentClass"
   }, {
     "id" : "158",
@@ -634,7 +634,7 @@
     "id" : "284",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "467",
+    "id" : "465",
     "type" : "owl:equivalentClass"
   }, {
     "id" : "99",
@@ -718,10 +718,10 @@
     "id" : "283",
     "type" : "owl:Class"
   }, {
-    "id" : "192",
+    "id" : "43",
     "type" : "owl:equivalentClass"
   }, {
-    "id" : "43",
+    "id" : "192",
     "type" : "owl:equivalentClass"
   }, {
     "id" : "296",
@@ -925,6 +925,17 @@
     "attributes" : [ "equivalent", "external" ],
     "id" : "33"
   }, {
+    "iri" : "http://snomed.info/sct/425389002",
+    "baseIri" : "http://snomed.info/sct",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "425389002",
+      "undefined" : "snomed:425389002"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "34",
+    "superClasses" : [ "35" ]
+  }, {
     "iri" : "http://irst.emr.it/cvl/SalvageTherapy2",
     "baseIri" : "http://irst.emr.it/cvl",
     "instances" : 1,
@@ -943,17 +954,6 @@
     },
     "id" : "15",
     "superClasses" : [ "1" ]
-  }, {
-    "iri" : "http://snomed.info/sct/425389002",
-    "baseIri" : "http://snomed.info/sct",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "425389002",
-      "undefined" : "snomed:425389002"
-    },
-    "attributes" : [ "equivalent", "external" ],
-    "id" : "34",
-    "superClasses" : [ "35" ]
   }, {
     "iri" : "http://irst.emr.it/cvl/SalvageTherapy3",
     "baseIri" : "http://irst.emr.it/cvl",
@@ -2623,16 +2623,6 @@
     "attributes" : [ "equivalent", "external" ],
     "id" : "443"
   }, {
-    "iri" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15675",
-    "baseIri" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "C15675",
-      "undefined" : "ncit:C15675"
-    },
-    "attributes" : [ "equivalent", "external" ],
-    "id" : "445"
-  }, {
     "iri" : "http://snomed.info/sct/399504009",
     "baseIri" : "http://snomed.info/sct",
     "instances" : 0,
@@ -2643,6 +2633,16 @@
     "attributes" : [ "equivalent", "external" ],
     "id" : "442",
     "superClasses" : [ "97" ]
+  }, {
+    "iri" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15675",
+    "baseIri" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "C15675",
+      "undefined" : "ncit:C15675"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "445"
   }, {
     "iri" : "http://irst.emr.it/cvl/Male",
     "equivalent" : [ "162" ],
@@ -2835,7 +2835,7 @@
     "superClasses" : [ "167" ]
   }, {
     "iri" : "http://irst.emr.it/cvl/Administration",
-    "equivalent" : [ "467" ],
+    "equivalent" : [ "465" ],
     "baseIri" : "http://irst.emr.it/cvl",
     "instances" : 0,
     "annotations" : {
@@ -2895,6 +2895,17 @@
     "attributes" : [ "external" ],
     "id" : "93"
   }, {
+    "iri" : "http://snomed.info/sct/423409001",
+    "baseIri" : "http://snomed.info/sct",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "423409001",
+      "undefined" : "snomed:423409001"
+    },
+    "attributes" : [ "equivalent", "external" ],
+    "id" : "273",
+    "superClasses" : [ "35" ]
+  }, {
     "iri" : "http://irst.emr.it/cvl/ConcomitantWithRadiotherapy",
     "equivalent" : [ "472" ],
     "baseIri" : "http://irst.emr.it/cvl",
@@ -2915,17 +2926,6 @@
     "attributes" : [ "equivalent" ],
     "id" : "69",
     "superClasses" : [ "66" ]
-  }, {
-    "iri" : "http://snomed.info/sct/423409001",
-    "baseIri" : "http://snomed.info/sct",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "423409001",
-      "undefined" : "snomed:423409001"
-    },
-    "attributes" : [ "equivalent", "external" ],
-    "id" : "273",
-    "superClasses" : [ "35" ]
   }, {
     "iri" : "https://loinc.org/LA3-6",
     "baseIri" : "https://loinc.org",
@@ -2977,7 +2977,7 @@
       "undefined" : "fhir:MedicationAdministration"
     },
     "attributes" : [ "equivalent", "external" ],
-    "id" : "467"
+    "id" : "465"
   }, {
     "iri" : "http://irst.emr.it/cvl/Response",
     "baseIri" : "http://irst.emr.it/cvl",
@@ -3379,27 +3379,6 @@
     "subClasses" : [ "238", "52" ],
     "id" : "283"
   }, {
-    "iri" : "http://irst.emr.it/cvl/Female",
-    "equivalent" : [ "158" ],
-    "baseIri" : "http://irst.emr.it/cvl",
-    "instances" : 1,
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Female sex assigned at birth.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "Female",
-      "en" : "Female",
-      "it" : "Donna"
-    },
-    "attributes" : [ "equivalent" ],
-    "id" : "192",
-    "superClasses" : [ "170" ]
-  }, {
     "iri" : "http://irst.emr.it/cvl/C_M_Class",
     "equivalent" : [ "206" ],
     "baseIri" : "http://irst.emr.it/cvl",
@@ -3420,6 +3399,27 @@
     "attributes" : [ "equivalent" ],
     "id" : "43",
     "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://irst.emr.it/cvl/Female",
+    "equivalent" : [ "158" ],
+    "baseIri" : "http://irst.emr.it/cvl",
+    "instances" : 1,
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Female sex assigned at birth.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Female",
+      "en" : "Female",
+      "it" : "Donna"
+    },
+    "attributes" : [ "equivalent" ],
+    "id" : "192",
+    "superClasses" : [ "170" ]
   }, {
     "iri" : "http://irst.emr.it/cvl/Department",
     "equivalent" : [ "544" ],
@@ -3694,7 +3694,7 @@
     "id" : "151",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "152",
+    "id" : "153",
     "type" : "owl:objectProperty"
   }, {
     "id" : "154",
@@ -4300,7 +4300,7 @@
     "id" : "388",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "465",
+    "id" : "466",
     "type" : "owl:objectProperty"
   }, {
     "id" : "468",
@@ -4318,7 +4318,7 @@
     "id" : "209",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "466",
+    "id" : "467",
     "type" : "owl:objectProperty"
   }, {
     "id" : "473",
@@ -4495,7 +4495,7 @@
     "id" : "531",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "153",
+    "id" : "152",
     "type" : "owl:objectProperty"
   }, {
     "id" : "532",
@@ -4588,14 +4588,14 @@
     "id" : "562",
     "type" : "owl:datatypeProperty"
   }, {
+    "id" : "563",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "542",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "563",
-    "type" : "owl:datatypeProperty"
-  }, {
     "id" : "564",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "565",
     "type" : "owl:datatypeProperty"
@@ -5228,6 +5228,27 @@
     "attributes" : [ "datatype" ],
     "id" : "149"
   }, {
+    "iri" : "http://irst.emr.it/cvl/has_therapy",
+    "inverse" : "152",
+    "baseIri" : "http://irst.emr.it/cvl",
+    "range" : "126",
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Links a patient to an oncological therapy.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_therapy",
+      "en" : "Has therapy",
+      "it" : "Ha terapia"
+    },
+    "domain" : "47",
+    "attributes" : [ "object" ],
+    "id" : "151"
+  }, {
     "iri" : "http://irst.emr.it/cvl/is_cn_of",
     "baseIri" : "http://irst.emr.it/cvl",
     "range" : "44",
@@ -5246,28 +5267,7 @@
     },
     "domain" : "104",
     "attributes" : [ "object" ],
-    "id" : "151"
-  }, {
-    "iri" : "http://irst.emr.it/cvl/has_therapy",
-    "inverse" : "153",
-    "baseIri" : "http://irst.emr.it/cvl",
-    "range" : "126",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Links a patient to an oncological therapy.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "has_therapy",
-      "en" : "Has therapy",
-      "it" : "Ha terapia"
-    },
-    "domain" : "47",
-    "attributes" : [ "object" ],
-    "id" : "152"
+    "id" : "153"
   }, {
     "iri" : "http://irst.emr.it/cvl/reference_max_value",
     "baseIri" : "http://irst.emr.it/cvl",
@@ -6416,7 +6416,7 @@
     "id" : "387"
   }, {
     "iri" : "http://irst.emr.it/cvl/has_cn",
-    "inverse" : "151",
+    "inverse" : "153",
     "baseIri" : "http://irst.emr.it/cvl",
     "range" : "104",
     "annotations" : {
@@ -7269,7 +7269,7 @@
     "id" : "388"
   }, {
     "iri" : "http://irst.emr.it/cvl/administer_active_substance",
-    "inverse" : "466",
+    "inverse" : "467",
     "baseIri" : "http://irst.emr.it/cvl",
     "range" : "37",
     "annotations" : {
@@ -7287,7 +7287,7 @@
     },
     "domain" : "179",
     "attributes" : [ "object" ],
-    "id" : "465"
+    "id" : "466"
   }, {
     "iri" : "http://irst.emr.it/cvl/is_pn_of",
     "baseIri" : "http://irst.emr.it/cvl",
@@ -7414,7 +7414,7 @@
     },
     "domain" : "37",
     "attributes" : [ "object" ],
-    "id" : "466"
+    "id" : "467"
   }, {
     "iri" : "http://irst.emr.it/cvl/variant2",
     "baseIri" : "http://irst.emr.it/cvl",
@@ -7999,7 +7999,7 @@
     },
     "domain" : "126",
     "attributes" : [ "object" ],
-    "id" : "153"
+    "id" : "152"
   }, {
     "range" : "167",
     "domain" : "441",
@@ -8364,6 +8364,26 @@
     "attributes" : [ "datatype" ],
     "id" : "562"
   }, {
+    "iri" : "http://irst.emr.it/cvl/has_gender",
+    "baseIri" : "http://irst.emr.it/cvl",
+    "range" : "170",
+    "annotations" : {
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "en",
+        "value" : "Specifies the sex assigned at birth of a patient.",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "has_gender",
+      "en" : "Has gender",
+      "it" : "Ha genere"
+    },
+    "domain" : "47",
+    "attributes" : [ "object" ],
+    "id" : "563"
+  }, {
     "iri" : "http://irst.emr.it/cvl/is_response_of",
     "baseIri" : "http://irst.emr.it/cvl",
     "range" : "47",
@@ -8402,26 +8422,6 @@
     },
     "domain" : "47",
     "attributes" : [ "datatype" ],
-    "id" : "563"
-  }, {
-    "iri" : "http://irst.emr.it/cvl/has_gender",
-    "baseIri" : "http://irst.emr.it/cvl",
-    "range" : "170",
-    "annotations" : {
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "en",
-        "value" : "Specifies the sex assigned at birth of a patient.",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "IRI-based" : "has_gender",
-      "en" : "Has gender",
-      "it" : "Ha genere"
-    },
-    "domain" : "47",
-    "attributes" : [ "object" ],
     "id" : "564"
   }, {
     "iri" : "http://irst.emr.it/cvl/site_description",

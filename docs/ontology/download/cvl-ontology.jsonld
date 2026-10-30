@@ -1,0 +1,4908 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding0"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding1"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding2"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding3"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding4"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding5"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://irst.emr.it/cvl/LineOfTherapy1"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/LineOfTherapy10"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/LineOfTherapy2"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/LineOfTherapy3"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/LineOfTherapy4"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/LineOfTherapy5"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/LineOfTherapy6"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/LineOfTherapy7"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/LineOfTherapy8"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/LineOfTherapy9"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://irst.emr.it/cvl/SalvageTherapy1"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/SalvageTherapy10"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/SalvageTherapy2"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/SalvageTherapy3"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/SalvageTherapy4"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/SalvageTherapy5"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/SalvageTherapy6"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/SalvageTherapy7"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/SalvageTherapy8"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/SalvageTherapy9"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://irst.emr.it/cvl/TNMClassificationM"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/TNMClassificationN"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/TNMClassificationT"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://irst.emr.it/cvl/Female"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/Male"
+    }, {
+      "@id" : "http://irst.emr.it/cvl/UnknownGender"
+    } ]
+  } ]
+}, {
+  "@id" : "http://hl7.org/fhir/AdverseEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "fhir:AdverseEvent"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://irst.emr.it/cvl/AdverseEvent"
+  } ]
+}, {
+  "@id" : "http://hl7.org/fhir/CarePlan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "fhir:CarePlan"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://irst.emr.it/cvl/Therapy"
+  } ]
+}, {
+  "@id" : "http://hl7.org/fhir/ChargeItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "fhir:ChargeItem"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://irst.emr.it/cvl/Service"
+  } ]
+}, {
+  "@id" : "http://hl7.org/fhir/Condition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "fhir:Condition"
+  } ]
+}, {
+  "@id" : "http://hl7.org/fhir/Medication",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "fhir:Medication"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://irst.emr.it/cvl/ActiveSubstance"
+  } ]
+}, {
+  "@id" : "http://hl7.org/fhir/MedicationAdministration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "fhir:MedicationAdministration"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://irst.emr.it/cvl/Administration"
+  } ]
+}, {
+  "@id" : "http://hl7.org/fhir/Observation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "fhir:Observation"
+  } ]
+}, {
+  "@id" : "http://hl7.org/fhir/Organization",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "fhir:Organization"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://irst.emr.it/cvl/Department"
+  } ]
+}, {
+  "@id" : "http://hl7.org/fhir/Patient",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "fhir:Patient"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "Giorgetti L, Carbonaro A, Ridolfi L, Pasolini R, Pagliarani A, Cavallucci M, Andalò A, Del Gaudio L, De Angelis P, Vespignani R, Gentili N. Cancer Virtual Lab Ontology (CVL-O), version 1.1.0. Zenodo; 2026. https://doi.org/10.5281/zenodo.23762955"
+  } ],
+  "http://purl.org/dc/terms/contributor" : [ {
+    "@id" : "https://orcid.org/0000-0002-0066-9172"
+  }, {
+    "@id" : "https://orcid.org/0000-0002-3890-4852"
+  }, {
+    "@id" : "https://orcid.org/0000-0003-3676-171X"
+  }, {
+    "@id" : "https://orcid.org/0009-0000-4148-5954"
+  }, {
+    "@id" : "https://orcid.org/0009-0005-8022-0242"
+  }, {
+    "@id" : "https://orcid.org/0009-0007-4241-3005"
+  }, {
+    "@value" : "Lorenzo Ridolfi"
+  }, {
+    "@value" : "Martina Cavallucci"
+  }, {
+    "@value" : "Paolo De Angelis"
+  }, {
+    "@value" : "Roberto Pasolini"
+  } ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2025-01-30"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "https://orcid.org/0009-0002-9475-0744"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "The Cancer Virtual Lab Ontology (CVL-O) is an OWL 2 ontology for representing the oncological care pathway of patients from real-world clinical data: diagnosis and TNM staging, therapies and drug administrations, adverse events, biomarkers, genomic variants, laboratory tests, body measurements, symptom assessments, treatment response and clinical services. It is aligned with HL7 FHIR and reuses standard biomedical terminologies (SNOMED CT, LOINC, NCIt, ICD-10, ATC). CVL-O is the semantic foundation of the Cancer Virtual Lab project, a collaboration between the University of Bologna, IRCCS Istituto Romagnolo per lo Studio dei Tumori (IRST) \"Dino Amadori\", Aivolution Srl and IFAB (International Foundation Big Data and Artificial Intelligence for Human Development), and underpins the Cancer Virtual Lab knowledge graph."
+  } ],
+  "http://purl.org/dc/terms/isPartOf" : [ {
+    "@id" : "https://doi.org/10.5281/zenodo.23762955"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "https://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-10-30"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Cancer Virtual Lab Ontology (CVL-O)"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "cvl"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "http://irst.emr.it/cvl/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The clinical definitions (skos:definition) of CVL-O 1.1.0 have been reviewed and validated by the biomedical team of the Cancer Virtual Lab project."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://cancer-virtual-lab.github.io/Cancer-Virtual-Lab-Public-Repo/"
+  }, {
+    "@id" : "https://github.com/Cancer-Virtual-Lab/Cancer-Virtual-Lab-Public-Repo"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "http://irst.emr.it/cvl/1.1.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1.1.0"
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/ActiveSubstance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Active Substance"
+  }, {
+    "@language" : "it",
+    "@value" : "Principio Attivo"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The pharmacologically active ingredient of a medication administered to a patient, identified by its ATC code (e.g., cisplatin, pembrolizumab)."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/AdjuvantTherapy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/AdjuvantTherapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Adjuvant therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Terapia adiuvante"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/TherapySetting"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15675"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A therapy setting given after the primary treatment (like surgery) to lower the risk that the cancer will return."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/Administration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Administration"
+  }, {
+    "@language" : "it",
+    "@value" : "Somministrazione"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A specific event where a drug, medication, or therapy dose is physically given to the patient at a specific time and date."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/AdvancedTherapy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/AdvancedTherapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Advanced therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Terapia avanzata"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/TherapySetting"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A therapy setting for treating advanced, late-stage, or metastatic cancer that has spread."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/AdverseEvent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Adverse Event"
+  }, {
+    "@language" : "it",
+    "@value" : "Evento avverso"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An unfavourable and unintended medical occurrence experienced by a patient following a treatment administration, whether or not considered related to it."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/AdverseEventEffect",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Adverse Event Effect"
+  }, {
+    "@language" : "it",
+    "@value" : "Effetto evento avverso"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://hl7.org/fhir/Condition"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The specific type and severity (toxicity grade) of a side effect experienced by the patient (e.g., severe nausea, grade 3 rash)."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/Anxiety",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ansia"
+  }, {
+    "@language" : "en",
+    "@value" : "Anxiety"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SymptomAssessmentFinding"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://snomed.info/sct/48694002"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An item of an ESAS (Edmonton Symptom Assessment System) survey rating the patient's anxiety, nervousness or psychological distress on a 0-10 scale (0 = absent, 10 = worst possible); the item is recorded whatever its score."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/Biomarker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Biomarker"
+  }, {
+    "@language" : "it",
+    "@value" : "Biomarker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://hl7.org/fhir/Observation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A measurable biological, molecular, or genetic marker tested in the patient's tumor or blood used to guide targeted therapy (e.g., PD-L1, EGFR, HER2)."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/BodyMeasurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Body Measurement"
+  }, {
+    "@language" : "it",
+    "@value" : "Peso e Altezza"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://hl7.org/fhir/Observation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A record of a patient's physical body metrics (e.g., height, weight) taken on a given date."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/BodyMetric",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Body Metric"
+  }, {
+    "@language" : "it",
+    "@value" : "Metrica corporea"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A specific physical measurement value, such as a patient's exact height in centimeters or weight in kilograms."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/BreathingDifficulty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Breathing difficulty"
+  }, {
+    "@language" : "it",
+    "@value" : "Difficoltà a respirare"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SymptomAssessmentFinding"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://snomed.info/sct/267036007"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An item of an ESAS (Edmonton Symptom Assessment System) survey rating the patient's shortness of breath, dyspnea or trouble breathing on a 0-10 scale (0 = absent, 10 = worst possible); the item is recorded whatever its score."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/C_M_Class",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Clinical presence of distant metastasis (M)"
+  }, {
+    "@language" : "it",
+    "@value" : "Presenza clinica di metastasi a distanza (M)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/TNMClassificationM"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://irst.emr.it/cvl/P_M_Class"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/399387003"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Clinical Metastasis (cM) category in TNM staging, indicating the presence or absence of distant spread based on clinical imaging before surgery."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/C_N_Class",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Clinical spread to regional lymph nodes (N)"
+  }, {
+    "@language" : "it",
+    "@value" : "Coinvolgimento clinico dei linfonodi regionali (N)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/TNMClassificationN"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://irst.emr.it/cvl/P_N_Class"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/399534004"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Clinical Node (cN) category in TNM staging, indicating regional lymph node involvement based on clinical exams before surgery."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/C_T_Class",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Clinical tumor size (T)"
+  }, {
+    "@language" : "it",
+    "@value" : "Dimensione del tumore clinica (T)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/TNMClassificationT"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://irst.emr.it/cvl/P_T_Class"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/399504009"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Clinical Tumor (cT) category in TNM staging, indicating the size and extent of the primary tumor based on clinical exams before surgery."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/ClinicalTNM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Clinical TNM"
+  }, {
+    "@language" : "it",
+    "@value" : "TNM clinico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/TNM"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://irst.emr.it/cvl/PathologicalTNM"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/399537006"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The clinical TNM (Tumor, Node, Metastasis) staging classification, assessed before definitive surgery using imaging and biopsies."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/ConcomitantWithRadiotherapy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/ConcomitantWithRadiotherapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Concomitant with radiotherapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Concomitante a radioterapia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/TherapySetting"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94626"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A therapy setting where systemic treatment (like chemotherapy) is administered concurrently or at the same time as radiation therapy."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/ConsolidationTherapy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/ConsolidationTherapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Consolidation therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Terapia di consolidamento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/TherapySetting"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15679"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A therapy setting given to kill any cancer cells that may be left after initial treatment to deepen the patient's response."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/Department",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Department"
+  }, {
+    "@language" : "it",
+    "@value" : "Reparto"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A specific hospital unit, clinic, or medical department that provides clinical services or procedures."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/Depression",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Depression"
+  }, {
+    "@language" : "it",
+    "@value" : "Depressione"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SymptomAssessmentFinding"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://snomed.info/sct/35489007"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An item of an ESAS (Edmonton Symptom Assessment System) survey rating the patient's depression, sadness or low mood on a 0-10 scale (0 = absent, 10 = worst possible); the item is recorded whatever its score."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/Diagnosis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Diagnosi"
+  }, {
+    "@language" : "en",
+    "@value" : "Diagnosis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://hl7.org/fhir/Condition"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The formal medical identification of the patient's cancer, tumor, or disease, including its anatomical primary site and overall stage."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/DrinkerPatient",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Drinker patient"
+  }, {
+    "@language" : "it",
+    "@value" : "Paziente consumatore di alcolici"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://snomed.info/sct/219006"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A patient who has a recorded physiological history of consuming alcohol or being a drinker."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/Drowsiness",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Drowsiness"
+  }, {
+    "@language" : "it",
+    "@value" : "Sonnolenza"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SymptomAssessmentFinding"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://snomed.info/sct/271782001"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An item of an ESAS (Edmonton Symptom Assessment System) survey rating the patient's unusual sleepiness or drowsiness on a 0-10 scale (0 = absent, 10 = worst possible); the item is recorded whatever its score."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ECOG performance status finding"
+  }, {
+    "@language" : "it",
+    "@value" : "Valore ECOG performance status"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/424122007"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The specific numeric grade (0 through 5) assigned during an ECOG performance status assessment."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding0"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Grade 0"
+  }, {
+    "@language" : "it",
+    "@value" : "Grado 0"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/425389002"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "ECOG Grade 0, indicating the patient is fully active and able to carry on all pre-disease performance without restriction."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Grade 1"
+  }, {
+    "@language" : "it",
+    "@value" : "Grado 1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/422512005"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "ECOG Grade 1, indicating the patient is restricted in physically strenuous activity but ambulatory."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Grade 2"
+  }, {
+    "@language" : "it",
+    "@value" : "Grado 2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/422894000"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "ECOG Grade 2, indicating the patient is ambulatory and capable of all selfcare but unable to carry out any work activities."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Grade 3"
+  }, {
+    "@language" : "it",
+    "@value" : "Grado 3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/423053003"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "ECOG Grade 3, indicating the patient is capable of only limited selfcare, confined to bed or chair more than 50% of waking hours."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding4"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Grade 4"
+  }, {
+    "@language" : "it",
+    "@value" : "Grado 4"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/423237006"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "ECOG Grade 4, indicating the patient is completely disabled, cannot carry on any selfcare, and is totally confined to bed or chair."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding5"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Grade 5"
+  }, {
+    "@language" : "it",
+    "@value" : "Grado 5"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/423409001"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "ECOG Grade 5, indicating the patient is dead."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/ECOGStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ECOG Performance Status"
+  }, {
+    "@language" : "it",
+    "@value" : "Stato di performance ECOG"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://hl7.org/fhir/Observation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An assessment of a patient's performance status — their level of functioning in terms of self-care, daily activity and physical ability — graded on the Eastern Cooperative Oncology Group (ECOG) scale (0–5)."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/ECOG_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/ECOGStatus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Data valutazione ECOG"
+  }, {
+    "@language" : "en",
+    "@value" : "ECOG assessment date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The date an ECOG performance status was measured or recorded."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/ESAS_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/SymptomAssessment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Data della valutazione ESAS"
+  }, {
+    "@language" : "en",
+    "@value" : "ESAS assessment date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The date and time a symptom assessment (ESAS) was completed by the patient."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/Fatigue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fatigue"
+  }, {
+    "@language" : "it",
+    "@value" : "Stanchezza"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SymptomAssessmentFinding"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://snomed.info/sct/84229001"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An item of an ESAS (Edmonton Symptom Assessment System) survey rating the patient's tiredness, exhaustion or fatigue on a 0-10 scale (0 = absent, 10 = worst possible); the item is recorded whatever its score."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/Female",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/Female"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Donna"
+  }, {
+    "@language" : "en",
+    "@value" : "Female"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SexAssignedAtBirth"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://loinc.org/LA3-6"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Female sex assigned at birth."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/Height",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Altezza"
+  }, {
+    "@language" : "en",
+    "@value" : "Height"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/BodyMetric"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/50373000"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A specific body metric recording how tall the patient is, usually measured in centimeters."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/InductionTherapy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/InductionTherapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Induction therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Terapia ad induzione"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/TherapySetting"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158876"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Initial or first-phase therapy setting given to shrink a tumor before other treatments like surgery or radiation."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/LaboratoryTest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Esame di laboratorio"
+  }, {
+    "@language" : "en",
+    "@value" : "Laboratory Test"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://hl7.org/fhir/Observation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A laboratory test performed on a patient specimen, reported with its normal reference range."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/LineOfTherapy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Line of therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Linea di terapia"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Represents the sequential order of cancer treatments a patient receives over time."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/LineOfTherapy1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "First line of therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Prima linea di terapia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45792"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "First-line therapy, the initial treatment regimen given for a disease."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/LineOfTherapy10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy10"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Decima linea di terapia"
+  }, {
+    "@language" : "en",
+    "@value" : "Tenth line of therapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Tenth-line therapy, a highly advanced subsequent treatment regimen."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/LineOfTherapy2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Second line of therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Seconda linea di terapia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54350"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Second-line therapy, the treatment given when the first-line therapy doesn't work or stops working."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/LineOfTherapy3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Terza linea di terapia"
+  }, {
+    "@language" : "en",
+    "@value" : "Third line of therapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94628"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Third-line therapy, given after first- and second-line treatments have failed."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/LineOfTherapy4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy4"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fourth line of therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Quarta linea di terapia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133522"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Fourth-line therapy, a subsequent treatment regimen."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/LineOfTherapy5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy5"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fifth line of therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Quinta linea di terapia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133524"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Fifth-line therapy, a subsequent treatment regimen."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/LineOfTherapy6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy6"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Sesta linea di terapia"
+  }, {
+    "@language" : "en",
+    "@value" : "Sixth line of therapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133526"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Sixth-line therapy, a subsequent treatment regimen."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/LineOfTherapy7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy7"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Settima linea di terapia"
+  }, {
+    "@language" : "en",
+    "@value" : "Seventh line of therapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133528"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Seventh-line therapy, a subsequent treatment regimen."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/LineOfTherapy8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy8"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Eighth line of therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Ottava linea di terapia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133529"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Eighth-line therapy, a subsequent treatment regimen."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/LineOfTherapy9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy9"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ninth line of therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Nona linea di terapia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Ninth-line therapy, a subsequent treatment regimen."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/LossOfAppetite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Loss of appetite"
+  }, {
+    "@language" : "it",
+    "@value" : "Mancanza di appetito"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SymptomAssessmentFinding"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://snomed.info/sct/289162002"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An item of an ESAS (Edmonton Symptom Assessment System) survey rating the patient's loss of appetite or reduced desire to eat on a 0-10 scale (0 = absent, 10 = worst possible); the item is recorded whatever its score."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/MaintenanceTherapy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/MaintenanceTherapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Maintenance therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Terapia di mantenimento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/TherapySetting"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15688"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A therapy setting intended to help keep cancer from growing after it has shrunk following initial treatment."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/Malaise",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Malaise"
+  }, {
+    "@language" : "it",
+    "@value" : "Malessere"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SymptomAssessmentFinding"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://snomed.info/sct/367391008"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An item of an ESAS (Edmonton Symptom Assessment System) survey rating the patient's general feeling of discomfort, illness or unease (lack of wellbeing) on a 0-10 scale (0 = absent, 10 = worst possible); the item is recorded whatever its score."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/Male",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/Male"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Male"
+  }, {
+    "@language" : "it",
+    "@value" : "Uomo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SexAssignedAtBirth"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://loinc.org/LA2-8"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Male sex assigned at birth."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/Nausea",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Nausea"
+  }, {
+    "@language" : "it",
+    "@value" : "Nausea"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SymptomAssessmentFinding"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://snomed.info/sct/422587007"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An item of an ESAS (Edmonton Symptom Assessment System) survey rating the patient's nausea or urge to vomit on a 0-10 scale (0 = absent, 10 = worst possible); the item is recorded whatever its score."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/NeoadjuvantTherapy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/NeoadjuvantTherapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Neoadjuvant therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Terapia neoadiuvante"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/TherapySetting"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15665"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A therapy setting given before the main treatment (usually surgery) to shrink a tumor and make it easier to remove."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/P_M_Class",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pathological presence of distant metastasis (M)"
+  }, {
+    "@language" : "it",
+    "@value" : "Presenza patologica di metastasi a distanza (M)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/TNMClassificationM"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/371497001"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Pathological Metastasis (pM) category, determining distant spread after examining surgical tissue under a microscope."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/P_N_Class",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Coinvolgimento patologico dei linfonodi regionali (N)"
+  }, {
+    "@language" : "en",
+    "@value" : "Pathological spread to regional lymph nodes (N)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/TNMClassificationN"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/371494008"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Pathological Node (pN) category, indicating lymph node spread based on definitive surgical pathology."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/P_T_Class",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Dimensione del tumore patologica (T)"
+  }, {
+    "@language" : "en",
+    "@value" : "Pathological tumor size (T)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/TNMClassificationT"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/384625004"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Pathological Tumor (pT) category, indicating primary tumor extent and size based on definitive surgical pathology."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/Pain",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Dolore"
+  }, {
+    "@language" : "en",
+    "@value" : "Pain"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SymptomAssessmentFinding"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://snomed.info/sct/22253000"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An item of an ESAS (Edmonton Symptom Assessment System) survey rating the patient's physical pain on a 0-10 scale (0 = absent, 10 = worst possible); the item is recorded whatever its score."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/PathologicalTNM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pathological TNM"
+  }, {
+    "@language" : "it",
+    "@value" : "TNM patologico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/TNM"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/399588009"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The pathological TNM staging classification, which is the most accurate staging determined after surgical removal and lab examination of the tumor."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/Patient",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Patient"
+  }, {
+    "@language" : "it",
+    "@value" : "Paziente"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The core individual person receiving clinical care, diagnosed with cancer, and undergoing oncological therapies."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/PhysiologicalHistory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Anamnesi Fisiologica"
+  }, {
+    "@language" : "en",
+    "@value" : "Physiological History"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://hl7.org/fhir/Observation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The patient's lifestyle habits, physiological background, and personal history, notably including smoking and alcohol use."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/Response",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Response"
+  }, {
+    "@language" : "it",
+    "@value" : "Risposta al trattamento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://hl7.org/fhir/Observation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The clinical outcome, treatment effect, or restaging result measuring how well the tumor responded to therapy (e.g., progressive disease, stable disease, complete response)."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/SalvageTherapy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Salvage therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Terapia di salvataggio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/TherapySetting"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15359"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Therapy setting given when the cancer has not responded to other treatments or has returned (relapse/refractory settings)."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/SalvageTherapy1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/SalvageTherapy1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "First salvage therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Primo salvataggio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SalvageTherapy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "First-line salvage therapy given for relapsed or refractory disease."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/SalvageTherapy10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/SalvageTherapy10"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Decimo salvataggio"
+  }, {
+    "@language" : "en",
+    "@value" : "Tenth salvage therapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SalvageTherapy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Tenth-line salvage therapy."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/SalvageTherapy2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/SalvageTherapy2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Second salvage therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Secondo salvataggio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SalvageTherapy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Second-line salvage therapy given for relapsed or refractory disease."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/SalvageTherapy3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/SalvageTherapy3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Terzo salvataggio"
+  }, {
+    "@language" : "en",
+    "@value" : "Third salvage therapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SalvageTherapy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Third-line salvage therapy given for relapsed or refractory disease."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/SalvageTherapy4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/SalvageTherapy4"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fourth salvage therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Quarto salvataggio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SalvageTherapy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Fourth-line salvage therapy."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/SalvageTherapy5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/SalvageTherapy5"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fifth salvage therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Quinto salvataggio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SalvageTherapy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Fifth-line salvage therapy."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/SalvageTherapy6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/SalvageTherapy6"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Sesto salvataggio"
+  }, {
+    "@language" : "en",
+    "@value" : "Sixth salvage therapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SalvageTherapy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Sixth-line salvage therapy."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/SalvageTherapy7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/SalvageTherapy7"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Settimo salvataggio"
+  }, {
+    "@language" : "en",
+    "@value" : "Seventh salvage therapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SalvageTherapy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Seventh-line salvage therapy."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/SalvageTherapy8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/SalvageTherapy8"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Eighth salvage therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Ottavo salvataggio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SalvageTherapy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Eighth-line salvage therapy."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/SalvageTherapy9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/SalvageTherapy9"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ninth salvage therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "Nono salvataggio"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SalvageTherapy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Ninth-line salvage therapy."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/Service",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Clinical Service"
+  }, {
+    "@language" : "it",
+    "@value" : "Prestazione Clinica"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A clinical service or procedure (e.g., imaging, surgery, outpatient visit) provided to a patient by a hospital department."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/SexAssignedAtBirth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Sesso assegnato alla nascita"
+  }, {
+    "@language" : "en",
+    "@value" : "Sex assigned at birth"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://loinc.org/76689-9"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The sex assigned to a patient at birth (e.g., male, female)."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/SmokerPatient",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Paziente fumatore"
+  }, {
+    "@language" : "en",
+    "@value" : "Smoker patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://snomed.info/sct/77176002"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A patient who has a recorded physiological history of smoking, tobacco use, or nicotine addiction."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/SymptomAssessment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Symptom Assessment"
+  }, {
+    "@language" : "it",
+    "@value" : "Valutazione dei sintomi"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://hl7.org/fhir/Observation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An Edmonton Symptom Assessment System (ESAS) survey evaluating the patient's palliative symptoms, pain, and quality of life."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/SymptomAssessmentFinding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Rilevazione dei sintomi manifestati"
+  }, {
+    "@language" : "en",
+    "@value" : "Symptom Assessment finding"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A specific subjective symptom reported in an ESAS survey along with its severity score (e.g., Pain=8)."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/TNM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "TNM"
+  }, {
+    "@language" : "it",
+    "@value" : "TNM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://hl7.org/fhir/Observation"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/399390009"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A general representation of the Tumor, Node, Metastasis (TNM) oncology staging system used to describe the extent of cancer."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/TNMClassification",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Classificazione TNM"
+  }, {
+    "@language" : "en",
+    "@value" : "TNM Classification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://hl7.org/fhir/Observation"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/399566009"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An overarching classification category for any specific T (Tumor), N (Node), or M (Metastasis) staging score."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/TNMClassificationM",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Categoria M"
+  }, {
+    "@language" : "en",
+    "@value" : "M category"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://snomed.info/sct/399566009"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/277208005"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The parent class for Metastasis (M) staging categories, indicating distant cancer spread."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/TNMClassificationN",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Categoria N"
+  }, {
+    "@language" : "en",
+    "@value" : "N category"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://snomed.info/sct/399566009"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/277206009"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The parent class for Node (N) staging categories, indicating regional lymph node involvement."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/TNMClassificationT",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Categoria T"
+  }, {
+    "@language" : "en",
+    "@value" : "T category"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://snomed.info/sct/399566009"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/78873005"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The parent class for Tumor (T) staging categories, indicating primary tumor size and local extent."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/TNM_code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/TNMClassification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Codice della classificazione TNM"
+  }, {
+    "@language" : "en",
+    "@value" : "TNM code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Identifier code for a TNM classification entity."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/TNM_value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/TNMClassification"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "TNM value"
+  }, {
+    "@language" : "it",
+    "@value" : "Valore della classificazione TNM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The string value representing a TNM classification score (e.g., 'T2', 'N1', 'M0')."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/Therapy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Terapia"
+  }, {
+    "@language" : "en",
+    "@value" : "Therapy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A treatment plan or oncological regimen (e.g., chemotherapy, immunotherapy, targeted therapy) administered to a patient over a period of time."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/TherapySetting",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Setting di terapia"
+  }, {
+    "@language" : "en",
+    "@value" : "Therapy setting"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The clinical context, timing, or intent of the cancer therapy (e.g., adjuvant, palliative, induction, neoadjuvant)."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/UnknownGender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://irst.emr.it/cvl/UnknownGender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Sconosciuto"
+  }, {
+    "@language" : "en",
+    "@value" : "Unknown"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/SexAssignedAtBirth"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://loinc.org/LA4489-6"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Assigned when the patient's biological sex is not recorded or known in the system."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/Variant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Variant"
+  }, {
+    "@language" : "it",
+    "@value" : "Variante genetica"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://hl7.org/fhir/Observation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A genetic mutation, genomic alteration, or molecular DNA variant found in the patient's tumor profiling or NGS sequencing."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/Weight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Peso"
+  }, {
+    "@language" : "en",
+    "@value" : "Weight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/BodyMetric"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://snomed.info/sct/363808001"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A specific body metric recording the patient's body mass, usually measured in kilograms."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/active_substance_code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/ActiveSubstance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Active substance code"
+  }, {
+    "@language" : "it",
+    "@value" : "Codice del principio attivo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The specific identifier or code for a drug, medication, or active clinical substance."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/active_substance_description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/ActiveSubstance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Active substance description"
+  }, {
+    "@language" : "it",
+    "@value" : "Descrizione del principio attivo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The name or textual description of a drug, medication, or active substance (e.g., 'Cisplatin', 'Pembrolizumab')."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/address_diagnosis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Therapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Address diagnosis"
+  }, {
+    "@language" : "it",
+    "@value" : "Affronta la diagnosi"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Diagnosis"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_addressed_by"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a therapy, treatment, or clinical management plan to the specific diagnosis or disease it is intended to treat."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/administer_active_substance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Administration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Administer active substance"
+  }, {
+    "@language" : "it",
+    "@value" : "Somministra principio attivo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/ActiveSubstance"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_administered_in"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a medical administration event to the specific active substance, drug, medicine, or chemical agent given to the patient."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/administration_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Administration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Administration date"
+  }, {
+    "@language" : "it",
+    "@value" : "Data di somministrazione"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The specific date a drug, medication, or therapy was physically administered to the patient."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/adverse_event_code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/AdverseEventEffect"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Adverse event code"
+  }, {
+    "@language" : "it",
+    "@value" : "Codice dell'evento avverso"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The identifier code for a side effect, toxicity, or adverse medical event."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/adverse_event_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/AdverseEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Adverse event date"
+  }, {
+    "@language" : "it",
+    "@value" : "Data dell’evento avverso"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The date an adverse event, toxicity, or side effect began."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/adverse_event_description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/AdverseEventEffect"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Adverse event description"
+  }, {
+    "@language" : "it",
+    "@value" : "Descrizione dell'evento avverso"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The text description of a side effect or adverse event (e.g., 'Nausea', 'Neutropenia', 'Rash')."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/alcohol_consumption",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/PhysiologicalHistory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Alcohol consumption"
+  }, {
+    "@language" : "it",
+    "@value" : "Consumo di alcol"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Boolean flag (true/false) indicating whether the patient consumes alcohol (is a drinker)."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/amino_acid_change",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Variant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Amino acid change"
+  }, {
+    "@language" : "it",
+    "@value" : "Cambiamento aminoacidico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The specific protein or amino acid change caused by a genetic variant (e.g., 'V600E', 'L858R')."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://snomed.info/sct/250574005"
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/birth_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Birth date"
+  }, {
+    "@language" : "it",
+    "@value" : "Data di nascita"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The patient's date of birth. Used to calculate their age."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/body_metric_unit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/BodyMetric"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Body metric unit"
+  }, {
+    "@language" : "it",
+    "@value" : "Unità di misura metrica"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The unit of measure of a body metric value (e.g., 'cm', 'kg')."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/body_metric_value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/BodyMetric"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Body metric value"
+  }, {
+    "@language" : "it",
+    "@value" : "Valore metrica"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The numeric integer value of a body measurement (e.g., height in cm, weight in kg)."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/category1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Categoria 1 della prestazione"
+  }, {
+    "@language" : "en",
+    "@value" : "Category 1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Primary hierarchical classification category for a clinical service or procedure."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/category2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Categoria 2 della prestazione"
+  }, {
+    "@language" : "en",
+    "@value" : "Category 2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Secondary hierarchical classification category for a clinical service or procedure."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/category3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Categoria 3 della prestazione"
+  }, {
+    "@language" : "en",
+    "@value" : "Category 3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Tertiary hierarchical classification category for a clinical service or procedure."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/causes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Administration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Causa"
+  }, {
+    "@language" : "en",
+    "@value" : "Causes"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/AdverseEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_due_to"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Indicates that a drug administration is associated with the onset of a specific adverse event."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/characterizes_diagnosis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/TNM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Caratterizza diagnosi"
+  }, {
+    "@language" : "en",
+    "@value" : "Characterizes diagnosis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Diagnosis"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_characterized_by"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a TNM staging classification to the specific tumor diagnosis it characterizes."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/currency",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Currency"
+  }, {
+    "@language" : "it",
+    "@value" : "Valuta della prestazione"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The currency used to denominate the price of a clinical service (e.g., 'EUR', 'USD')."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/death_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Data di morte"
+  }, {
+    "@language" : "en",
+    "@value" : "Death date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The date of the patient's death. Used for calculating overall survival and mortality."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/department_code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Department"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Codice del reparto"
+  }, {
+    "@language" : "en",
+    "@value" : "Department code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Alphanumeric identifier code for a hospital department."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/department_name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Department"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Department name"
+  }, {
+    "@language" : "it",
+    "@value" : "Nome del reparto"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The name of the hospital department providing a clinical service (e.g., 'Oncology', 'Radiology')."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/diagnosis_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Diagnosis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Data della diagnosi"
+  }, {
+    "@language" : "en",
+    "@value" : "Diagnosis date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The date the cancer, tumor, or disease was formally diagnosed."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/exam_code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Variant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Codice dell'esame"
+  }, {
+    "@language" : "en",
+    "@value" : "Exam code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The identifier for a genetic variant examination, sequencing, or molecular test."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/exam_description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Variant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Descrizione dell'esame"
+  }, {
+    "@language" : "en",
+    "@value" : "Exam description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Description of the genetic, genomic, or molecular examination performed to find a variant."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/first_administration_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Therapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Data della prima somministrazione della terapia"
+  }, {
+    "@language" : "en",
+    "@value" : "First administration date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The start date when a patient received the very first dose of a specific line of therapy."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_ECOG_status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha ECOG"
+  }, {
+    "@language" : "en",
+    "@value" : "Has ECOG status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/ECOGStatus"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_ECOG_status_of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a patient to an assessment of their ECOG performance status."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_administration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Therapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha somministrazione"
+  }, {
+    "@language" : "en",
+    "@value" : "Has administration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Administration"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_based_on_therapy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a therapy or treatment plan to the specific dates and events when drugs or medications were administered to the patient."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_biomarker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha biomarker"
+  }, {
+    "@language" : "en",
+    "@value" : "Has biomarker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Biomarker"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_biomarker_of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Connects a patient to a biomarker test, genetic marker finding, or molecular profile result (e.g., PD-L1, HER2)."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_body_measurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha peso e altezza"
+  }, {
+    "@language" : "en",
+    "@value" : "Has body measurement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/BodyMeasurement"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_body_measurement_of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a patient to their physical body measurements, such as their recorded height or weight."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_body_metric",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/BodyMeasurement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha metrica corporea"
+  }, {
+    "@language" : "en",
+    "@value" : "Has body metric"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/BodyMetric"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_body_metric_of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Connects a body measurement event to the specific metric recorded (e.g., measuring height or weight)."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_cm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/ClinicalTNM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha presenza clinica di metastasi a distanza (M)"
+  }, {
+    "@language" : "en",
+    "@value" : "Has clinical presence of distant metastasis (M)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/C_M_Class"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_cm_of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a clinical TNM staging record to the clinical Metastasis (cM) classification, indicating distant spread."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_cn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/ClinicalTNM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha coinvolgimento clinico dei linfonodi regionali (N)"
+  }, {
+    "@language" : "en",
+    "@value" : "Has clinical spread to regional lymph nodes (N)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/C_N_Class"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_cn_of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a clinical TNM staging record to the clinical Node (cN) classification, indicating lymph node involvement."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_ct",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/ClinicalTNM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha dimensione del tumore clinica (T)"
+  }, {
+    "@language" : "en",
+    "@value" : "Has clinical tumor size (T)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/C_T_Class"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_ct_of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a clinical TNM staging record to the clinical Tumor (cT) classification, indicating primary tumor size."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_diagnosis",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha diagnosi"
+  }, {
+    "@language" : "en",
+    "@value" : "Has diagnosis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Diagnosis"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_diagnosis_of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a patient to a cancer diagnosis."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_effect",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/AdverseEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha effetto"
+  }, {
+    "@language" : "en",
+    "@value" : "Has effect"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/AdverseEventEffect"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_adverse_event_effect_of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links an adverse event to the specific effect, toxicity grade, and description of the side effect experienced."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_gender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha genere"
+  }, {
+    "@language" : "en",
+    "@value" : "Has gender"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/SexAssignedAtBirth"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Specifies the sex assigned at birth of a patient."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_height",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/BodyMeasurement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha altezza"
+  }, {
+    "@language" : "en",
+    "@value" : "Has height"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Height"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/has_body_metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a body measurement event specifically to the patient's height metric."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_laboratory_test",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha esame di laboratorio"
+  }, {
+    "@language" : "en",
+    "@value" : "Has laboratory test"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/LaboratoryTest"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_laboratory_test_of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Connects a patient to blood tests, lab work, hematology, or other laboratory examinations."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_line_of_therapy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Therapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha linea di terapia"
+  }, {
+    "@language" : "en",
+    "@value" : "Has line of therapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/LineOfTherapy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the sequential line of therapy (e.g., first-line, second-line, third-line) for a specific treatment plan."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_physiological_history",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha anamnesi fisiologica"
+  }, {
+    "@language" : "en",
+    "@value" : "Has physiological history"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/PhysiologicalHistory"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_physiological_history_of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a patient to their lifestyle habits, physiological background, and history such as smoking or alcohol consumption."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_pm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/PathologicalTNM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha presenza patologica di metastasi a distanza (M)"
+  }, {
+    "@language" : "en",
+    "@value" : "Has pathological presence of distant metastasis (M)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/P_M_Class"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_pm_of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a pathological TNM staging record to the pathological Metastasis (pM) classification."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_pn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/PathologicalTNM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha coinvolgimento patologico dei linfonodi regionali (N)"
+  }, {
+    "@language" : "en",
+    "@value" : "Has pathological spread to regional lymph nodes (N)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/P_N_Class"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_pn_of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a pathological TNM staging record to the pathological Node (pN) classification."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_pt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/PathologicalTNM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha dimensione del tumore patologica (T)"
+  }, {
+    "@language" : "en",
+    "@value" : "Has pathological tumor size (T)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/P_T_Class"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_pt_of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a pathological TNM staging record to the pathological Tumor (pT) classification."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_response",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha risposta al trattamento"
+  }, {
+    "@language" : "en",
+    "@value" : "Has response"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Response"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_response_of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Connects a patient to their treatment response, clinical outcome, or disease progression status (e.g., complete response, stable disease)."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_service",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha prestazione clinica"
+  }, {
+    "@language" : "en",
+    "@value" : "Has clinical service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Service"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_service_of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a patient to a clinical service or procedure they received."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_symptom_assessment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha valutazione ESAS"
+  }, {
+    "@language" : "en",
+    "@value" : "Has symptom assessment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/SymptomAssessment"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_symptom_assessment_of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a patient to an ESAS (Edmonton Symptom Assessment System) evaluation, measuring pain, fatigue, and palliative symptoms."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_symptom_assessment_finding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/SymptomAssessment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha valutazione"
+  }, {
+    "@language" : "en",
+    "@value" : "Has finding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/SymptomAssessmentFinding"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Connects a symptom assessment survey to a specific symptom finding and its numeric severity score."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_target_value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/ECOGStatus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha valore"
+  }, {
+    "@language" : "en",
+    "@value" : "Has value"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/ECOGPerformanceStatusFinding"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links an ECOG performance status to the specific numeric grade (e.g., Grade 0 to Grade 5) of the patient's health."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_therapy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha terapia"
+  }, {
+    "@language" : "en",
+    "@value" : "Has therapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Therapy"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_therapy_of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a patient to an oncological therapy."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_therapy_setting",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Therapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha setting"
+  }, {
+    "@language" : "en",
+    "@value" : "Has setting"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/TherapySetting"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the clinical setting or intent of a therapy (e.g., adjuvant, neoadjuvant, palliative, advanced, consolidation)."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_variant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha variante genetica"
+  }, {
+    "@language" : "en",
+    "@value" : "Has variant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Variant"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_variant_of"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a patient to a specific genetic mutation, genomic alteration, or genetic variant detected in their tumor DNA."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/has_weight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/BodyMeasurement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Ha peso"
+  }, {
+    "@language" : "en",
+    "@value" : "Has weight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Weight"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/has_body_metric"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a body measurement event specifically to the patient's weight metric."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_ECOG_status_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/ECOGStatus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is ECOG status of"
+  }, {
+    "@language" : "it",
+    "@value" : "È ECOG di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from an ECOG performance status assessment back to the patient."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_addressed_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Diagnosis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is addressed by"
+  }, {
+    "@language" : "it",
+    "@value" : "È affrontata da"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Therapy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from a disease diagnosis to the therapy or treatment used to address it."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_administered_in",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/ActiveSubstance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is administered in"
+  }, {
+    "@language" : "it",
+    "@value" : "È somministrato in"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Administration"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from an active substance/drug to the administration event."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_adverse_event_effect_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/AdverseEventEffect"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is adverse event effect of"
+  }, {
+    "@language" : "it",
+    "@value" : "È effetto di evento avverso di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/AdverseEvent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from a specific adverse effect or toxicity back to the overarching adverse event."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_based_on_therapy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Administration"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is based on therapy"
+  }, {
+    "@language" : "it",
+    "@value" : "È basata su terapia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Therapy"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from a single administration event back to the broad therapy plan it belongs to."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_biomarker_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Biomarker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is biomarker of"
+  }, {
+    "@language" : "it",
+    "@value" : "È biomarker di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from a biomarker test result back to the patient."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_body_measurement_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/BodyMeasurement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is body measurement of"
+  }, {
+    "@language" : "it",
+    "@value" : "È peso e altezza di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from a body measurement event back to the patient."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_body_metric_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/BodyMetric"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is body metric of"
+  }, {
+    "@language" : "it",
+    "@value" : "È metrica corporea di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/BodyMeasurement"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from a specific height/weight metric back to the body measurement event."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_characterized_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Diagnosis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is characterized by"
+  }, {
+    "@language" : "it",
+    "@value" : "È caratterizzata da"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/TNM"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a diagnosis to the TNM staging classification that characterizes it."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_characterized_by_clinical_tnm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Diagnosis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is characterized by clinical TNM"
+  }, {
+    "@language" : "it",
+    "@value" : "È caratterizzata da TNM clinico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/ClinicalTNM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_characterized_by"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a diagnosis specifically to its clinical TNM (cTNM) staging."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_characterized_by_pathological_tnm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Diagnosis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is characterized by pathological TNM"
+  }, {
+    "@language" : "it",
+    "@value" : "È caratterizzata da TNM patologico"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/PathologicalTNM"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/is_characterized_by"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Relates a diagnosis specifically to its pathological TNM (pTNM) staging after surgery."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_cm_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/C_M_Class"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is clinical presence of distant metastasis of"
+  }, {
+    "@language" : "it",
+    "@value" : "È presenza clinica di metastasi a distanza di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/ClinicalTNM"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from a clinical Metastasis (cM) class to the clinical TNM record."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_cn_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/C_N_Class"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is clinical spread to regional lymph nodes of"
+  }, {
+    "@language" : "it",
+    "@value" : "È diffusione clinica ai linfonodi regionali di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/ClinicalTNM"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from a clinical Node (cN) class to the clinical TNM record."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_ct_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/C_T_Class"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is clinical tumor size of"
+  }, {
+    "@language" : "it",
+    "@value" : "È dimensione clinica del tumore di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/ClinicalTNM"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from a clinical Tumor (cT) class to the clinical TNM record."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_diagnosis_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Diagnosis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is diagnosis of"
+  }, {
+    "@language" : "it",
+    "@value" : "È diagnosi di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from a medical diagnosis back to the patient."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_due_to",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/AdverseEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is due to"
+  }, {
+    "@language" : "it",
+    "@value" : "È dovuto a"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Administration"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Indicates that an adverse event or side effect is due to a specific administration of a drug."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_laboratory_test_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/LaboratoryTest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is laboratory test of"
+  }, {
+    "@language" : "it",
+    "@value" : "È esame di laboratorio di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from a laboratory blood test back to the patient."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_physiological_history_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/PhysiologicalHistory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is physiological history of"
+  }, {
+    "@language" : "it",
+    "@value" : "È anamnesi fisiologica di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from physiological and lifestyle history (smoking/alcohol) back to the patient."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_pm_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/P_M_Class"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is pathological presence of distant metastasis of"
+  }, {
+    "@language" : "it",
+    "@value" : "È presenza patologica di metastasi a distanza di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/PathologicalTNM"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from a pathological Metastasis (pM) class to the pathological TNM record."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_pn_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/P_N_Class"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is pathological spread to regional lymph nodes of"
+  }, {
+    "@language" : "it",
+    "@value" : "È diffusione patologica ai linfonodi regionali di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/PathologicalTNM"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from a pathological Node (pN) class to the pathological TNM record."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_provided_by",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is provided by"
+  }, {
+    "@language" : "it",
+    "@value" : "È erogata da"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Department"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://irst.emr.it/cvl/provides"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a clinical service, procedure, or care event to the hospital department that provided it."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_pt_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/P_T_Class"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is pathological tumor size of"
+  }, {
+    "@language" : "it",
+    "@value" : "È dimensione patologica del tumore di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/PathologicalTNM"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from a pathological Tumor (pT) class to the pathological TNM record."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_response_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Response"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is response of"
+  }, {
+    "@language" : "it",
+    "@value" : "È risposta al trattamento di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from a treatment response outcome back to the patient."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_service_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is service of"
+  }, {
+    "@language" : "it",
+    "@value" : "È prestazione clinica di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from a clinical service or procedure back to the patient."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_symptom_assessment_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/SymptomAssessment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is symptom assessment of"
+  }, {
+    "@language" : "it",
+    "@value" : "È valutazione ESAS di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from a symptom assessment (ESAS) back to the patient."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_therapy_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Therapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is therapy of"
+  }, {
+    "@language" : "it",
+    "@value" : "È terapia di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from an oncology therapy or treatment back to the patient."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/is_variant_of",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Variant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Is variant of"
+  }, {
+    "@language" : "it",
+    "@value" : "È variante genetica di"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Reverse link from a genetic mutation or variant back to the patient."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/laboratory_code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/LaboratoryTest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Codice dell’esame"
+  }, {
+    "@language" : "en",
+    "@value" : "Laboratory code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Identifier code for a specific laboratory test."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/laboratory_description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/LaboratoryTest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Descrizione dell’esame"
+  }, {
+    "@language" : "en",
+    "@value" : "Laboratory description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The name or description of a lab test (e.g., 'Hemoglobin', 'White Blood Cell Count')."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/laboratory_test_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/LaboratoryTest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Data dell’esame di laboratorio"
+  }, {
+    "@language" : "en",
+    "@value" : "Laboratory test date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The date a blood test or laboratory exam was drawn or performed."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/last_administration_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Therapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Data dell’ultima somministrazione della terapia"
+  }, {
+    "@language" : "en",
+    "@value" : "Last administration date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The end date when a patient received their final dose of a specific line of therapy."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/line_of_therapy_value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Therapy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Line of therapy value"
+  }, {
+    "@language" : "it",
+    "@value" : "Valore linea di terapia"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Numeric integer indicating the sequential line of treatment (1 for first-line, 2 for second-line, etc.)."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/marker_code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Biomarker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Biomarker code"
+  }, {
+    "@language" : "it",
+    "@value" : "Codice del biomarker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Identifier code for a molecular biomarker test."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/marker_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Biomarker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Biomarker measurement date"
+  }, {
+    "@language" : "it",
+    "@value" : "Data della misurazione del biomarker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The date a biomarker test or molecular profiling was performed."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/marker_description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Biomarker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Biomarker description"
+  }, {
+    "@language" : "it",
+    "@value" : "Descrizione del biomarker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The name of the biomarker tested (e.g., 'PD-L1', 'HER2', 'ALK')."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/marker_value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Biomarker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Biomarker value"
+  }, {
+    "@language" : "it",
+    "@value" : "Valore del biomarker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The result or status of a biomarker test (e.g., 'Positive', 'Negative', '50% expression')."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/marker_value_code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Biomarker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Biomarker value code"
+  }, {
+    "@language" : "it",
+    "@value" : "Codice del valore del biomarker"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Identifier code for the specific value or outcome of a biomarker test."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/measurement_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/BodyMeasurement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Data della misurazione"
+  }, {
+    "@language" : "en",
+    "@value" : "Measurement date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The date a patient's body measurement (height or weight) was recorded."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/patient_identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Patient"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Identificativo del paziente"
+  }, {
+    "@language" : "en",
+    "@value" : "Patient identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The unique alphanumeric ID code or medical record number of a patient."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/price",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Prezzo della prestazione"
+  }, {
+    "@language" : "en",
+    "@value" : "Price"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The financial cost, billing amount, or price of a medical service or procedure."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/provides",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Department"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Eroga"
+  }, {
+    "@language" : "en",
+    "@value" : "Provides"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://irst.emr.it/cvl/Service"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Links a hospital department to the specific clinical services it provides to patients."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/quantity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Quantity"
+  }, {
+    "@language" : "it",
+    "@value" : "Quantità erogata"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The count or number of times a specific service or procedure was performed."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/reference_max_unit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/LaboratoryTest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Maximum reference unit"
+  }, {
+    "@language" : "it",
+    "@value" : "Unità del valore massimo di riferimento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The unit of measurement for a lab test's maximum normal value."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/reference_max_value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/LaboratoryTest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Maximum reference value"
+  }, {
+    "@language" : "it",
+    "@value" : "Valore massimo di riferimento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The upper limit of the normal reference range for a laboratory test."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/reference_min_unit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/LaboratoryTest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Minimum reference unit"
+  }, {
+    "@language" : "it",
+    "@value" : "Unità del valore minimo di riferimento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The unit of measurement for a lab test's minimum normal value."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/reference_min_value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/LaboratoryTest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Minimum reference value"
+  }, {
+    "@language" : "it",
+    "@value" : "Valore minimo di riferimento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The lower limit of the normal reference range for a laboratory test."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/response_code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Response"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Codice della risposta"
+  }, {
+    "@language" : "en",
+    "@value" : "Response code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Identifier code for a clinical treatment response finding."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/response_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Response"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Data della risposta"
+  }, {
+    "@language" : "en",
+    "@value" : "Response date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The date a clinical response evaluation or tumor restaging was recorded."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/response_description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Response"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Descrizione della risposta"
+  }, {
+    "@language" : "en",
+    "@value" : "Response description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Free-text description of a clinical response assessment as reported in the source record."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/response_value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Response"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Response value"
+  }, {
+    "@language" : "it",
+    "@value" : "Valore della risposta"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The clinical outcome or tumor response to therapy (e.g., 'Complete Response', 'Progressive Disease', 'Stable Disease')."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/service_code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Codice della prestazione"
+  }, {
+    "@language" : "en",
+    "@value" : "Service code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Identifier code for a medical procedure, surgery, or clinical service."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/service_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Data di erogazione della prestazione"
+  }, {
+    "@language" : "en",
+    "@value" : "Service date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The date a clinical service, imaging scan, or procedure was provided."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/service_description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Service"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Descrizione della prestazione"
+  }, {
+    "@language" : "en",
+    "@value" : "Service description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The text description of a medical procedure, imaging scan, surgery, or clinical service."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/site_code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Diagnosis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Codice della sede anamnestica"
+  }, {
+    "@language" : "en",
+    "@value" : "Site code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Identifier code for the anatomical site, organ, or location of a tumor/diagnosis."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/site_description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Diagnosis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Descrizione della sede anamnestica"
+  }, {
+    "@language" : "en",
+    "@value" : "Site description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The anatomical site, organ, or bodily location where the primary tumor or cancer is located (e.g., 'Lung', 'Breast', 'Colon')."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/smoking",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/PhysiologicalHistory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Fumo"
+  }, {
+    "@language" : "en",
+    "@value" : "Smoking"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Boolean flag (true/false) indicating whether the patient is a smoker or uses tobacco."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/stage_code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Diagnosis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Codice stadio della malattia"
+  }, {
+    "@language" : "en",
+    "@value" : "Disease stage code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Identifier code for the overall stage of a cancer diagnosis."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/stage_description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Diagnosis"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Descrizione dello stadio della malattia"
+  }, {
+    "@language" : "en",
+    "@value" : "Disease stage description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The overall clinical or pathological stage of the cancer (e.g., 'Stage IIIA', 'Stage IV', 'Metastatic')."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/symptom_assessment_value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/SymptomAssessmentFinding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Symptom assessment value"
+  }, {
+    "@language" : "it",
+    "@value" : "Valore valutazione dei sintomi"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The numeric severity score (usually 0-10) for a specific patient-reported symptom (pain, fatigue, nausea, etc.)."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/target_description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/ECOGStatus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Descrizione del target"
+  }, {
+    "@language" : "en",
+    "@value" : "Target description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The text description of the patient's ECOG performance status (e.g., 'Fully active', 'Restricted in physically strenuous activity')."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/toxicity_grade_description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/AdverseEventEffect"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Descrizione del grado di tossicità"
+  }, {
+    "@language" : "en",
+    "@value" : "Toxicity grade description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Text description of the severity of an adverse event or side effect."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/toxicity_grade_value",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/AdverseEventEffect"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Toxicity grade value"
+  }, {
+    "@language" : "it",
+    "@value" : "Valore del grado di tossicità"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Numeric grade (usually 1-5) indicating the severity of an adverse event or clinical toxicity."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/variant2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Variant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Seconda variante"
+  }, {
+    "@language" : "en",
+    "@value" : "Variant 2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Additional molecular information or secondary classification about a genetic variant."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://snomed.info/sct/64195000"
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/variant_code",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Variant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Codice della variante"
+  }, {
+    "@language" : "en",
+    "@value" : "Variant code"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Identifier code for a specific genetic variant or mutation."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/variant_date",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Variant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Data della variante"
+  }, {
+    "@language" : "en",
+    "@value" : "Variant date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The date a genetic variant or mutation was sequenced or detected."
+  } ]
+}, {
+  "@id" : "http://irst.emr.it/cvl/variant_description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://irst.emr.it/cvl/Variant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "it",
+    "@value" : "Descrizione della variante"
+  }, {
+    "@language" : "en",
+    "@value" : "Variant description"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "The name or gene of the detected mutation, variant, or genetic alteration (e.g., 'EGFR', 'BRAF', 'KRAS')."
+  } ]
+}, {
+  "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133522",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ncit:C133522"
+  } ]
+}, {
+  "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133524",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ncit:C133524"
+  } ]
+}, {
+  "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133526",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ncit:C133526"
+  } ]
+}, {
+  "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133528",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ncit:C133528"
+  } ]
+}, {
+  "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133529",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ncit:C133529"
+  } ]
+}, {
+  "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15359",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ncit:C15359"
+  } ]
+}, {
+  "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15665",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ncit:C15665"
+  } ]
+}, {
+  "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15675",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ncit:C15675"
+  } ]
+}, {
+  "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15679",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ncit:C15679"
+  } ]
+}, {
+  "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15688",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ncit:C15688"
+  } ]
+}, {
+  "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158876",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ncit:C158876"
+  } ]
+}, {
+  "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45792",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ncit:C45792"
+  } ]
+}, {
+  "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54350",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ncit:C54350"
+  } ]
+}, {
+  "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94626",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ncit:C94626"
+  } ]
+}, {
+  "@id" : "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94628",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "ncit:C94628"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/bibliographicCitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/contributor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/isPartOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://snomed.info/sct/277206009",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:277206009"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://snomed.info/sct/399566009"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/277208005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:277208005"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://snomed.info/sct/399566009"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/363808001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:363808001"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/371494008",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:371494008"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://snomed.info/sct/277206009"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/371497001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:371497001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://snomed.info/sct/277208005"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/384625004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:384625004"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://snomed.info/sct/78873005"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/399387003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:399387003"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://snomed.info/sct/277208005"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/399390009",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:399390009"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/399504009",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:399504009"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://snomed.info/sct/78873005"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/399534004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:399534004"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://snomed.info/sct/277206009"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/399537006",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:399537006"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://snomed.info/sct/399390009"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/399566009",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:399566009"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/399588009",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:399588009"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://snomed.info/sct/399390009"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/422512005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:422512005"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://snomed.info/sct/424122007"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/422894000",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:422894000"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://snomed.info/sct/424122007"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/423053003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:423053003"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://snomed.info/sct/424122007"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/423237006",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:423237006"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://snomed.info/sct/424122007"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/423409001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:423409001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://snomed.info/sct/424122007"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/424122007",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:424122007"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/425389002",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:425389002"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://snomed.info/sct/424122007"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/50373000",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:50373000"
+  } ]
+}, {
+  "@id" : "http://snomed.info/sct/78873005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "snomed:78873005"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://snomed.info/sct/399566009"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#closeMatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://loinc.org/76689-9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "loinc:76689-9"
+  } ]
+}, {
+  "@id" : "https://loinc.org/LA2-8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "loinc:LA2-8"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://loinc.org/76689-9"
+  } ]
+}, {
+  "@id" : "https://loinc.org/LA3-6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "loinc:LA3-6"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://loinc.org/76689-9"
+  } ]
+}, {
+  "@id" : "https://loinc.org/LA4489-6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "loinc:LA4489-6"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://loinc.org/76689-9"
+  } ]
+}, {
+  "@id" : "https://orcid.org/0000-0002-0066-9172",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Nicola Gentili"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Nicola Gentili"
+  } ]
+}, {
+  "@id" : "https://orcid.org/0000-0002-3890-4852",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Antonella Carbonaro"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Antonella Carbonaro"
+  } ]
+}, {
+  "@id" : "https://orcid.org/0000-0003-3676-171X",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Roberto Vespignani"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Roberto Vespignani"
+  } ]
+}, {
+  "@id" : "https://orcid.org/0009-0000-4148-5954",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Livia Del Gaudio"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Livia Del Gaudio"
+  } ]
+}, {
+  "@id" : "https://orcid.org/0009-0002-9475-0744",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Luca Giorgetti"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Luca Giorgetti"
+  } ]
+}, {
+  "@id" : "https://orcid.org/0009-0005-8022-0242",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Alice Andalò"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Alice Andalò"
+  } ]
+}, {
+  "@id" : "https://orcid.org/0009-0007-4241-3005",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Andrea Pagliarani"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Andrea Pagliarani"
+  } ]
+} ]
