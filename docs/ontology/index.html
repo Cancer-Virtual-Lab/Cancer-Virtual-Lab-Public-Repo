@@ -9,7 +9,11 @@
 <meta property="og:description" content="OWL 2 ontology of the oncological care pathway, aligned with HL7 FHIR and standard biomedical terminologies.">
 <meta name="theme-color" content="#0CA7D3">
 <link rel="icon" href="../assets/cvl-mark.svg" type="image/svg+xml">
-<script>document.documentElement.classList.add("js")</script>
+<script>
+  // Apply the saved theme before the first paint
+  try { const t = localStorage.getItem("cvl-theme"); if (t) document.documentElement.dataset.theme = t; } catch {}
+  document.documentElement.classList.add("js");
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -73,8 +77,7 @@
   }
   .acc details[open] summary > span:first-child::before { transform: rotate(45deg); }
   .badge { font: 500 .78rem "Geist Mono", monospace; color: var(--faint); white-space: nowrap; }
-  .badge.ok { color: #1a9a52; }
-  @media (prefers-color-scheme: dark) { .badge.ok { color: #3fcf7f; } }
+  .badge.ok { color: var(--ok); }
   .panel { padding: 0 24px 24px; color: var(--muted); }
   .panel p { margin: 0 0 12px; }
   .panel ul { margin: 0 0 16px; padding-left: 20px; }
@@ -124,16 +127,18 @@
 
 <nav aria-label="Main">
   <a class="brand" href="../" aria-label="Cancer Virtual Lab home">
-    <picture>
-      <source srcset="../assets/cvl-logo-dark.svg" media="(prefers-color-scheme: dark)">
-      <img src="../assets/cvl-logo-light.svg" alt="Cancer Virtual Lab" width="81" height="26">
-    </picture>
+    <img class="logo-light" src="../assets/cvl-logo-light.svg" alt="Cancer Virtual Lab" width="81" height="26">
+
+    <img class="logo-dark" src="../assets/cvl-logo-dark.svg" alt="Cancer Virtual Lab" width="81" height="26">
   </a>
   <ul>
     <li><a href="#download">Download</a></li>
     <li><a href="#validation">Validation</a></li>
     <li><a href="#cite">Cite</a></li>
   </ul>
+  <button class="theme-toggle" type="button" aria-label="Switch theme">
+    <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"/></svg>
+  </button>
   <a class="btn accent" href="doc/index-en.html">Documentation <span class="ico" aria-hidden="true">
     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </span></a>
@@ -260,10 +265,9 @@
 <footer>
   <div class="wrap">
     <a href="../" aria-label="Cancer Virtual Lab home">
-      <picture>
-        <source srcset="../assets/cvl-logo-dark.svg" media="(prefers-color-scheme: dark)">
-        <img src="../assets/cvl-logo-light.svg" alt="Cancer Virtual Lab" width="68" height="22">
-      </picture>
+      <img class="logo-light" src="../assets/cvl-logo-light.svg" alt="Cancer Virtual Lab" width="68" height="22">
+
+      <img class="logo-dark" src="../assets/cvl-logo-dark.svg" alt="Cancer Virtual Lab" width="68" height="22">
     </a>
     <span>Documentation generated with <a href="https://github.com/dgarijo/Widoco">WIDOCO</a> and
     <a href="https://github.com/ontodev/robot">ROBOT</a> ·
@@ -368,5 +372,6 @@ document.querySelectorAll("pre[data-src]").forEach(async (pre) => {
   show("all");
 })();
 </script>
+<script src="../assets/theme.js"></script>
 </body>
 </html>

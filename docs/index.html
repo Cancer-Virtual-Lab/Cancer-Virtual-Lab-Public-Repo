@@ -9,7 +9,11 @@
 <meta property="og:description" content="Real-world oncological data, standardised with HL7 FHIR and connected in a clinical knowledge graph.">
 <meta name="theme-color" content="#0CA7D3">
 <link rel="icon" href="assets/cvl-mark.svg" type="image/svg+xml">
-<script>document.documentElement.classList.add("js")</script>
+<script>
+  // Apply the saved theme before the first paint
+  try { const t = localStorage.getItem("cvl-theme"); if (t) document.documentElement.dataset.theme = t; } catch {}
+  document.documentElement.classList.add("js");
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -20,10 +24,9 @@
 
 <nav aria-label="Main">
   <a class="brand" href="./" aria-label="Cancer Virtual Lab home">
-    <picture>
-      <source srcset="assets/cvl-logo-dark.svg" media="(prefers-color-scheme: dark)">
-      <img src="assets/cvl-logo-light.svg" alt="Cancer Virtual Lab" width="81" height="26">
-    </picture>
+    <img class="logo-light" src="assets/cvl-logo-light.svg" alt="Cancer Virtual Lab" width="81" height="26">
+
+    <img class="logo-dark" src="assets/cvl-logo-dark.svg" alt="Cancer Virtual Lab" width="81" height="26">
   </a>
   <ul>
     <li><a href="#how">How it works</a></li>
@@ -31,6 +34,9 @@
     <li><a href="#partners">Partners</a></li>
     <li><a href="https://github.com/Cancer-Virtual-Lab/Cancer-Virtual-Lab-Public-Repo">GitHub</a></li>
   </ul>
+  <button class="theme-toggle" type="button" aria-label="Switch theme">
+    <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.25" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.75a6.25 6.25 0 0 1 0 12.5z" fill="currentColor"/></svg>
+  </button>
   <a class="btn accent" href="ontology/">Ontology <span class="ico" aria-hidden="true">
     <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </span></a>
@@ -45,9 +51,6 @@
       and connects them in a knowledge graph governed by a domain ontology, so researchers can select
       cohorts, run analytics and ask questions in natural language.</p>
       <div class="cta reveal d3">
-        <a class="btn accent" href="ontology/">Explore the ontology <span class="ico" aria-hidden="true">
-          <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </span></a>
         <a class="link" href="#resources">See all resources</a>
       </div>
     </div>
@@ -186,10 +189,9 @@
 
 <footer>
   <div class="wrap">
-    <picture>
-      <source srcset="assets/cvl-logo-dark.svg" media="(prefers-color-scheme: dark)">
-      <img src="assets/cvl-logo-light.svg" alt="Cancer Virtual Lab" width="68" height="22">
-    </picture>
+    <img class="logo-light" src="assets/cvl-logo-light.svg" alt="Cancer Virtual Lab" width="68" height="22">
+
+    <img class="logo-dark" src="assets/cvl-logo-dark.svg" alt="Cancer Virtual Lab" width="68" height="22">
     <span><a href="https://github.com/Cancer-Virtual-Lab/Cancer-Virtual-Lab-Public-Repo">Source on GitHub</a></span>
   </div>
 </footer>
@@ -201,5 +203,6 @@
   }, { rootMargin: "0px 0px -8% 0px" });
   document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
 </script>
+<script src="assets/theme.js"></script>
 </body>
 </html>
