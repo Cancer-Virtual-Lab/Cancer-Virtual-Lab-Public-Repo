@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cancer Virtual Lab</title>
+<meta name="description" content="Cancer Virtual Lab: a semantic platform that bridges oncological clinical data and research through HL7 FHIR and ontology-driven knowledge graphs.">
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1d2330; --muted: #5b6475; --line: #e3e6ec;
+    --card: #f7f8fa; --accent: #1f5fae; --accent-fg: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12151b; --fg: #e6e8ec; --muted: #9aa3b2; --line: #2a303b;
+      --card: #1a1f27; --accent: #6ea8f0; --accent-fg: #0d1117;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 860px; margin: 0 auto; padding: 64px 16px; }
+  h1 { font-size: 2.25rem; line-height: 1.2; margin: 0 0 12px; }
+  h2 { font-size: 1.05rem; margin: 48px 0 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+  p { margin: 0 0 12px; }
+  a { color: var(--accent); }
+  .lead { font-size: 1.15rem; color: var(--muted); margin-bottom: 24px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+  .card {
+    display: flex; flex-direction: column; gap: 8px; padding: 20px;
+    border: 1px solid var(--line); border-radius: 8px; background: var(--card);
+  }
+  .card h3 { margin: 0; font-size: 1.1rem; }
+  .card p { color: var(--muted); flex: 1; }
+  .btn {
+    align-self: flex-start; display: inline-block; padding: 10px 16px; border-radius: 6px;
+    text-decoration: none; font-weight: 600; background: var(--accent); color: var(--accent-fg);
+  }
+  footer { margin-top: 56px; color: var(--muted); font-size: .9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Cancer Virtual Lab</h1>
+  <p class="lead">A semantic platform that bridges oncological clinical data and research workflows
+  through HL7 FHIR and ontology-driven knowledge graphs.</p>
+  <p>The Cancer Virtual Lab (CVL) standardises the real-world oncological records of IRCCS Istituto
+  Romagnolo per lo Studio dei Tumori (IRST) "Dino Amadori" as HL7 FHIR resources, lifts them into an
+  RDF knowledge graph governed by a domain ontology, and makes them available for cohort selection,
+  analytics and natural-language querying. It is a collaboration between the University of Bologna,
+  IRST, Aivolution Srl and IFAB.</p>
+
+  <h2>Resources</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>CVL-O Ontology</h3>
+      <p>The OWL 2 ontology of the oncological care pathway: documentation, graph view, downloads and
+      validation reports.</p>
+      <a class="btn" href="ontology/">Open the ontology</a>
+    </div>
+  </div>
+
+  <h2>Reproducibility package</h2>
+  <p>The ontology, FHIR Implementation Guide, mapping rules, GraphDB rule sets, validation reports and
+  natural-language query component are deposited on Zenodo:
+  <a href="https://doi.org/10.5281/zenodo.23762955">https://doi.org/10.5281/zenodo.23762955</a>.</p>
+
+  <footer>
+    Source: <a href="https://github.com/Cancer-Virtual-Lab/Cancer-Virtual-Lab-Public-Repo">GitHub</a>
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cancer Virtual Lab Ontology (CVL-O)</title>
+<meta name="description" content="CVL-O, an OWL 2 ontology for the oncological care pathway from real-world hospital data, aligned with HL7 FHIR.">
+<style>
+  :root {
+    --bg: #ffffff; --fg: #1d2330; --muted: #5b6475; --line: #e3e6ec;
+    --card: #f7f8fa; --accent: #1f5fae; --accent-fg: #ffffff; --ok: #1a7f37;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #12151b; --fg: #e6e8ec; --muted: #9aa3b2; --line: #2a303b;
+      --card: #1a1f27; --accent: #6ea8f0; --accent-fg: #0d1117; --ok: #3fb950;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--fg);
+    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 860px; margin: 0 auto; padding: 48px 16px 64px; }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 4px; }
+  h2 { font-size: 1.05rem; margin: 40px 0 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+  p { margin: 0 0 12px; }
+  a { color: var(--accent); }
+  .meta { color: var(--muted); margin-bottom: 20px; }
+  .meta code { color: var(--fg); }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 24px 0 0; }
+  .btn {
+    display: inline-block; padding: 10px 16px; border-radius: 6px; text-decoration: none;
+    border: 1px solid var(--accent); color: var(--accent); font-weight: 600;
+  }
+  .btn.primary { background: var(--accent); color: var(--accent-fg); }
+  ul.list { list-style: none; padding: 0; margin: 0; border: 1px solid var(--line); border-radius: 8px; }
+  ul.list li { padding: 12px 16px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  ul.list li:first-child { border-top: 0; }
+  ul.list span { color: var(--muted); }
+  .cite { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 16px; overflow-wrap: anywhere; }
+  footer { margin-top: 48px; color: var(--muted); font-size: .9rem; }
+  .acc { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .acc details + details { border-top: 1px solid var(--line); }
+  .acc summary {
+    list-style: none; cursor: pointer; padding: 12px 16px; display: flex;
+    justify-content: space-between; align-items: center; gap: 12px; font-weight: 600;
+  }
+  .acc summary::-webkit-details-marker { display: none; }
+  .acc summary > span:first-child::before {
+    content: "▸"; display: inline-block; width: 1.1em; color: var(--muted); transition: transform .15s;
+  }
+  .acc details[open] summary > span:first-child::before { transform: rotate(90deg); }
+  .acc summary:hover { background: var(--card); }
+  .panel { padding: 4px 16px 16px; }
+  .panel ul { margin: 0 0 12px; padding-left: 20px; }
+  .badge { font-size: .8rem; font-weight: 600; color: var(--muted); white-space: nowrap; }
+  .badge.ok { color: var(--ok); }
+  pre {
+    background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 12px;
+    margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; font-size: .85rem;
+  }
+  .filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+  .filters button {
+    font: inherit; font-size: .85rem; padding: 4px 10px; border-radius: 999px; cursor: pointer;
+    border: 1px solid var(--line); background: var(--bg); color: var(--fg);
+  }
+  .filters button[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+  .table-wrap { max-height: 420px; overflow: auto; border: 1px solid var(--line); border-radius: 6px; }
+  table { border-collapse: collapse; width: 100%; font-size: .85rem; }
+  th, td { text-align: left; padding: 6px 10px; border-top: 1px solid var(--line); vertical-align: top; }
+  th { position: sticky; top: 0; background: var(--card); border-top: 0; }
+  td { overflow-wrap: anywhere; }
+  .note { margin-top: 12px; font-size: .9rem; }
+  .back { margin: 0 0 24px; font-size: .9rem; }
+  .back a { text-decoration: none; }
+</style>
+</head>
+<body>
+<main>
+  <p class="back"><a href="../">← Cancer Virtual Lab</a></p>
+  <h1>Cancer Virtual Lab Ontology (CVL-O)</h1>
+  <p class="meta">Version 1.1.0 · Namespace <code>http://irst.emr.it/cvl/</code> · Prefix <code>cvl:</code></p>
+
+  <p>CVL-O is an OWL 2 ontology for representing the oncological care pathway of patients from
+  real-world hospital data: diagnosis and TNM staging, therapies and drug administrations, adverse
+  events, biomarkers, genomic variants, laboratory tests, body measurements, symptom assessments,
+  treatment response and clinical services. It is aligned with HL7 FHIR and reuses standard
+  biomedical terminologies (SNOMED CT, LOINC, NCIt, ICD-10, ATC).</p>
+  <p>CVL-O is the semantic foundation of the Cancer Virtual Lab project, a collaboration between the
+  University of Bologna, IRCCS Istituto Romagnolo per lo Studio dei Tumori (IRST) "Dino Amadori",
+  Aivolution Srl and IFAB.</p>
+
+  <div class="actions">
+    <a class="btn primary" href="doc/index-en.html">Documentation</a>
+    <a class="btn" href="doc/index-it.html">Documentazione (IT)</a>
+    <a class="btn" href="doc/webvowl/index.html">Graph view (WebVOWL)</a>
+  </div>
+
+  <h2>Download</h2>
+  <ul class="list">
+    <li><a href="doc/ontology.ttl">ontology.ttl</a><span>Turtle</span></li>
+    <li><a href="doc/ontology.owl">ontology.owl</a><span>RDF/XML</span></li>
+    <li><a href="doc/ontology.jsonld">ontology.jsonld</a><span>JSON-LD</span></li>
+    <li><a href="doc/ontology.nt">ontology.nt</a><span>N-Triples</span></li>
+  </ul>
+
+  <h2>Validation</h2>
+  <div class="acc">
+    <details>
+      <summary><span>ROBOT quality report</span><span class="badge" id="robot-summary">ROBOT</span></summary>
+      <div class="panel">
+        <p>Checks run by <a href="https://robot.obolibrary.org/report">ROBOT report</a> on the CVL terms
+        (<code>--base-iri http://irst.emr.it/cvl/</code>). No errors. The warnings and info are expected:</p>
+        <ul>
+          <li><strong>equivalent_pair</strong>: a CVL class is declared <code>owl:equivalentClass</code> to an
+          external concept (SNOMED CT, NCIt, LOINC). These are the intended exact alignments, which let the
+          clinical data be queried through the external terminologies.</li>
+          <li><strong>missing_superclass</strong>: a top-level CVL class with no superclass.</li>
+        </ul>
+        <div class="filters" id="robot-filters"></div>
+        <div class="table-wrap"><table id="robot-table"><thead><tr>
+          <th>Level</th><th>Rule</th><th>Subject</th><th>Property</th><th>Value</th>
+        </tr></thead><tbody></tbody></table></div>
+        <p class="note"><a href="validation/robot_report.html">Full ROBOT report</a> ·
+        <a href="validation/robot_report.tsv">TSV</a></p>
+      </div>
+    </details>
+    <details>
+      <summary><span>OWL 2 DL profile check</span><span class="badge ok">In profile</span></summary>
+      <div class="panel">
+        <p>Validated with <code>robot validate-profile --profile DL</code>.</p>
+        <pre data-src="validation/owl2_dl_profile.txt">validation/owl2_dl_profile.txt</pre>
+      </div>
+    </details>
+    <details>
+      <summary><span>Consistency check</span><span class="badge ok">Consistent</span></summary>
+      <div class="panel">
+        <p>Reasoned with HermiT (<code>robot reason --reasoner hermit</code>): the ontology is consistent and
+        has no unsatisfiable classes.</p>
+        <pre data-src="validation/reasoner_hermit.log">validation/reasoner_hermit.log</pre>
+      </div>
+    </details>
+  </div>
+
+  <h2>How to cite</h2>
+  <p class="cite">Giorgetti L, Carbonaro A, Ridolfi L, Pasolini R, Pagliarani A, Cavallucci M, Andalò A,
+  Del Gaudio L, De Angelis P, Vespignani R, Gentili N. Cancer Virtual Lab Ontology (CVL-O),
+  version 1.1.0. Zenodo; 2026.
+  <a href="https://doi.org/10.5281/zenodo.23762955">https://doi.org/10.5281/zenodo.23762955</a></p>
+
+  <footer>
+    License: <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> ·
+    Source: <a href="https://github.com/Cancer-Virtual-Lab/Cancer-Virtual-Lab-Public-Repo">GitHub</a> ·
+    Documentation generated with <a href="https://github.com/dgarijo/Widoco">WIDOCO</a> and
+    <a href="https://github.com/ontodev/robot">ROBOT</a>
+  </footer>
+</main>
+<script>
+// Fills the validation panels from the files in validation/ (served over HTTP, e.g. GitHub Pages)
+const PREFIXES = [
+  ["http://irst.emr.it/cvl/", "cvl:"],
+  ["http://snomed.info/sct/", "sct:"],
+  ["http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#", "ncit:"],
+  ["https://loinc.org/", "loinc:"],
+  ["http://hl7.org/fhir/", "fhir:"],
+];
+const shorten = (s) => {
+  for (const [ns, p] of PREFIXES) if (s.startsWith(ns)) return p + s.slice(ns.length);
+  return s;
+};
+const cell = (text, href) => {
+  const td = document.createElement("td");
+  if (href && /^https?:/.test(href)) {
+    const a = document.createElement("a");
+    a.href = href; a.textContent = text; a.target = "_blank"; a.rel = "noopener";
+    td.append(a);
+  } else td.textContent = text;
+  return td;
+};
+
+document.querySelectorAll("pre[data-src]").forEach(async (pre) => {
+  try {
+    const r = await fetch(pre.dataset.src);
+    if (!r.ok) throw new Error(r.status);
+    pre.textContent = (await r.text()).trim();
+  } catch {
+    pre.innerHTML = "";
+    const a = document.createElement("a");
+    a.href = pre.dataset.src; a.textContent = "Open " + pre.dataset.src;
+    pre.append(a);
+  }
+});
+
+(async () => {
+  const summary = document.getElementById("robot-summary");
+  const tbody = document.querySelector("#robot-table tbody");
+  let rows;
+  try {
+    const r = await fetch("validation/robot_report.tsv");
+    if (!r.ok) throw new Error(r.status);
+    rows = (await r.text()).trim().split(/\r?\n/).slice(1).map((l) => l.split("\t"));
+  } catch {
+    summary.textContent = "see full report";
+    document.querySelector("#robot-table").closest(".table-wrap").remove();
+    return;
+  }
+  const count = (lvl) => rows.filter((r) => r[0] === lvl).length;
+  summary.textContent = `${count("ERROR")} errors · ${count("WARN")} warnings · ${count("INFO")} info`;
+  summary.classList.toggle("ok", count("ERROR") === 0);
+
+  for (const [level, rule, subject, property, value] of rows) {
+    const tr = document.createElement("tr");
+    tr.dataset.rule = rule;
+    tr.append(cell(level), cell(rule), cell(shorten(subject), subject),
+              cell(property || ""), cell(shorten(value || ""), value));
+    tbody.append(tr);
+  }
+
+  const filters = document.getElementById("robot-filters");
+  const rules = [...new Set(rows.map((r) => r[1]))];
+  const show = (rule) => {
+    tbody.querySelectorAll("tr").forEach((tr) => { tr.hidden = rule !== "all" && tr.dataset.rule !== rule; });
+    filters.querySelectorAll("button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.rule === rule));
+  };
+  for (const rule of ["all", ...rules]) {
+    const b = document.createElement("button");
+    b.type = "button"; b.dataset.rule = rule;
+    const n = rule === "all" ? rows.length : rows.filter((r) => r[1] === rule).length;
+    b.textContent = `${rule === "all" ? "All" : rule} (${n})`;
+    b.addEventListener("click", () => show(rule));
+    filters.append(b);
+  }
+  show("all");
+})();
+</script>
+</body>
+</html>

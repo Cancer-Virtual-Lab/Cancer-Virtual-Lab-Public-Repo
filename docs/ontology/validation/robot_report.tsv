@@ -1,0 +1,55 @@
+Level	Rule Name	Subject	Property	Value
+WARN	equivalent_pair	http://irst.emr.it/cvl/AdjuvantTherapy	owl:equivalentClass	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15675
+WARN	equivalent_pair	http://irst.emr.it/cvl/C_M_Class	owl:equivalentClass	http://snomed.info/sct/399387003
+WARN	equivalent_pair	http://irst.emr.it/cvl/C_N_Class	owl:equivalentClass	http://snomed.info/sct/399534004
+WARN	equivalent_pair	http://irst.emr.it/cvl/C_T_Class	owl:equivalentClass	http://snomed.info/sct/399504009
+WARN	equivalent_pair	http://irst.emr.it/cvl/ClinicalTNM	owl:equivalentClass	http://snomed.info/sct/399537006
+WARN	equivalent_pair	http://irst.emr.it/cvl/ConcomitantWithRadiotherapy	owl:equivalentClass	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94626
+WARN	equivalent_pair	http://irst.emr.it/cvl/ConsolidationTherapy	owl:equivalentClass	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15679
+WARN	equivalent_pair	http://irst.emr.it/cvl/ECOGPerformanceStatusFinding	owl:equivalentClass	http://snomed.info/sct/424122007
+WARN	equivalent_pair	http://irst.emr.it/cvl/ECOGPerformanceStatusFinding0	owl:equivalentClass	http://snomed.info/sct/425389002
+WARN	equivalent_pair	http://irst.emr.it/cvl/ECOGPerformanceStatusFinding1	owl:equivalentClass	http://snomed.info/sct/422512005
+WARN	equivalent_pair	http://irst.emr.it/cvl/ECOGPerformanceStatusFinding2	owl:equivalentClass	http://snomed.info/sct/422894000
+WARN	equivalent_pair	http://irst.emr.it/cvl/ECOGPerformanceStatusFinding3	owl:equivalentClass	http://snomed.info/sct/423053003
+WARN	equivalent_pair	http://irst.emr.it/cvl/ECOGPerformanceStatusFinding4	owl:equivalentClass	http://snomed.info/sct/423237006
+WARN	equivalent_pair	http://irst.emr.it/cvl/ECOGPerformanceStatusFinding5	owl:equivalentClass	http://snomed.info/sct/423409001
+WARN	equivalent_pair	http://irst.emr.it/cvl/Female	owl:equivalentClass	https://loinc.org/LA3-6
+WARN	equivalent_pair	http://irst.emr.it/cvl/Height	owl:equivalentClass	http://snomed.info/sct/50373000
+WARN	equivalent_pair	http://irst.emr.it/cvl/InductionTherapy	owl:equivalentClass	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C158876
+WARN	equivalent_pair	http://irst.emr.it/cvl/LineOfTherapy1	owl:equivalentClass	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C45792
+WARN	equivalent_pair	http://irst.emr.it/cvl/LineOfTherapy2	owl:equivalentClass	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C54350
+WARN	equivalent_pair	http://irst.emr.it/cvl/LineOfTherapy3	owl:equivalentClass	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C94628
+WARN	equivalent_pair	http://irst.emr.it/cvl/LineOfTherapy4	owl:equivalentClass	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133522
+WARN	equivalent_pair	http://irst.emr.it/cvl/LineOfTherapy5	owl:equivalentClass	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133524
+WARN	equivalent_pair	http://irst.emr.it/cvl/LineOfTherapy6	owl:equivalentClass	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133526
+WARN	equivalent_pair	http://irst.emr.it/cvl/LineOfTherapy7	owl:equivalentClass	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133528
+WARN	equivalent_pair	http://irst.emr.it/cvl/LineOfTherapy8	owl:equivalentClass	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C133529
+WARN	equivalent_pair	http://irst.emr.it/cvl/MaintenanceTherapy	owl:equivalentClass	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15688
+WARN	equivalent_pair	http://irst.emr.it/cvl/Male	owl:equivalentClass	https://loinc.org/LA2-8
+WARN	equivalent_pair	http://irst.emr.it/cvl/NeoadjuvantTherapy	owl:equivalentClass	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15665
+WARN	equivalent_pair	http://irst.emr.it/cvl/P_M_Class	owl:equivalentClass	http://snomed.info/sct/371497001
+WARN	equivalent_pair	http://irst.emr.it/cvl/P_N_Class	owl:equivalentClass	http://snomed.info/sct/371494008
+WARN	equivalent_pair	http://irst.emr.it/cvl/P_T_Class	owl:equivalentClass	http://snomed.info/sct/384625004
+WARN	equivalent_pair	http://irst.emr.it/cvl/PathologicalTNM	owl:equivalentClass	http://snomed.info/sct/399588009
+WARN	equivalent_pair	http://irst.emr.it/cvl/SalvageTherapy	owl:equivalentClass	http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl#C15359
+WARN	equivalent_pair	http://irst.emr.it/cvl/SexAssignedAtBirth	owl:equivalentClass	https://loinc.org/76689-9
+WARN	equivalent_pair	http://irst.emr.it/cvl/TNM	owl:equivalentClass	http://snomed.info/sct/399390009
+WARN	equivalent_pair	http://irst.emr.it/cvl/TNMClassification	owl:equivalentClass	http://snomed.info/sct/399566009
+WARN	equivalent_pair	http://irst.emr.it/cvl/TNMClassificationM	owl:equivalentClass	http://snomed.info/sct/277208005
+WARN	equivalent_pair	http://irst.emr.it/cvl/TNMClassificationN	owl:equivalentClass	http://snomed.info/sct/277206009
+WARN	equivalent_pair	http://irst.emr.it/cvl/TNMClassificationT	owl:equivalentClass	http://snomed.info/sct/78873005
+WARN	equivalent_pair	http://irst.emr.it/cvl/UnknownGender	owl:equivalentClass	https://loinc.org/LA4489-6
+WARN	equivalent_pair	http://irst.emr.it/cvl/Weight	owl:equivalentClass	http://snomed.info/sct/363808001
+INFO	missing_superclass	http://irst.emr.it/cvl/ActiveSubstance	rdfs:subClassOf	
+INFO	missing_superclass	http://irst.emr.it/cvl/Administration	rdfs:subClassOf	
+INFO	missing_superclass	http://irst.emr.it/cvl/AdverseEvent	rdfs:subClassOf	
+INFO	missing_superclass	http://irst.emr.it/cvl/BodyMetric	rdfs:subClassOf	
+INFO	missing_superclass	http://irst.emr.it/cvl/Department	rdfs:subClassOf	
+INFO	missing_superclass	http://irst.emr.it/cvl/ECOGPerformanceStatusFinding	rdfs:subClassOf	
+INFO	missing_superclass	http://irst.emr.it/cvl/LineOfTherapy	rdfs:subClassOf	
+INFO	missing_superclass	http://irst.emr.it/cvl/Patient	rdfs:subClassOf	
+INFO	missing_superclass	http://irst.emr.it/cvl/Service	rdfs:subClassOf	
+INFO	missing_superclass	http://irst.emr.it/cvl/SexAssignedAtBirth	rdfs:subClassOf	
+INFO	missing_superclass	http://irst.emr.it/cvl/SymptomAssessmentFinding	rdfs:subClassOf	
+INFO	missing_superclass	http://irst.emr.it/cvl/Therapy	rdfs:subClassOf	
+INFO	missing_superclass	http://irst.emr.it/cvl/TherapySetting	rdfs:subClassOf	

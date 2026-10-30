@@ -1,0 +1,32 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<http://irst.emr.it/cvl/1.1.0> a prov:Entity;
+	 dc:title "Cancer Virtual Lab Ontology (CVL-O)";
+	 prov:wasAttributedTo <https://orcid.org/0009-0002-9475-0744>;
+	 dc:creator <https://orcid.org/0009-0002-9475-0744>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0002-3890-4852>;
+	 dc:contributor <https://orcid.org/0000-0002-3890-4852>;
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo <https://orcid.org/0009-0007-4241-3005>;
+	 dc:contributor <https://orcid.org/0009-0007-4241-3005>;
+	 prov:wasAttributedTo :agent2;
+	 prov:wasAttributedTo <https://orcid.org/0009-0005-8022-0242>;
+	 dc:contributor <https://orcid.org/0009-0005-8022-0242>;
+	 prov:wasAttributedTo <https://orcid.org/0009-0000-4148-5954>;
+	 dc:contributor <https://orcid.org/0009-0000-4148-5954>;
+	 prov:wasAttributedTo :agent3;
+	 prov:wasAttributedTo <https://orcid.org/0000-0003-3676-171X>;
+	 dc:contributor <https://orcid.org/0000-0003-3676-171X>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0002-0066-9172>;
+	 dc:contributor <https://orcid.org/0000-0002-0066-9172>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:specializationOf <http://irst.emr.it/cvl/>;
+	 prov:wasGeneratedAt "2025-01-30";
+.
+:agent0 a prov:Agent; foaf:name "Lorenzo Ridolfi".
+:agent1 a prov:Agent; foaf:name "Roberto Pasolini".
+:agent2 a prov:Agent; foaf:name "Martina Cavallucci".
+:agent3 a prov:Agent; foaf:name "Paolo De Angelis".
