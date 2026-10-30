@@ -4,72 +4,379 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cancer Virtual Lab</title>
-<meta name="description" content="Cancer Virtual Lab: a semantic platform that bridges oncological clinical data and research through HL7 FHIR and ontology-driven knowledge graphs.">
+<meta name="description" content="Cancer Virtual Lab: a semantic platform that turns real-world oncological records into HL7 FHIR resources and an ontology-driven knowledge graph for clinical research.">
+<meta property="og:title" content="Cancer Virtual Lab">
+<meta property="og:description" content="Real-world oncological data, standardised with HL7 FHIR and connected in a clinical knowledge graph.">
+<meta name="theme-color" content="#0CA7D3">
+<link rel="icon" href="assets/cvl-mark.svg" type="image/svg+xml">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #ffffff; --fg: #1d2330; --muted: #5b6475; --line: #e3e6ec;
-    --card: #f7f8fa; --accent: #1f5fae; --accent-fg: #ffffff;
+    --bg: #f6f8fa; --bg-2: #eef2f5; --fg: #0f1720; --muted: #55606d; --faint: #8a95a1;
+    --line: rgba(15, 23, 32, .08); --surface: #ffffff; --shell: rgba(15, 23, 32, .035);
+    --accent: #0a97c0; --accent-strong: #0CA7D3; --accent-soft: rgba(12, 167, 211, .12);
+    --on-accent: #ffffff; --glow: rgba(12, 167, 211, .22);
+    --shadow: 0 24px 48px -24px rgba(10, 70, 95, .22), 0 2px 6px -2px rgba(10, 70, 95, .08);
+    --ease: cubic-bezier(.32, .72, 0, 1);
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --bg: #12151b; --fg: #e6e8ec; --muted: #9aa3b2; --line: #2a303b;
-      --card: #1a1f27; --accent: #6ea8f0; --accent-fg: #0d1117;
+      --bg: #0b1016; --bg-2: #0f161e; --fg: #e8eef3; --muted: #9aa7b3; --faint: #6b7884;
+      --line: rgba(232, 238, 243, .08); --surface: #121a23; --shell: rgba(232, 238, 243, .035);
+      --accent: #33bfe6; --accent-strong: #0CA7D3; --accent-soft: rgba(12, 167, 211, .16);
+      --on-accent: #04141b; --glow: rgba(12, 167, 211, .28);
+      --shadow: 0 24px 48px -24px rgba(0, 0, 0, .6), 0 2px 6px -2px rgba(0, 0, 0, .4);
     }
   }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     margin: 0; background: var(--bg); color: var(--fg);
-    font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    font: 16px/1.6 "Geist", system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
   }
-  main { max-width: 860px; margin: 0 auto; padding: 64px 16px; }
-  h1 { font-size: 2.25rem; line-height: 1.2; margin: 0 0 12px; }
-  h2 { font-size: 1.05rem; margin: 48px 0 12px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
-  p { margin: 0 0 12px; }
+  body::before {
+    /* soft brand glow behind the hero */
+    content: ""; position: absolute; inset: -20vh -10vw auto; height: 90vh; z-index: -1;
+    background:
+      radial-gradient(40% 50% at 78% 38%, var(--glow), transparent 70%),
+      radial-gradient(30% 40% at 12% 8%, var(--accent-soft), transparent 70%);
+    pointer-events: none;
+  }
+  body::after {
+    /* fine grain, fixed and non-interactive */
+    content: ""; position: fixed; inset: 0; pointer-events: none; opacity: .035; z-index: 2;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
   a { color: var(--accent); }
-  .lead { font-size: 1.15rem; color: var(--muted); margin-bottom: 24px; }
-  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
-  .card {
-    display: flex; flex-direction: column; gap: 8px; padding: 20px;
-    border: 1px solid var(--line); border-radius: 8px; background: var(--card);
+  a:focus-visible, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 999px; }
+  .skip { position: absolute; left: -9999px; }
+  .skip:focus { left: 16px; top: 16px; z-index: 3; background: var(--surface); padding: 8px 12px; border-radius: 8px; }
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+  /* floating nav */
+  nav {
+    position: sticky; top: 16px; z-index: 1; margin: 16px auto 0; width: max-content; max-width: calc(100% - 32px);
+    display: flex; align-items: center; gap: 28px; padding: 8px 8px 8px 18px; border-radius: 999px;
+    background: color-mix(in srgb, var(--surface) 72%, transparent); border: 1px solid var(--line);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: var(--shadow);
   }
-  .card h3 { margin: 0; font-size: 1.1rem; }
-  .card p { color: var(--muted); flex: 1; }
+  nav .brand { display: flex; }
+  nav .brand img { height: 26px; width: auto; display: block; }
+  nav ul { display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; font-size: .92rem; font-weight: 500; }
+  nav ul a { color: var(--muted); text-decoration: none; transition: color .3s var(--ease); }
+  nav ul a:hover { color: var(--fg); }
+  nav .btn { padding: 8px 8px 8px 16px; font-size: .9rem; }
+  nav .btn .ico { width: 26px; height: 26px; }
+
+  /* buttons with a nested icon */
   .btn {
-    align-self: flex-start; display: inline-block; padding: 10px 16px; border-radius: 6px;
-    text-decoration: none; font-weight: 600; background: var(--accent); color: var(--accent-fg);
+    display: inline-flex; align-items: center; gap: 12px; padding: 10px 10px 10px 22px; border-radius: 999px;
+    background: var(--fg); color: var(--bg); text-decoration: none; font-weight: 600; font-size: 1rem;
+    transition: transform .5s var(--ease), background-color .3s var(--ease), box-shadow .5s var(--ease);
   }
-  footer { margin-top: 56px; color: var(--muted); font-size: .9rem; }
+  .btn.accent { background: var(--accent-strong); color: var(--on-accent); box-shadow: 0 12px 28px -12px var(--glow); }
+  .btn .ico {
+    display: grid; place-items: center; width: 34px; height: 34px; border-radius: 999px;
+    background: color-mix(in srgb, currentColor 14%, transparent); transition: transform .5s var(--ease);
+  }
+  .btn:hover .ico { transform: translate(2px, -2px) scale(1.06); }
+  .btn:active { transform: scale(.98); }
+  .link { color: var(--fg); font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 2px; transition: border-color .3s var(--ease); }
+  .link:hover { border-color: var(--accent); }
+
+  /* hero */
+  .hero { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr); gap: 56px; align-items: center; padding-block: 112px 128px; }
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; max-width: 100%;
+    background: var(--accent-soft); color: var(--accent); font: 500 .72rem/1 "Geist Mono", monospace;
+    letter-spacing: .14em; text-transform: uppercase;
+  }
+  .eyebrow::before { content: ""; flex: none; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-strong); }
+  h1 {
+    font-size: clamp(2.6rem, 6vw, 4.6rem); line-height: 1.02; letter-spacing: -.035em; font-weight: 600;
+    margin: 24px 0 24px; text-wrap: balance;
+  }
+  h1 em { font-style: normal; color: var(--accent); }
+  .lead { font-size: 1.2rem; color: var(--muted); max-width: 34em; margin: 0 0 36px; text-wrap: pretty; }
+  .cta { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; }
+
+  /* hero visual: the CVL mark in a machined frame */
+  .shell { padding: 8px; border-radius: 32px; background: var(--shell); border: 1px solid var(--line); }
+  .core {
+    border-radius: 25px; background: var(--surface); box-shadow: var(--shadow), inset 0 1px 0 rgba(255, 255, 255, .06);
+    overflow: hidden; position: relative;
+  }
+  .visual .core { aspect-ratio: 1; display: grid; place-items: center; }
+  .visual .core::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(55% 55% at 50% 50%, var(--accent-soft), transparent 70%);
+  }
+  .visual svg.graph { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .graph line { stroke: var(--accent-strong); stroke-opacity: .28; stroke-width: 1; }
+  .graph circle { fill: var(--accent-strong); }
+  .graph .pulse { animation: pulse 4.8s var(--ease) infinite; transform-box: fill-box; transform-origin: center; }
+  .graph .pulse:nth-of-type(2n) { animation-delay: 1.6s; }
+  .graph .pulse:nth-of-type(3n) { animation-delay: 3.2s; }
+  @keyframes pulse { 0%, 100% { opacity: .35; transform: scale(1); } 50% { opacity: 1; transform: scale(1.5); } }
+  .mark { width: 42%; position: relative; animation: float 7s ease-in-out infinite; filter: drop-shadow(0 18px 30px var(--glow)); }
+  @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  .visual .caption {
+    position: absolute; left: 16px; bottom: 16px; right: 16px; display: flex; justify-content: space-between;
+    font: 500 .72rem/1 "Geist Mono", monospace; color: var(--faint); letter-spacing: .06em;
+  }
+
+  /* sections */
+  section { padding: 96px 0; }
+  .section-head { max-width: 40em; margin-bottom: 48px; }
+  h2 { font-size: clamp(1.9rem, 3.4vw, 2.6rem); line-height: 1.1; letter-spacing: -.025em; font-weight: 600; margin: 16px 0 12px; text-wrap: balance; }
+  .section-head p { color: var(--muted); font-size: 1.08rem; margin: 0; text-wrap: pretty; }
+
+  /* data flow */
+  .flow { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; counter-reset: step; }
+  .flow::before {
+    content: ""; position: absolute; top: 27px; left: 28px; right: 12%; height: 1px;
+    background: linear-gradient(90deg, var(--accent-strong), color-mix(in srgb, var(--accent-strong) 15%, transparent));
+  }
+  .step { position: relative; padding-right: 32px; }
+  .step .num {
+    position: relative; display: grid; place-items: center; width: 56px; height: 56px; border-radius: 18px;
+    background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow);
+    font: 500 .9rem/1 "Geist Mono", monospace; color: var(--accent);
+  }
+  .step h3 { font-size: 1.15rem; font-weight: 600; letter-spacing: -.01em; margin: 24px 0 8px; }
+  .step p { color: var(--muted); margin: 0; font-size: .97rem; }
+  .step code { font: 500 .85em "Geist Mono", monospace; color: var(--fg); }
+
+  /* resources bento */
+  .bento { display: grid; grid-template-columns: repeat(12, 1fr); gap: 20px; }
+  .tile { grid-column: span 5; display: flex; }
+  .tile.big { grid-column: span 7; grid-row: span 2; }
+  .tile .core { padding: 32px; display: flex; flex-direction: column; gap: 12px; width: 100%; }
+  .tile .label { font: 500 .72rem/1 "Geist Mono", monospace; letter-spacing: .14em; text-transform: uppercase; color: var(--faint); }
+  .tile h3 { font-size: 1.45rem; letter-spacing: -.02em; font-weight: 600; margin: 0; }
+  .tile.big h3 { font-size: 2rem; }
+  .tile p { color: var(--muted); margin: 0; flex: 1; text-wrap: pretty; }
+  .tile .actions { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; margin-top: 12px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 28px; margin: 12px 0 4px; }
+  .facts div { display: flex; flex-direction: column; }
+  .facts b { font-size: 1.9rem; font-weight: 600; letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+  .facts span { color: var(--faint); font-size: .85rem; }
+  .doi { font: 500 .9rem "Geist Mono", monospace; overflow-wrap: anywhere; }
+
+  /* partners + footer */
+  .partners { display: flex; flex-wrap: wrap; gap: 12px 40px; color: var(--muted); font-weight: 500; font-size: 1.02rem; }
+  .partners span { white-space: nowrap; }
+  footer { border-top: 1px solid var(--line); padding: 32px 0 48px; color: var(--faint); font-size: .9rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; align-items: center; }
+  footer img { height: 22px; width: auto; display: block; }
+  footer a { color: var(--muted); }
+
+  /* entry motion */
+  .js .reveal { opacity: 0; transform: translateY(24px); filter: blur(6px); transition: opacity .9s var(--ease), transform .9s var(--ease), filter .9s var(--ease); }
+  .js .reveal.in { opacity: 1; transform: none; filter: none; }
+  .d1 { transition-delay: .08s; } .d2 { transition-delay: .16s; } .d3 { transition-delay: .24s; } .d4 { transition-delay: .32s; }
+  @media (prefers-reduced-motion: reduce) {
+    .js .reveal { opacity: 1; transform: none; filter: none; transition: none; }
+    .mark, .graph .pulse { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  @media (max-width: 860px) {
+    nav ul { display: none; }
+    .hero { grid-template-columns: minmax(0, 1fr); gap: 48px; padding-block: 72px 80px; }
+    .eyebrow { line-height: 1.5; }
+    .visual { max-width: 420px; }
+    .flow { grid-template-columns: 1fr; gap: 32px; }
+    .flow::before { top: 28px; bottom: 28px; left: 27px; right: auto; width: 1px; height: auto;
+      background: linear-gradient(180deg, var(--accent-strong), color-mix(in srgb, var(--accent-strong) 15%, transparent)); }
+    .step { display: grid; grid-template-columns: 56px 1fr; grid-template-rows: auto 1fr; column-gap: 20px; padding: 0; }
+    .step .num { grid-row: span 2; }
+    .step h3 { margin: 4px 0 6px; }
+    .step p { grid-column: 2; }
+    .tile, .tile.big { grid-column: 1 / -1; grid-row: auto; }
+    section { padding: 64px 0; }
+  }
+  @media (max-width: 480px) {
+    .wrap { padding: 0 16px; }
+    nav { gap: 12px; }
+    .tile .core { padding: 24px; }
+  }
 </style>
 </head>
 <body>
-<main>
-  <h1>Cancer Virtual Lab</h1>
-  <p class="lead">A semantic platform that bridges oncological clinical data and research workflows
-  through HL7 FHIR and ontology-driven knowledge graphs.</p>
-  <p>The Cancer Virtual Lab (CVL) standardises the real-world oncological records of IRCCS Istituto
-  Romagnolo per lo Studio dei Tumori (IRST) "Dino Amadori" as HL7 FHIR resources, lifts them into an
-  RDF knowledge graph governed by a domain ontology, and makes them available for cohort selection,
-  analytics and natural-language querying. It is a collaboration between the University of Bologna,
-  IRST, Aivolution Srl and IFAB.</p>
+<a class="skip" href="#main">Skip to content</a>
 
-  <h2>Resources</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>CVL-O Ontology</h3>
-      <p>The OWL 2 ontology of the oncological care pathway: documentation, graph view, downloads and
-      validation reports.</p>
-      <a class="btn" href="ontology/">Open the ontology</a>
+<nav aria-label="Main">
+  <a class="brand" href="./" aria-label="Cancer Virtual Lab home">
+    <picture>
+      <source srcset="assets/cvl-logo-dark.svg" media="(prefers-color-scheme: dark)">
+      <img src="assets/cvl-logo-light.svg" alt="Cancer Virtual Lab" width="81" height="26">
+    </picture>
+  </a>
+  <ul>
+    <li><a href="#how">How it works</a></li>
+    <li><a href="#resources">Resources</a></li>
+    <li><a href="https://github.com/Cancer-Virtual-Lab/Cancer-Virtual-Lab-Public-Repo">GitHub</a></li>
+  </ul>
+  <a class="btn accent" href="ontology/">Ontology <span class="ico" aria-hidden="true">
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </span></a>
+</nav>
+
+<main id="main">
+  <div class="wrap hero">
+    <div>
+      <span class="eyebrow reveal">IRCCS IRST "Dino Amadori" · University of Bologna</span>
+      <h1 class="reveal d1">Real-world oncology data, <em>ready for research.</em></h1>
+      <p class="lead reveal d2">The Cancer Virtual Lab standardises clinical records as HL7 FHIR resources
+      and connects them in a knowledge graph governed by a domain ontology, so researchers can select
+      cohorts, run analytics and ask questions in natural language.</p>
+      <div class="cta reveal d3">
+        <a class="btn accent" href="ontology/">Explore the ontology <span class="ico" aria-hidden="true">
+          <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span></a>
+        <a class="link" href="#resources">See all resources</a>
+      </div>
+    </div>
+
+    <div class="visual shell reveal d2" aria-hidden="true">
+      <div class="core">
+        <svg class="graph" viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice">
+          <line x1="58" y1="84" x2="200" y2="200"/><line x1="342" y1="70" x2="200" y2="200"/>
+          <line x1="352" y1="300" x2="200" y2="200"/><line x1="64" y1="318" x2="200" y2="200"/>
+          <line x1="58" y1="84" x2="342" y2="70"/><line x1="342" y1="70" x2="352" y2="300"/>
+          <line x1="64" y1="318" x2="352" y2="300"/><line x1="58" y1="84" x2="64" y2="318"/>
+          <line x1="200" y1="28" x2="342" y2="70"/><line x1="200" y1="28" x2="58" y2="84"/>
+          <line x1="200" y1="372" x2="352" y2="300"/><line x1="200" y1="372" x2="64" y2="318"/>
+          <circle class="pulse" cx="58" cy="84" r="4"/><circle class="pulse" cx="342" cy="70" r="4"/>
+          <circle class="pulse" cx="352" cy="300" r="4"/><circle class="pulse" cx="64" cy="318" r="4"/>
+          <circle class="pulse" cx="200" cy="28" r="3"/><circle class="pulse" cx="200" cy="372" r="3"/>
+        </svg>
+        <img class="mark" src="assets/cvl-mark.svg" alt="">
+        <div class="caption"><span>cvl:Patient</span><span>FHIR → RDF</span></div>
+      </div>
     </div>
   </div>
 
-  <h2>Reproducibility package</h2>
-  <p>The ontology, FHIR Implementation Guide, mapping rules, GraphDB rule sets, validation reports and
-  natural-language query component are deposited on Zenodo:
-  <a href="https://doi.org/10.5281/zenodo.23762955">https://doi.org/10.5281/zenodo.23762955</a>.</p>
+  <section id="how">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">How it works</span>
+        <h2>From the clinical record to a question answered</h2>
+        <p>Each step uses open standards, so the data stay interoperable outside the platform.</p>
+      </div>
+      <div class="flow">
+        <div class="step reveal d1">
+          <span class="num">01</span>
+          <h3>Clinical records</h3>
+          <p>Diagnoses, therapies, administrations, adverse events, biomarkers and laboratory tests from IRST systems.</p>
+        </div>
+        <div class="step reveal d2">
+          <span class="num">02</span>
+          <h3>HL7 FHIR</h3>
+          <p>Mapping rules convert each table into FHIR resources that conform to 19 CVL profiles.</p>
+        </div>
+        <div class="step reveal d3">
+          <span class="num">03</span>
+          <h3>Knowledge graph</h3>
+          <p>Resources become RDF typed with <code>cvl:</code> classes and linked to SNOMED CT, LOINC and NCIt.</p>
+        </div>
+        <div class="step reveal d4">
+          <span class="num">04</span>
+          <h3>Research</h3>
+          <p>Reasoning, cohort selection, analytics and natural-language queries on the same graph.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    Source: <a href="https://github.com/Cancer-Virtual-Lab/Cancer-Virtual-Lab-Public-Repo">GitHub</a>
-  </footer>
+  <section id="resources">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Resources</span>
+        <h2>Open materials</h2>
+        <p>The ontology, the FHIR profiles and the reproducibility package of the platform.</p>
+      </div>
+      <div class="bento">
+        <article class="tile big shell reveal d1">
+          <div class="core">
+            <span class="label">Ontology · v1.1.0</span>
+            <h3>CVL-O, the Cancer Virtual Lab Ontology</h3>
+            <p>The OWL 2 ontology of the oncological care pathway, aligned with HL7 FHIR and standard
+            terminologies. Browse the documentation in English and Italian, explore the graph and
+            check the validation reports.</p>
+            <div class="facts">
+              <div><b>86</b><span>classes</span></div>
+              <div><b>123</b><span>properties</span></div>
+              <div><b>OWL 2 DL</b><span>consistent</span></div>
+            </div>
+            <div class="actions">
+              <a class="btn accent" href="ontology/">Open the ontology <span class="ico" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 12 12" fill="none"><path d="M3 9L9 3M9 3H4M9 3V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span></a>
+              <a class="link" href="ontology/doc/webvowl/index.html">Graph view</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile shell reveal d2">
+          <div class="core">
+            <span class="label">Zenodo · DOI</span>
+            <h3>Reproducibility package</h3>
+            <p>Ontology, FHIR Implementation Guide, mapping rules, GraphDB rule sets, validation reports and
+            natural-language query component.</p>
+            <div class="actions">
+              <a class="link doi" href="https://doi.org/10.5281/zenodo.23762955">10.5281/zenodo.23762955</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="tile shell reveal d3">
+          <div class="core">
+            <span class="label">HL7 FHIR R4</span>
+            <h3>FHIR profiles</h3>
+            <p>FSH sources of the 19 CVL profiles for the oncological care pathway.</p>
+            <div class="actions">
+              <a class="link" href="https://github.com/Cancer-Virtual-Lab/Cancer-Virtual-Lab-Public-Repo/tree/main/input/fsh/profiles">View on GitHub</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Partners">
+    <div class="wrap">
+      <div class="partners reveal">
+        <span>University of Bologna</span>
+        <span>IRCCS IRST "Dino Amadori"</span>
+        <span>Aivolution Srl</span>
+        <span>IFAB</span>
+      </div>
+    </div>
+  </section>
 </main>
+
+<footer>
+  <div class="wrap">
+    <picture>
+      <source srcset="assets/cvl-logo-dark.svg" media="(prefers-color-scheme: dark)">
+      <img src="assets/cvl-logo-light.svg" alt="Cancer Virtual Lab" width="68" height="22">
+    </picture>
+    <span><a href="https://github.com/Cancer-Virtual-Lab/Cancer-Virtual-Lab-Public-Repo">Source on GitHub</a></span>
+  </div>
+</footer>
+
+<script>
+  // Reveal elements as they enter the viewport
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+  }, { rootMargin: "0px 0px -8% 0px" });
+  document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+</script>
 </body>
 </html>

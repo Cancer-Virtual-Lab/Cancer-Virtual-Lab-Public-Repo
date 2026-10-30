@@ -42,6 +42,7 @@ echo "== 2. Site -> $OUT/"
 rm -rf "$OUT"
 mkdir -p "$OUT/ontology/validation"
 cp pages/index.html "$OUT/"
+cp -r pages/assets "$OUT/assets"
 cp pages/ontology/index.html "$OUT/ontology/"
 cp -r "$TMP/doc" "$OUT/ontology/doc"
 cp "$PKG"/validation/{robot_report.html,robot_report.tsv,owl2_dl_profile.txt,reasoner_hermit.log} \
